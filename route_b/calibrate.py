@@ -16,7 +16,7 @@ def run(args):
     tr,va=load_items(args.cache_root);out=Path(args.output);baseline=compare(tr,va,args.cache_root,out)
     if baseline['status']=='STOP_NN':
         result={'status':'NOT_RUN_G2_PILOT_NO_HEADROOM','baseline':baseline['macro']};write(out/'J0.json',result);return result
-    norm=Normalizer.fit(tr);batch=tr[:8];times={};accuracy=[];peaks={}
+    norm=Normalizer.fit(tr);batch=[tr[0],tr[1]]*4;times={};accuracy=[];peaks={}
     for device in ('cpu','cuda'):
         if device=='cuda' and not torch.cuda.is_available():continue
         torch.manual_seed(1801);model=CoefficientMLP().to(device);optimizer=torch.optim.AdamW(model.parameters(),lr=.001);elapsed=[]
@@ -29,9 +29,9 @@ def run(args):
                 if device=='cuda':torch.cuda.synchronize()
                 elapsed.append(time.perf_counter()-begin)
             assert counter['Maxwell_action_count']==0
-        times[device]={'samples':20,'discarded':5,'measured_median_seconds':float(np.median(elapsed[5:])),'raw_seconds':elapsed,'Maxwell_action_count':counter['Maxwell_action_count']}
+        times[device]={'samples':20,'discarded':5,'measured_median_seconds':float(np.median(elapsed[5:])),'measured_P95_seconds':float(np.percentile(elapsed[5:],95)),'raw_seconds':elapsed,'Maxwell_action_count':counter['Maxwell_action_count']}
         peaks[device]=torch.cuda.max_memory_allocated() if device=='cuda' else 0
-        s=batch[0];c=t[0,0,0,:s['rank']+1].detach().to(torch.complex128);g,valid,_,_=s['cache'].evaluate(c,(0,));exact=s['cache'].numpy_metrics(c.cpu().numpy(),(0,));err=abs(float(g.detach())-exact['gain'])/max(abs(exact['gain']),1e-12);accuracy.append({'device':device,'FP64_cached_gain_relative_error':err,'valid_equal':bool(valid)==exact['valid']})
+        s=batch[0];c=t[0,0,0,:s['rank']+1].detach().to(torch.complex128);g,valid,_,_=s['cache'].evaluate(c[None],(0,));exact=s['cache'].numpy_metrics(c.cpu().numpy(),(0,));err=abs(float(g.detach())-exact['gain'])/max(abs(exact['gain']),1e-12);accuracy.append({'device':device,'FP64_cached_gain_relative_error':err,'valid_equal':bool(valid)==exact['valid']})
     chosen=min(times,key=lambda d:times[d]['measured_median_seconds']);result={'status':'PASS' if all(x['FP64_cached_gain_relative_error']<=1e-8 and x['valid_equal'] for x in accuracy) else 'FAIL','chosen_device':chosen,'measurements':times,'accuracy':accuracy,'peak_gpu_allocated_bytes':peaks,'parameters':249703,'baseline_macro':baseline['macro'],'baseline_method':baseline['best_method'],'locked_test_opened':False,'epoch_cap':80,'each_J2_seconds_cap':1350};write(out/'J0.json',result);return result
 
 if __name__=='__main__':
