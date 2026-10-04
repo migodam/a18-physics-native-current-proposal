@@ -8,6 +8,7 @@ from shared_backend.fft_maxwell import load_backend
 from shared_backend.core import pack,VerifiedExchange,directional_check
 from shared_backend.dictionary import prepare_dictionary
 from shared_backend.discrete_audit import audit_bank,ranked_records
+from shared_backend.batched_dictionary import audit_bank_batched
 from .basis import build_basis,feature_vector
 from .small_physics import SmallPhysics,teacher_best
 from .policy import propose_poly,POLICIES
@@ -65,7 +66,7 @@ def benchmark(public,oid,sid,a17_root,policy,repetitions=5):
             if method=="B-poly":
                 basis=build_basis(b,s);feature_vector(b,s,basis);actions=propose_poly(s,basis,family_order=policy[0],degree=policy[1],mixed=policy[2],drop_rule=policy[3])
             elif method.startswith("D-"):
-                d=prepare_dictionary(b,s,a17_root);proxy=audit_bank(b,s,d["vectors"],d["anchor_J"],d["anchor_J"]);actions=ranked_records(d["vectors"],s,proxy,1 if method=="D-recommended" else 4);recipes={str(j):(lambda j=j:d["vectors"][:,j]) for j in range(d["vectors"].shape[1])}
+                d=prepare_dictionary(b,s,a17_root);proxy=audit_bank_batched(b,s,d["vectors"],d["anchor_J"],d["anchor_J"]);actions=ranked_records(d["vectors"],s,proxy,1 if method=="D-recommended" else 4);recipes={str(j):(lambda j=j:d["vectors"][:,j]) for j in range(d["vectors"].shape[1])}
             else:
                 from route_a.features import extract
                 from route_a.bridge import ReceiptBackend
