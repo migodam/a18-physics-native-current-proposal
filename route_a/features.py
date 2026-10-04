@@ -100,13 +100,20 @@ def extract(state, backend, cache=None, audit=None):
                       "dependencies": [*recipe.dependency_ids, "recipe_metadata", "current_chi_estimate"],
                       "exclusive_seconds": time.perf_counter()-node_started})
     nodes = np.stack(node_rows) if recipes else np.empty((0, 32))
-    mask = np.array([r.static_descriptor.get("active", True) for r in recipes])
+    known_modes = {int(i) for i in value(state, "receiver_mode_ids", ()) if int(i) >= 0}
+    # A mode already represented by an original column of U either vanishes
+    # under retained projection or recreates that same column. Both cases have
+    # no positive exact opportunity. This metadata test needs no atom projection.
+    known_noop = {r.id for r in recipes if r.family == "receiver" and
+                  int(r.static_descriptor["geometry_index"]) in known_modes}
+    mask = np.array([r.static_descriptor.get("active", True) and r.id not in known_noop for r in recipes])
     protected = set(value(state, "protected_slots", ()))
     outgoing_mask = np.array([i not in protected and bool(outgoing[i, 31]) for i in range(k)])
     nested = sum(float(r["exclusive_seconds"]) for r in audit.receipts[before:])
     audit.record({"origin": "route_a.feature_assembly", "dependencies": ["shared_state_features", "outgoing_features", "current_chi_estimate", "recipe_metadata"],
                   "exclusive_seconds": max(0., time.perf_counter()-started-nested),
-                  "atom_seed_projections": False, "inactive_families": inactive})
+                  "atom_seed_projections": False, "inactive_families": inactive,
+                  "known_receiver_noop_ids": sorted(known_noop)})
     assembly = len(audit.receipts)-1
     packing_started = time.perf_counter()
     provenance = feature_provenance("xi", xi, STATE_SOURCES[:192], state_refs, audit)

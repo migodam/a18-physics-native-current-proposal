@@ -12,6 +12,7 @@ FEATURE_SCHEMA = {"version": SCHEMA, "dimensions": [204, 32, 32],
                   "state_norm_log1p_scale1": STATE_NORM_INDICES,
                   "node_raw_norm": 21, "outgoing_raw_norms": [16, 17],
                   "atom_seed_projections": False,
+                  "mask_receiver_modes_known_in_current_U": True,
                   "families": ["receiver", "fourier", "haar", "random", "feedback"]}
 SCHEMA_HASH = sha256(json.dumps(FEATURE_SCHEMA, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
 

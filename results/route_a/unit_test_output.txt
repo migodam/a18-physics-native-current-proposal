@@ -30,6 +30,7 @@ test_a0_and_missing_labels_rejected_completed_invalid_preserved (test_route_a_co
 test_analytic_pairs_four_unique_incomings_with_one_legal_drop (test_route_a_contracts.ContractTests.test_analytic_pairs_four_unique_incomings_with_one_legal_drop) ... ok
 test_endpoint_failure_and_duplicate_action_no_retry_or_ridge (test_route_a_contracts.ContractTests.test_endpoint_failure_and_duplicate_action_no_retry_or_ridge) ... ok
 test_explicit_invalid_label_does_not_poison_loss (test_route_a_contracts.ContractTests.test_explicit_invalid_label_does_not_poison_loss) ... ok
+test_known_receiver_noop_mask_preserves_first_useful_mode_without_projection (test_route_a_contracts.ContractTests.test_known_receiver_noop_mask_preserves_first_useful_mode_without_projection) ... ok
 test_missing_machinery_counts_cannot_pass_preflight (test_route_a_contracts.ContractTests.test_missing_machinery_counts_cannot_pass_preflight) ... ok
 test_norm_scales_train_only_and_checkpoint_roundtrip (test_route_a_contracts.ContractTests.test_norm_scales_train_only_and_checkpoint_roundtrip) ... ok
 test_online_cache_roundtrip_and_extra_teacher_array_rejected (test_route_a_contracts.ContractTests.test_online_cache_roundtrip_and_extra_teacher_array_rejected) ... ok
@@ -63,6 +64,6 @@ test_sketch_stable_channel_order (test_shared_backend.SharedTests.test_sketch_st
 test_zero_seeds_inactive (test_shared_backend.SharedTests.test_zero_seeds_inactive) ... ok
 
 ----------------------------------------------------------------------
-Ran 63 tests in 0.326s
+Ran 64 tests in 0.354s
 
 OK

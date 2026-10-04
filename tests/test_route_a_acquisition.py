@@ -120,6 +120,7 @@ class AcquisitionTests(unittest.TestCase):
         s, b, _ = fixture(); f, recipes, audit = extract(s, b)
         self.assertEqual(f.xi.shape, (204,)); self.assertEqual(f.nodes.shape[1], 32); self.assertEqual(f.outgoing.shape, (3, 32))
         self.assertFalse(f.outgoing_mask[0]); self.assertEqual(b.calls, 0)
+        self.assertFalse(any(f.node_mask[j] for j,r in enumerate(recipes) if r.family == "receiver"))
         self.assertFalse(f.xi.flags.writeable); self.assertEqual(audit.calls["raw_currents"], 0)
         normalizer = Normalizer.fit([f]); out = normalizer.transform(f)
         self.assertTrue(np.isfinite(out.xi).all()); self.assertEqual(normalizer.training_object_ids, (s.object_id,))
