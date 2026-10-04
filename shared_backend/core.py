@@ -199,14 +199,17 @@ class OperatorBackend:
         out=self._J(z);self.receipt.add("full_J_directions",n,time.perf_counter()-t);self.receipt.add("full_J_illumination_rhs",4*n);return out
     def get_receiver_basis(self,count):
         t=time.perf_counter();out=self._receiver(count);self.receipt.add("receiver_mode_accesses",1,time.perf_counter()-t);return out
-    def freeze_state(self,U,*,object_id,state_id,split="development",receiver_mode_ids=(),accepted_count=0):
-        U=np.asarray(U,complex);LU=self.apply_L(U);SU=self.apply_S(U);D=U.conj().T@LU
-        m=self.metadata;ep=endpoint_from_maps(D,SU,self.project_B(U),m["r"],m["ell"],m["Lambda"])
+    def freeze_state(self,U,*,object_id,state_id,split="development",receiver_mode_ids=(),accepted_count=0,protected_slots=(),_paid_maps=None):
+        U=np.asarray(U,complex)
+        if _paid_maps is None:LU=self.apply_L(U);SU=self.apply_S(U);NB=self.project_B(U)
+        else:LU,SU,NB=_paid_maps
+        D=U.conj().T@LU;m=self.metadata;ep=endpoint_from_maps(D,SU,NB,m["r"],m["ell"],m["Lambda"])
         phases=m.get("source_phase",np.ones(4,complex))
         state_hash=sha256((m["state_hash"]+"".join(array_hash(m[k]) for k in ("chi","a","r","forcing","ell","Lambda"))+array_hash(phases)+m["material_gauge_sha256"]+m["receiver_geometry_sha256"]).encode()).hexdigest()
-        config=sha256((state_hash+array_hash(U)+SEED_SCHEMA+"seed=1e-10;breakdown=1e-12;orth=1e-10;phase=maxabs;schema=192v2").encode()).hexdigest()
         if not receiver_mode_ids:receiver_mode_ids=tuple(range(U.shape[1])) if np.allclose(U,self.get_receiver_basis(U.shape[1]),rtol=0,atol=TOL) else (-1,)*U.shape[1]
-        return FrozenState(object_id,state_id,split,config,m["material_gauge_sha256"],m["receiver_geometry_sha256"],m["chi"],m["a"],m["points"],tuple(m["grid_shape"]),m["cell_volume"],m["wavenumber"],m["r"],m["forcing"],U,LU,SU,D,ep["step"],m["ell"],m["Lambda"],phases,ep["normal_relative_residual"],m.get("geometry",{}),(),tuple(receiver_mode_ids),accepted_count,{"origin":"FrozenState.current_estimate","state_sha256":state_hash},ep["reduced_gradient_norm"],self.get_receiver_basis(16))
+        descriptor=json.dumps({"protected_slots":[int(i) for i in protected_slots],"receiver_mode_ids":[int(i) for i in receiver_mode_ids],"accepted_count":int(accepted_count)},sort_keys=True)
+        config=sha256((state_hash+array_hash(U)+descriptor+SEED_SCHEMA+"seed=1e-10;breakdown=1e-12;orth=1e-10;phase=maxabs;schema=192v2").encode()).hexdigest()
+        return FrozenState(object_id,state_id,split,config,m["material_gauge_sha256"],m["receiver_geometry_sha256"],m["chi"],m["a"],m["points"],tuple(m["grid_shape"]),m["cell_volume"],m["wavenumber"],m["r"],m["forcing"],U,LU,SU,D,ep["step"],m["ell"],m["Lambda"],phases,ep["normal_relative_residual"],m.get("geometry",{}),tuple(protected_slots),tuple(receiver_mode_ids),accepted_count,{"origin":"FrozenState.current_estimate","state_sha256":state_hash},ep["reduced_gradient_norm"],self.get_receiver_basis(16))
     def get_old_endpoint(self,state):
         return endpoint_from_maps(state.D,state.SU,self.project_B(state.U),state.r,state.ell,state.Lambda)
     def get_opm_seeds(self,state):
@@ -246,7 +249,7 @@ class VerifiedExchange:
     Callback recipes are registered externally; no teacher ranker is used.
     """
     def __init__(self,backend,state,recipes=None):
-        self.backend,self.state=backend,state;self.recipes=recipes or {};self._u=None
+        self.backend,self.state=backend,state;self.recipes=recipes or {};self._u=None;self._pending={}
     def _materialize(self,action):
         b,s=self.backend,self.state
         if action.configuration_id!=s.configuration_id:raise ValueError("STALE_CONFIGURATION")
@@ -281,6 +284,7 @@ class VerifiedExchange:
             if self._u is None:self._u=pack(s.r)+b.full_J_action(s.step_old)
             d=ep["step"]-s.step_old;z=b.full_J_action(d)
             g=directional_check(pack(s.r),self._u,z,s.step_old,d,s.ell,s.Lambda)
+            self._pending[action.action_id]=(W,LW,SW,np.concatenate((NR,NC),axis=1),z,tuple(keep),ep["step"])
             return {"status":"OK","action_id":action.action_id,"accepted":g["gain"]>g["tau"],**g,
                     "step":ep["step"],"new_U":W,"normal_relative_residual":ep["normal_relative_residual"],"stability":ep["stability"],
                     "singular_core_fallback":not stability(s.D[np.ix_(keep,keep)])["stable"],"cost":b.receipt.delta(before),"wall_seconds":time.perf_counter()-t}
@@ -289,4 +293,13 @@ class VerifiedExchange:
     def accept(self,result):
         if result.get("status")!="OK" or not result.get("accepted"):raise ValueError("unverified accept")
         if self.state.accepted_count>=3:raise ValueError("accept cap")
-        s=self.state;return self.backend.freeze_state(result["new_U"],object_id=s.object_id,state_id=s.state_id,split=s.split,accepted_count=s.accepted_count+1,receiver_mode_ids=(-1,)*s.U.shape[1])
+        s=self.state
+        if result["action_id"] not in self._pending:raise ValueError("result is not from this verifier")
+        W,LW,SW,NB,z,keep,step=self._pending[result["action_id"]]
+        modes=tuple(s.receiver_mode_ids[i] for i in keep)+(-1,)*(s.U.shape[1]-len(keep))
+        protected=tuple(j for j,i in enumerate(keep) if i in s.protected_slots)
+        new=self.backend.freeze_state(W,object_id=s.object_id,state_id=s.state_id,split=s.split,accepted_count=s.accepted_count+1,receiver_mode_ids=modes,protected_slots=protected,_paid_maps=(LW,SW,NB))
+        if not np.array_equal(new.step_old,step):
+            # Any solver roundoff change must be explicitly accounted for.
+            z=z+self.backend.full_J_action(new.step_old-step)
+        self._u=self._u+z;self.state=new;self._pending.clear();return new
