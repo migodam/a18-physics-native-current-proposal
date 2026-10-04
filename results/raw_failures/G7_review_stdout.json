@@ -1,0 +1,7 @@
+{
+  "status": "FAILED_AFTER_VALID_RESULT_WRITE",
+  "action": "local cached rank2 numerical review",
+  "error": "numpy.int64 in final stdout json.dumps",
+  "physics_repeated": false,
+  "fix": "jsonable stdout, saved scientific result unchanged"
+}

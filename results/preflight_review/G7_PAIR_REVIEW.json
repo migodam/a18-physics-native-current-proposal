@@ -1,0 +1,2133 @@
+{
+  "schema": "a18.G7.rank2.v1",
+  "status": "NO_BLOCK_TRIGGER_FOUND",
+  "joint_gain_over_singleton_reference_macro": 0.9252462517571586,
+  "positive_extra_gain_over_singleton_reference_macro": 0.0,
+  "joint_only_pair_count": 0,
+  "joint_only_state_rate": 0.0,
+  "projected_columns_joint_only_pairs": 16,
+  "positive_joint_pair_count": 72,
+  "total_pairs": 72,
+  "states": [
+    {
+      "object_id": "test_geometry_00",
+      "state_id": "state0",
+      "family": "geometry",
+      "union_reference": 35.13825996117372,
+      "best_joint_gain": 32.24474669177983,
+      "extra_gain": 0.0
+    },
+    {
+      "object_id": "test_geometry_00",
+      "state_id": "state1",
+      "family": "geometry",
+      "union_reference": 33.571735292063735,
+      "best_joint_gain": 31.474959628187403,
+      "extra_gain": 0.0
+    },
+    {
+      "object_id": "train_00",
+      "state_id": "state0",
+      "family": "separated",
+      "union_reference": 16.93228760748388,
+      "best_joint_gain": 14.918793298139827,
+      "extra_gain": 0.0
+    },
+    {
+      "object_id": "train_00",
+      "state_id": "state1",
+      "family": "separated",
+      "union_reference": 16.591412510605835,
+      "best_joint_gain": 15.45821710055772,
+      "extra_gain": 0.0
+    },
+    {
+      "object_id": "train_01",
+      "state_id": "state0",
+      "family": "separated",
+      "union_reference": 11.26970662651892,
+      "best_joint_gain": 9.724541359525897,
+      "extra_gain": 0.0
+    },
+    {
+      "object_id": "train_01",
+      "state_id": "state1",
+      "family": "separated",
+      "union_reference": 10.151133834879966,
+      "best_joint_gain": 9.168574216035994,
+      "extra_gain": 0.0
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state0",
+      "family": "near",
+      "union_reference": 9.297082100873439,
+      "best_joint_gain": 8.041344251586617,
+      "extra_gain": 0.0
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state1",
+      "family": "near",
+      "union_reference": 8.576186684354822,
+      "best_joint_gain": 8.410930352851866,
+      "extra_gain": 0.0
+    },
+    {
+      "object_id": "train_09",
+      "state_id": "state0",
+      "family": "near",
+      "union_reference": 16.76421290823083,
+      "best_joint_gain": 15.753768139869155,
+      "extra_gain": 0.0
+    },
+    {
+      "object_id": "train_09",
+      "state_id": "state1",
+      "family": "near",
+      "union_reference": 16.61039219923639,
+      "best_joint_gain": 15.700000416930317,
+      "extra_gain": 0.0
+    },
+    {
+      "object_id": "train_16",
+      "state_id": "state0",
+      "family": "high",
+      "union_reference": 19.211928229161334,
+      "best_joint_gain": 18.641362283090462,
+      "extra_gain": 0.0
+    },
+    {
+      "object_id": "train_16",
+      "state_id": "state1",
+      "family": "high",
+      "union_reference": 19.41414798288497,
+      "best_joint_gain": 18.94301519356024,
+      "extra_gain": 0.0
+    }
+  ],
+  "pairs": [
+    {
+      "object_id": "test_geometry_00",
+      "state_id": "state0",
+      "family": "geometry",
+      "drops": [
+        0,
+        1
+      ],
+      "joint_gain": 32.14286938316515,
+      "joint_tau": 3.5377172421911483e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.431968154261643e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        1.3408724792795699,
+        1.3290054984160709
+      ],
+      "projected_singleton_taus": [
+        3.6085926788345743e-09,
+        3.527967923968637e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        34.93941144596149,
+        33.17426143396699
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "test_geometry_00",
+      "state_id": "state0",
+      "family": "geometry",
+      "drops": [
+        0,
+        2
+      ],
+      "joint_gain": 30.49500607189237,
+      "joint_tau": 3.544758541613658e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.974255698997717e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -30.056742538659595,
+        4.6493320931452295
+      ],
+      "projected_singleton_taus": [
+        3.630789240391852e-09,
+        3.5773101922180957e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        34.93941144596149,
+        33.108517388720706
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "test_geometry_00",
+      "state_id": "state0",
+      "family": "geometry",
+      "drops": [
+        0,
+        3
+      ],
+      "joint_gain": 31.356355658891857,
+      "joint_tau": 3.552054166262069e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.489181257222788e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -27.467671824646768,
+        18.90328674305774
+      ],
+      "projected_singleton_taus": [
+        3.6644693789004793e-09,
+        3.5182754697624253e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        34.93941144596149,
+        34.513373116871165
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "test_geometry_00",
+      "state_id": "state0",
+      "family": "geometry",
+      "drops": [
+        1,
+        2
+      ],
+      "joint_gain": 29.770701216292323,
+      "joint_tau": 3.534252340671314e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.666653413074972e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        24.243072207083742,
+        17.231929029794557
+      ],
+      "projected_singleton_taus": [
+        3.573838064529333e-09,
+        3.5237571354826144e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        33.17426143396699,
+        33.108517388720706
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "test_geometry_00",
+      "state_id": "state0",
+      "family": "geometry",
+      "drops": [
+        1,
+        3
+      ],
+      "joint_gain": 31.688991505783832,
+      "joint_tau": 3.5366104358932717e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.92312572006034e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        28.548852782146177,
+        27.44105914572748
+      ],
+      "projected_singleton_taus": [
+        3.519305554983219e-09,
+        3.5219809881767077e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        33.17426143396699,
+        34.513373116871165
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "test_geometry_00",
+      "state_id": "state0",
+      "family": "geometry",
+      "drops": [
+        2,
+        3
+      ],
+      "joint_gain": 32.24474669177983,
+      "joint_tau": 3.5215598950498703e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.1338895823394365e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -138.76741598850626,
+        15.06449631905184
+      ],
+      "projected_singleton_taus": [
+        3.850937401816935e-09,
+        3.4854675406946276e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        33.108517388720706,
+        34.513373116871165
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "test_geometry_00",
+      "state_id": "state1",
+      "family": "geometry",
+      "drops": [
+        0,
+        1
+      ],
+      "joint_gain": 30.256984522639844,
+      "joint_tau": 2.962258776738711e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 1.303358980775311e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        24.114003067420864,
+        7.3584865114111215
+      ],
+      "projected_singleton_taus": [
+        2.9471881678545147e-09,
+        2.9916472491785018e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        33.383636676162986,
+        31.810322294605726
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "test_geometry_00",
+      "state_id": "state1",
+      "family": "geometry",
+      "drops": [
+        0,
+        2
+      ],
+      "joint_gain": 30.1532238406812,
+      "joint_tau": 2.9850841813998136e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.43850343179645e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -28.532147081712075,
+        13.0142395580524
+      ],
+      "projected_singleton_taus": [
+        3.0577357564829186e-09,
+        2.979063810709023e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        33.383636676162986,
+        31.401702301847084
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "test_geometry_00",
+      "state_id": "state1",
+      "family": "geometry",
+      "drops": [
+        0,
+        3
+      ],
+      "joint_gain": 31.370275207073707,
+      "joint_tau": 2.9882443982685656e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.750778012963268e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        15.924709253125679,
+        13.252104378586996
+      ],
+      "projected_singleton_taus": [
+        3.01206201934725e-09,
+        2.938826296810173e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        33.383636676162986,
+        33.093074230314336
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "test_geometry_00",
+      "state_id": "state1",
+      "family": "geometry",
+      "drops": [
+        1,
+        2
+      ],
+      "joint_gain": 28.824629993412618,
+      "joint_tau": 2.9921157696396112e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 5.345435904130551e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        13.210440075559998,
+        8.004662951378958
+      ],
+      "projected_singleton_taus": [
+        3.0484191992282354e-09,
+        2.941763960346291e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        31.810322294605726,
+        31.401702301847084
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "test_geometry_00",
+      "state_id": "state1",
+      "family": "geometry",
+      "drops": [
+        1,
+        3
+      ],
+      "joint_gain": 30.790875351356057,
+      "joint_tau": 2.9684072829109768e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 5.913190737667258e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        1.740300983159989,
+        12.101969026373819
+      ],
+      "projected_singleton_taus": [
+        3.0234010627859516e-09,
+        3.038125913895073e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        31.810322294605726,
+        33.093074230314336
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "test_geometry_00",
+      "state_id": "state1",
+      "family": "geometry",
+      "drops": [
+        2,
+        3
+      ],
+      "joint_gain": 31.474959628187403,
+      "joint_tau": 2.962948687970167e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.9685728013097586e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -21.62614371606201,
+        22.230713070697835
+      ],
+      "projected_singleton_taus": [
+        3.037094976169379e-09,
+        2.930329651098954e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        31.401702301847084,
+        33.093074230314336
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_00",
+      "state_id": "state0",
+      "family": "separated",
+      "drops": [
+        0,
+        1
+      ],
+      "joint_gain": 14.790677633008627,
+      "joint_tau": 2.3839060067123253e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.4231516691378897e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -11.222993234819741,
+        6.298370247738872
+      ],
+      "projected_singleton_taus": [
+        2.3630072754573813e-09,
+        2.366113955885024e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        14.974345839534587,
+        15.545833055889009
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_00",
+      "state_id": "state0",
+      "family": "separated",
+      "drops": [
+        0,
+        2
+      ],
+      "joint_gain": 14.443408310376533,
+      "joint_tau": 2.397218707834982e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 1.6029926298609895e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        10.075754610539033,
+        3.897626041281155
+      ],
+      "projected_singleton_taus": [
+        2.3958696743393063e-09,
+        2.3771064518706028e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        14.974345839534587,
+        15.452873384642817
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_00",
+      "state_id": "state0",
+      "family": "separated",
+      "drops": [
+        0,
+        3
+      ],
+      "joint_gain": 14.918793298139827,
+      "joint_tau": 2.384649341817862e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.156141032366362e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        3.3331886308134,
+        1.730357424519789
+      ],
+      "projected_singleton_taus": [
+        2.355969590918632e-09,
+        2.364876972167972e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        14.974345839534587,
+        15.982901651267957
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_00",
+      "state_id": "state0",
+      "family": "separated",
+      "drops": [
+        1,
+        2
+      ],
+      "joint_gain": 14.375397449970876,
+      "joint_tau": 2.3948783271432157e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 5.92008611628401e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -34.702491596795376,
+        -15.663712345280599
+      ],
+      "projected_singleton_taus": [
+        2.5550866866414027e-09,
+        2.388151022004215e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        15.545833055889009,
+        15.452873384642817
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_00",
+      "state_id": "state0",
+      "family": "separated",
+      "drops": [
+        1,
+        3
+      ],
+      "joint_gain": 14.730412571483845,
+      "joint_tau": 2.3908866047959323e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.7792243138071706e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -3.5597238322761626,
+        3.1691015578234714
+      ],
+      "projected_singleton_taus": [
+        2.3686734986550508e-09,
+        2.376700734924739e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        15.545833055889009,
+        15.982901651267957
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_00",
+      "state_id": "state0",
+      "family": "separated",
+      "drops": [
+        2,
+        3
+      ],
+      "joint_gain": 14.811035341185617,
+      "joint_tau": 2.3945745982072715e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.3945678763946976e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -4.970074977886769,
+        6.586657779537676
+      ],
+      "projected_singleton_taus": [
+        2.379357960935149e-09,
+        2.4152032137087103e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        15.452873384642817,
+        15.982901651267957
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_00",
+      "state_id": "state1",
+      "family": "separated",
+      "drops": [
+        0,
+        1
+      ],
+      "joint_gain": 15.45821710055772,
+      "joint_tau": 2.118037354625506e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.8638777963840644e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -0.08473796173325349,
+        4.1331639606373365
+      ],
+      "projected_singleton_taus": [
+        2.101945706929995e-09,
+        2.1049031278120714e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        14.57362380818649,
+        15.270709282601217
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_00",
+      "state_id": "state1",
+      "family": "separated",
+      "drops": [
+        0,
+        2
+      ],
+      "joint_gain": 14.812550784705376,
+      "joint_tau": 2.1202034976969915e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.1418926832360295e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        9.05092780559099,
+        3.186967215490489
+      ],
+      "projected_singleton_taus": [
+        2.1211780474652644e-09,
+        2.1012669506498285e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        14.57362380818649,
+        15.307614060517116
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_00",
+      "state_id": "state1",
+      "family": "separated",
+      "drops": [
+        0,
+        3
+      ],
+      "joint_gain": 14.942248628701128,
+      "joint_tau": 2.118776762254296e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.1130271969461326e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        1.7989391621585948,
+        0.04810554301056463
+      ],
+      "projected_singleton_taus": [
+        2.0750271785154638e-09,
+        2.0744357169016566e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        14.57362380818649,
+        16.117175823234597
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_00",
+      "state_id": "state1",
+      "family": "separated",
+      "drops": [
+        1,
+        2
+      ],
+      "joint_gain": 14.366297925835537,
+      "joint_tau": 2.125886804333759e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 4.815502182236154e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -27.72421071597295,
+        -14.019691740131188
+      ],
+      "projected_singleton_taus": [
+        2.260147980705317e-09,
+        2.129836524801631e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        15.270709282601217,
+        15.307614060517116
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_00",
+      "state_id": "state1",
+      "family": "separated",
+      "drops": [
+        1,
+        3
+      ],
+      "joint_gain": 14.596470873681858,
+      "joint_tau": 2.119752299044802e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.472109061499891e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -14.064257054857915,
+        -4.780942594982381
+      ],
+      "projected_singleton_taus": [
+        2.1991838234238655e-09,
+        2.0781988894655494e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        15.270709282601217,
+        16.117175823234597
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_00",
+      "state_id": "state1",
+      "family": "separated",
+      "drops": [
+        2,
+        3
+      ],
+      "joint_gain": 14.896058623120474,
+      "joint_tau": 2.127410718909932e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 5.367002739620869e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -7.9038290191613125,
+        -2.979971370568393
+      ],
+      "projected_singleton_taus": [
+        2.1978034174668453e-09,
+        2.0766379277872216e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        15.307614060517116,
+        16.117175823234597
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_01",
+      "state_id": "state0",
+      "family": "separated",
+      "drops": [
+        0,
+        1
+      ],
+      "joint_gain": 8.578189157507309,
+      "joint_tau": 1.6099207014322824e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.6190491680491526e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        5.306581868719631,
+        -4.558206444266125
+      ],
+      "projected_singleton_taus": [
+        1.594106617765191e-09,
+        1.5940779366309962e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        9.705508152487312,
+        9.605348475187599
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_01",
+      "state_id": "state0",
+      "family": "separated",
+      "drops": [
+        0,
+        2
+      ],
+      "joint_gain": 9.572611029843547,
+      "joint_tau": 1.6065240191251596e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.570065532553171e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        2.0025514361906613,
+        2.376288942149278
+      ],
+      "projected_singleton_taus": [
+        1.6084878868181036e-09,
+        1.5932795182895599e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        9.705508152487312,
+        10.200868717397888
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_01",
+      "state_id": "state0",
+      "family": "separated",
+      "drops": [
+        0,
+        3
+      ],
+      "joint_gain": 8.861795133892324,
+      "joint_tau": 1.6096352958358712e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 5.999584263738698e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -1.4484038196881681,
+        1.1989719836210826
+      ],
+      "projected_singleton_taus": [
+        1.6273787866329615e-09,
+        1.5855709064529962e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        9.705508152487312,
+        10.188120386816866
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_01",
+      "state_id": "state0",
+      "family": "separated",
+      "drops": [
+        1,
+        2
+      ],
+      "joint_gain": 8.055271194153166,
+      "joint_tau": 1.6030977479869347e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.1405752833212477e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -26.767991922647163,
+        -25.06545392743479
+      ],
+      "projected_singleton_taus": [
+        1.6411850093942872e-09,
+        1.7293583819049456e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        9.605348475187599,
+        10.200868717397888
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_01",
+      "state_id": "state0",
+      "family": "separated",
+      "drops": [
+        1,
+        3
+      ],
+      "joint_gain": 9.724541359525897,
+      "joint_tau": 1.6100496897817458e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.975983942821538e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -3.831722393894484,
+        -26.128392116010104
+      ],
+      "projected_singleton_taus": [
+        1.5955826358876536e-09,
+        1.6428858938312378e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        9.605348475187599,
+        10.188120386816866
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_01",
+      "state_id": "state0",
+      "family": "separated",
+      "drops": [
+        2,
+        3
+      ],
+      "joint_gain": 8.464644161972915,
+      "joint_tau": 1.6182897927449394e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 5.839829257693266e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -3.681938131898312,
+        -14.440979670485296
+      ],
+      "projected_singleton_taus": [
+        1.580001096433401e-09,
+        1.6472015963991188e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        10.200868717397888,
+        10.188120386816866
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_01",
+      "state_id": "state1",
+      "family": "separated",
+      "drops": [
+        0,
+        1
+      ],
+      "joint_gain": 8.426100610772336,
+      "joint_tau": 1.5462249267146906e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 1.5943760725070893e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        2.765423835177394,
+        -5.849173190951754
+      ],
+      "projected_singleton_taus": [
+        1.5521345589688726e-09,
+        1.5447144702492334e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        8.62729398354494,
+        9.5756541365103
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_01",
+      "state_id": "state1",
+      "family": "separated",
+      "drops": [
+        0,
+        2
+      ],
+      "joint_gain": 8.999037926280154,
+      "joint_tau": 1.5460756954823382e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 1.743589318817886e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -9.896431345292457,
+        0.07555640392516566
+      ],
+      "projected_singleton_taus": [
+        1.5687410071610808e-09,
+        1.5325009322381293e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        8.62729398354494,
+        9.885005656988717
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_01",
+      "state_id": "state1",
+      "family": "separated",
+      "drops": [
+        0,
+        3
+      ],
+      "joint_gain": 9.168574216035994,
+      "joint_tau": 1.5547725969173013e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 4.499358648992157e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        1.4709756859212515,
+        -0.2315887158045013
+      ],
+      "projected_singleton_taus": [
+        1.555650889393196e-09,
+        1.5562951853995533e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        8.62729398354494,
+        9.657812495956883
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_01",
+      "state_id": "state1",
+      "family": "separated",
+      "drops": [
+        1,
+        2
+      ],
+      "joint_gain": 8.72708886476058,
+      "joint_tau": 1.5483979457192521e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 4.0822320616959986e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -0.7575584208069525,
+        1.4134882249642264
+      ],
+      "projected_singleton_taus": [
+        1.540381893791803e-09,
+        1.5354782418668546e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        9.5756541365103,
+        9.885005656988717
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_01",
+      "state_id": "state1",
+      "family": "separated",
+      "drops": [
+        1,
+        3
+      ],
+      "joint_gain": 8.572800425906085,
+      "joint_tau": 1.5478096692966457e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.526665664220878e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -9.28204591146421,
+        1.2957124499060002
+      ],
+      "projected_singleton_taus": [
+        1.5523782686475458e-09,
+        1.527957551012649e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        9.5756541365103,
+        9.657812495956883
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_01",
+      "state_id": "state1",
+      "family": "separated",
+      "drops": [
+        2,
+        3
+      ],
+      "joint_gain": 8.171610113750262,
+      "joint_tau": 1.5593571726289002e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 5.703405286171935e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -4.160108438365745,
+        -5.663822125061416
+      ],
+      "projected_singleton_taus": [
+        1.5243183576756379e-09,
+        1.568693658173434e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        9.885005656988717,
+        9.657812495956883
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state0",
+      "family": "near",
+      "drops": [
+        0,
+        1
+      ],
+      "joint_gain": 7.836454755401598,
+      "joint_tau": 1.408415624971451e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.4786905203241403e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -0.8881195270613456,
+        -2.919753710110971
+      ],
+      "projected_singleton_taus": [
+        1.4255012798911722e-09,
+        1.4192921921844326e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        8.049242601310914,
+        7.591326269488391
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state0",
+      "family": "near",
+      "drops": [
+        0,
+        2
+      ],
+      "joint_gain": 7.690756603261949,
+      "joint_tau": 1.4070907577287666e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.2737469699989007e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        3.1759051133230987,
+        -6.833234910078235
+      ],
+      "projected_singleton_taus": [
+        1.4142655572697038e-09,
+        1.4074179255609877e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        8.049242601310914,
+        8.063011645659762
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state0",
+      "family": "near",
+      "drops": [
+        0,
+        3
+      ],
+      "joint_gain": 7.451593229333364,
+      "joint_tau": 1.409364210093499e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.7340341449268734e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        1.4878666241476308,
+        -3.131447321615958
+      ],
+      "projected_singleton_taus": [
+        1.4287183585730141e-09,
+        1.4235607731724524e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        8.049242601310914,
+        8.644328131004539
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state0",
+      "family": "near",
+      "drops": [
+        1,
+        2
+      ],
+      "joint_gain": 8.041344251586617,
+      "joint_tau": 1.4162422657341953e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 1.0129373485877319e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -2.4159789602656185,
+        -29.444755648658973
+      ],
+      "projected_singleton_taus": [
+        1.4196304834750991e-09,
+        1.481388546773425e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        7.591326269488391,
+        8.063011645659762
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state0",
+      "family": "near",
+      "drops": [
+        1,
+        3
+      ],
+      "joint_gain": 7.9374179096863,
+      "joint_tau": 1.4087061397437088e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.5667463222747645e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -1.169734289157764,
+        -5.432008881184995
+      ],
+      "projected_singleton_taus": [
+        1.4159819622115792e-09,
+        1.4115482339566037e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        7.591326269488391,
+        8.644328131004539
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state0",
+      "family": "near",
+      "drops": [
+        2,
+        3
+      ],
+      "joint_gain": 7.505635835995567,
+      "joint_tau": 1.404157312163893e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.2811238204574444e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -24.081411803092372,
+        0.45464007065788203
+      ],
+      "projected_singleton_taus": [
+        1.4497853177835495e-09,
+        1.3945048161298325e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        8.063011645659762,
+        8.644328131004539
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state1",
+      "family": "near",
+      "drops": [
+        0,
+        1
+      ],
+      "joint_gain": 6.666343867526791,
+      "joint_tau": 1.201290835049693e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.5463828970288924e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        1.4782070249065382,
+        -0.11118776305020325
+      ],
+      "projected_singleton_taus": [
+        1.197444590766647e-09,
+        1.2072859789807383e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        7.669047662648417,
+        8.029627874750062
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state1",
+      "family": "near",
+      "drops": [
+        0,
+        2
+      ],
+      "joint_gain": 7.92495358491663,
+      "joint_tau": 1.1928914775413245e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.786651765961505e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        2.2489680619692125,
+        0.5556721535678122
+      ],
+      "projected_singleton_taus": [
+        1.1842277127442917e-09,
+        1.2067365098566015e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        7.669047662648417,
+        7.980887053768921
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state1",
+      "family": "near",
+      "drops": [
+        0,
+        3
+      ],
+      "joint_gain": 8.410930352851866,
+      "joint_tau": 1.1942192217581905e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.200648819742504e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        1.9846409579146858,
+        2.234479298062929
+      ],
+      "projected_singleton_taus": [
+        1.185011146489632e-09,
+        1.2042137090499331e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        7.669047662648417,
+        8.527625219577612
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state1",
+      "family": "near",
+      "drops": [
+        1,
+        2
+      ],
+      "joint_gain": 7.855541567369843,
+      "joint_tau": 1.192502858175939e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.6128901926377464e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -7.504062129011227,
+        -13.976152117033939
+      ],
+      "projected_singleton_taus": [
+        1.1801797758174146e-09,
+        1.221087324909432e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        8.029627874750062,
+        7.980887053768921
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state1",
+      "family": "near",
+      "drops": [
+        1,
+        3
+      ],
+      "joint_gain": 7.95272516151084,
+      "joint_tau": 1.1926886549584026e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.028584569069609e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -14.385585556522626,
+        -6.067753993793728
+      ],
+      "projected_singleton_taus": [
+        1.2545170764094992e-09,
+        1.1963444211994087e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        8.029627874750062,
+        8.527625219577612
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state1",
+      "family": "near",
+      "drops": [
+        2,
+        3
+      ],
+      "joint_gain": 8.204621940637347,
+      "joint_tau": 1.1937528221781126e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 5.690053695239489e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -14.895100671504961,
+        0.8317908305633241
+      ],
+      "projected_singleton_taus": [
+        1.209358634995505e-09,
+        1.2018174579445748e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        7.980887053768921,
+        8.527625219577612
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_09",
+      "state_id": "state0",
+      "family": "near",
+      "drops": [
+        0,
+        1
+      ],
+      "joint_gain": 14.805782911542348,
+      "joint_tau": 1.5488231176221207e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.8065816374567817e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        3.29030918907325,
+        -2.6560590940772575
+      ],
+      "projected_singleton_taus": [
+        1.5001089291455372e-09,
+        1.5346011361960341e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        15.404071382567087,
+        15.186568214780623
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_09",
+      "state_id": "state0",
+      "family": "near",
+      "drops": [
+        0,
+        2
+      ],
+      "joint_gain": 14.561734120292668,
+      "joint_tau": 1.5406801457226573e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.6558162302956915e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -3.6086518496345503,
+        9.59815146952917
+      ],
+      "projected_singleton_taus": [
+        1.5040667356751876e-09,
+        1.5054011725543453e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        15.404071382567087,
+        16.02588865991623
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_09",
+      "state_id": "state0",
+      "family": "near",
+      "drops": [
+        0,
+        3
+      ],
+      "joint_gain": 14.490655207028377,
+      "joint_tau": 1.5372731102071506e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.8593985522220017e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        6.520313655039684,
+        -8.635927372423694
+      ],
+      "projected_singleton_taus": [
+        1.5197348463131716e-09,
+        1.533829698363471e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        15.404071382567087,
+        16.50384389475596
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_09",
+      "state_id": "state0",
+      "family": "near",
+      "drops": [
+        1,
+        2
+      ],
+      "joint_gain": 15.155542237605413,
+      "joint_tau": 1.541270250433587e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 1.6721053867000616e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        4.5821416913756785,
+        9.29915122624988
+      ],
+      "projected_singleton_taus": [
+        1.5534765297828745e-09,
+        1.5070335801795546e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        15.186568214780623,
+        16.02588865991623
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_09",
+      "state_id": "state0",
+      "family": "near",
+      "drops": [
+        1,
+        3
+      ],
+      "joint_gain": 15.753768139869155,
+      "joint_tau": 1.5339480459376127e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 6.002740723440455e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -6.87779115867251,
+        -13.377397270758529
+      ],
+      "projected_singleton_taus": [
+        1.5283348353118169e-09,
+        1.5295256337488334e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        15.186568214780623,
+        16.50384389475596
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_09",
+      "state_id": "state0",
+      "family": "near",
+      "drops": [
+        2,
+        3
+      ],
+      "joint_gain": 14.699224699017217,
+      "joint_tau": 1.538312065503136e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 1.488628404028125e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        7.2730773252879555,
+        3.64973932796257
+      ],
+      "projected_singleton_taus": [
+        1.5237588715964872e-09,
+        1.528428984966305e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        16.02588865991623,
+        16.50384389475596
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_09",
+      "state_id": "state1",
+      "family": "near",
+      "drops": [
+        0,
+        1
+      ],
+      "joint_gain": 15.420623266160417,
+      "joint_tau": 1.4086153518611361e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 1.9927785421738697e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        2.12324960587537,
+        -3.593646803070836
+      ],
+      "projected_singleton_taus": [
+        1.3681255515034104e-09,
+        1.4252762393770588e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        15.96651817064017,
+        15.506841128494575
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_09",
+      "state_id": "state1",
+      "family": "near",
+      "drops": [
+        0,
+        2
+      ],
+      "joint_gain": 14.903424892078814,
+      "joint_tau": 1.4130329972027462e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 4.478122652303433e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        6.978456372898592,
+        8.43939074874256
+      ],
+      "projected_singleton_taus": [
+        1.3717656625258024e-09,
+        1.3703957825772119e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        15.96651817064017,
+        15.759072536805196
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_09",
+      "state_id": "state1",
+      "family": "near",
+      "drops": [
+        0,
+        3
+      ],
+      "joint_gain": 14.195196308137517,
+      "joint_tau": 1.4020978101462845e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 2.0858222678719667e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        3.751218657511772,
+        -5.994782373332178
+      ],
+      "projected_singleton_taus": [
+        1.38643105629063e-09,
+        1.4145808537552579e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        15.96651817064017,
+        16.23379395642439
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_09",
+      "state_id": "state1",
+      "family": "near",
+      "drops": [
+        1,
+        2
+      ],
+      "joint_gain": 15.07473372628598,
+      "joint_tau": 1.4080404460709839e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 4.2121016069954205e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        3.769820144234655,
+        3.3176386148171817
+      ],
+      "projected_singleton_taus": [
+        1.3705451474100968e-09,
+        1.3653361547304985e-09
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        15.506841128494575,
+        15.759072536805196
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_09",
+      "state_id": "state1",
+      "family": "near",
+      "drops": [
+        1,
+        3
+      ],
+      "joint_gain": 15.241282032517748,
+      "joint_tau": 1.4127155256187835e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.4515281663403823e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -5.5568107996133005,
+        -17.59889726843841
+      ],
+      "projected_singleton_taus": [
+        1.4063541078014022e-09,
+        1.3744651446750077e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        15.506841128494575,
+        16.23379395642439
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_09",
+      "state_id": "state1",
+      "family": "near",
+      "drops": [
+        2,
+        3
+      ],
+      "joint_gain": 15.700000416930317,
+      "joint_tau": 1.4177045598556229e-09,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 3.766900938670844e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -12.944439433128611,
+        -46.77142073016935
+      ],
+      "projected_singleton_taus": [
+        1.481557202074925e-09,
+        1.4937505828071899e-09
+      ],
+      "projected_columns_joint_only": true,
+      "same_drops_best_found_singleton_gains": [
+        15.759072536805196,
+        16.23379395642439
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_16",
+      "state_id": "state0",
+      "family": "high",
+      "drops": [
+        0,
+        1
+      ],
+      "joint_gain": 18.165724307659847,
+      "joint_tau": 9.409484541850627e-10,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 8.692207872717636e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        8.091925065862277,
+        1.6650519704434419
+      ],
+      "projected_singleton_taus": [
+        9.3091686803864e-10,
+        9.41976254845148e-10
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        19.050082670052944,
+        19.12265061664919
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_16",
+      "state_id": "state0",
+      "family": "high",
+      "drops": [
+        0,
+        2
+      ],
+      "joint_gain": 18.149568781172572,
+      "joint_tau": 9.40862672618981e-10,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 4.524552115922344e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        6.471754877196884,
+        10.613213299312072
+      ],
+      "projected_singleton_taus": [
+        9.7186173297066e-10,
+        9.234651958729969e-10
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        19.050082670052944,
+        18.88417247711759
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_16",
+      "state_id": "state0",
+      "family": "high",
+      "drops": [
+        0,
+        3
+      ],
+      "joint_gain": 17.345937599950492,
+      "joint_tau": 9.408385431044003e-10,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 7.991780741717445e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        14.424858256439272,
+        6.162534267953298
+      ],
+      "projected_singleton_taus": [
+        9.549179210221995e-10,
+        9.257891195591748e-10
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        19.050082670052944,
+        18.894355958092387
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_16",
+      "state_id": "state0",
+      "family": "high",
+      "drops": [
+        1,
+        2
+      ],
+      "joint_gain": 18.641362283090462,
+      "joint_tau": 9.303839031842668e-10,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 9.541512823527452e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -11.176164928658661,
+        12.769036298025007
+      ],
+      "projected_singleton_taus": [
+        9.70361856203123e-10,
+        9.310029953605312e-10
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        19.12265061664919,
+        18.88417247711759
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_16",
+      "state_id": "state0",
+      "family": "high",
+      "drops": [
+        1,
+        3
+      ],
+      "joint_gain": 18.37483849975444,
+      "joint_tau": 9.328288927795655e-10,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 7.684595913010594e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -0.02895470196276989,
+        1.9215227041029057
+      ],
+      "projected_singleton_taus": [
+        9.530781371322378e-10,
+        9.032418413001158e-10
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        19.12265061664919,
+        18.894355958092387
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_16",
+      "state_id": "state0",
+      "family": "high",
+      "drops": [
+        2,
+        3
+      ],
+      "joint_gain": 18.437902095304818,
+      "joint_tau": 9.383192896232766e-10,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 7.02403124782235e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        6.871837371954926,
+        10.125546514157564
+      ],
+      "projected_singleton_taus": [
+        9.166263964578112e-10,
+        9.297819137626142e-10
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        18.88417247711759,
+        18.894355958092387
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_16",
+      "state_id": "state1",
+      "family": "high",
+      "drops": [
+        0,
+        1
+      ],
+      "joint_gain": 18.22076939370691,
+      "joint_tau": 7.936581555936917e-10,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 1.2759418614492706e-15,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        10.890645179581194,
+        9.028475300720618
+      ],
+      "projected_singleton_taus": [
+        7.932897458609663e-10,
+        7.858727330754708e-10
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        19.234780335977238,
+        19.344371362104326
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_16",
+      "state_id": "state1",
+      "family": "high",
+      "drops": [
+        0,
+        2
+      ],
+      "joint_gain": 18.711291274941694,
+      "joint_tau": 8.030225740218758e-10,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 5.313956315967841e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        8.346972808527033,
+        0.8464569857186369
+      ],
+      "projected_singleton_taus": [
+        8.260389148017997e-10,
+        7.916509662860024e-10
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        19.234780335977238,
+        19.102269390523794
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_16",
+      "state_id": "state1",
+      "family": "high",
+      "drops": [
+        0,
+        3
+      ],
+      "joint_gain": 17.87621554786837,
+      "joint_tau": 8.046705115141569e-10,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 1.286869073922657e-15,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        13.305971969259808,
+        -29.49708691119562
+      ],
+      "projected_singleton_taus": [
+        7.889302816993108e-10,
+        8.94441478538628e-10
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        19.234780335977238,
+        19.161945235943918
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_16",
+      "state_id": "state1",
+      "family": "high",
+      "drops": [
+        1,
+        2
+      ],
+      "joint_gain": 18.94301519356024,
+      "joint_tau": 7.975703701693694e-10,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 7.996576940577809e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        -4.728054737648936,
+        12.412954489889467
+      ],
+      "projected_singleton_taus": [
+        8.217593143643821e-10,
+        7.997826277770605e-10
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        19.344371362104326,
+        19.102269390523794
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_16",
+      "state_id": "state1",
+      "family": "high",
+      "drops": [
+        1,
+        3
+      ],
+      "joint_gain": 18.816398109283725,
+      "joint_tau": 8.032371567564574e-10,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 4.491165489883866e-16,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        2.0706985997718186,
+        -2.285062501393335
+      ],
+      "projected_singleton_taus": [
+        8.237639301362655e-10,
+        7.801989250387759e-10
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        19.344371362104326,
+        19.161945235943918
+      ],
+      "joint_only": false
+    },
+    {
+      "object_id": "train_16",
+      "state_id": "state1",
+      "family": "high",
+      "drops": [
+        2,
+        3
+      ],
+      "joint_gain": 18.851764885203604,
+      "joint_tau": 7.95440469545506e-10,
+      "joint_valid": true,
+      "joint_normal_relative_residual": 1.2832889472626556e-15,
+      "joint_positive": true,
+      "projected_singleton_gains": [
+        13.540273029004156,
+        6.330845880648575
+      ],
+      "projected_singleton_taus": [
+        7.833070741200268e-10,
+        8.381743392452395e-10
+      ],
+      "projected_columns_joint_only": false,
+      "same_drops_best_found_singleton_gains": [
+        19.102269390523794,
+        19.161945235943918
+      ],
+      "joint_only": false
+    }
+  ],
+  "search": "4 starts x 20 steps x 6 registered pairs per development state; BEST_FOUND, not optimum",
+  "gate_singletons": "Same registered drops, independently best-found degree-2 singleton endpoints, exact original tau. Projecting an arbitrary joint QR frame into single columns is gauge dependent and is only a separate diagnostic.",
+  "singleton_projection_definition": "Each joint column projected to [own deleted column,Q]; the other deleted column is removed because it is retained in the singleton endpoint.",
+  "scope": "historically exposed development; true joint rank-2 endpoint. This diagnoses singleton scope, not a distribution or nonlinear imaging claim.",
+  "elapsed_seconds": 0.13926624995656312,
+  "locked_test_opened": false
+}

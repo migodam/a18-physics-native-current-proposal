@@ -290,7 +290,7 @@ class VerifiedExchange:
             if self._u is None:self._u=pack(s.r)+b.full_J_action(s.step_old)
             d=ep["step"]-s.step_old;z=b.full_J_action(d)
             g=directional_check(pack(s.r),self._u,z,s.step_old,d,s.ell,s.Lambda)
-            self._pending[action.action_id]=(W,LW,SW,np.concatenate((NR,NC),axis=1),z,tuple(keep),ep["step"])
+            self._pending[action.action_id]=(W,LW,SW,np.concatenate((NR,NC),axis=1),z,tuple(keep),ep["step"],g["gain"],g["tau"])
             return {"status":"OK","action_id":action.action_id,"accepted":g["gain"]>g["tau"],**g,
                     "step":ep["step"],"new_U":W,"normal_relative_residual":ep["normal_relative_residual"],"stability":ep["stability"],
                     "singular_core_fallback":not stability(s.D[np.ix_(keep,keep)])["stable"],"cost":b.receipt.delta(before),"wall_seconds":time.perf_counter()-t}
@@ -301,7 +301,9 @@ class VerifiedExchange:
         if self.state.accepted_count>=3:raise ValueError("accept cap")
         s=self.state
         if result["action_id"] not in self._pending:raise ValueError("result is not from this verifier")
-        W,LW,SW,NB,z,keep,step=self._pending[result["action_id"]]
+        W,LW,SW,NB,z,keep,step,gain,tau=self._pending[result["action_id"]]
+        if gain<=tau or result.get("gain")!=gain or result.get("tau")!=tau:
+            raise ValueError("acceptance must match the verifier's original positive finite gain")
         modes=tuple(s.receiver_mode_ids[i] for i in keep)+(-1,)*(s.U.shape[1]-len(keep))
         protected=tuple(j for j,i in enumerate(keep) if i in s.protected_slots)
         new=self.backend.freeze_state(W,object_id=s.object_id,state_id=s.state_id,split=s.split,accepted_count=s.accepted_count+1,receiver_mode_ids=modes,protected_slots=protected,_paid_maps=(LW,SW,NB))
