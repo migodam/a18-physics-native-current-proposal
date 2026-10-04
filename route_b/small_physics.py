@@ -6,7 +6,7 @@ from shared_backend.core import pack,endpoint_from_maps
 
 class SmallPhysics:
     def __init__(self,backend,state,Q,Jfull,device="cpu"):
-        self.state=state;self.Q=Q;self.Z=np.column_stack((state.U,Q));self.k=state.U.shape[1];self.r=Q.shape[1];self.device=device
+        self.state=state;self.Q=Q;self.Z=np.column_stack((state.U,Q));self.k=state.U.shape[1];self.rank=Q.shape[1];self.device=device
         before=backend.receipt.snapshot();t=time.perf_counter()
         LZ=backend.apply_L(self.Z);O=backend.apply_S(self.Z);N=backend.project_B(self.Z);A=self.Z.conj().T@LZ
         self.numpy={"A":A,"O":O,"N":N,"Jfull":np.asarray(Jfull,float),"r":pack(state.r),"ell":state.ell,"Lambda":state.Lambda,"old_step":state.step_old}
@@ -15,9 +15,9 @@ class SmallPhysics:
         self.u=self.r+self.Jfull@self.old_step;self.h=self.ell+self.Lambda@self.old_step
     def evaluate(self,T,drops):
         """Batch normalized singleton or Stiefel rank-two joint coordinates."""
-        drops=tuple(drops);batch=T.shape[0];rank=len(drops);n=self.k+self.r
+        drops=tuple(drops);batch=T.shape[0];rank=len(drops);n=self.k+self.rank
         if T.ndim==2:T=T[:,:,None]
-        if T.shape[1:]!=(self.r+rank,rank):raise ValueError("coefficient shape")
+        if T.shape[1:]!=(self.rank+rank,rank):raise ValueError("coefficient shape")
         keep=[i for i in range(self.k) if i not in drops]
         E=torch.zeros((batch,n,self.k),device=self.device,dtype=torch.complex128)
         for j,i in enumerate(keep):E[:,i,j]=1
@@ -46,7 +46,7 @@ class SmallPhysics:
 
 def teacher_best(cache,drops,*,starts=8,steps=40,seed=1801,deadline=None):
     """Bounded Adam + sphere/Stiefel retraction; every result is best-found."""
-    start=time.perf_counter();rank=len(drops);dim=cache.r+rank;rng=np.random.default_rng(seed)
+    start=time.perf_counter();rank=len(drops);dim=cache.rank+rank;rng=np.random.default_rng(seed)
     c=(rng.normal(size=(starts,dim,rank))+1j*rng.normal(size=(starts,dim,rank)))
     c[0]=0;c[0,:rank]=np.eye(rank)
     retract=lambda x:torch.linalg.qr(x,mode="reduced")[0] if rank>1 else x/torch.linalg.vector_norm(x,dim=1,keepdim=True).clamp_min(1e-300)
