@@ -39,12 +39,14 @@ POLICIES=tuple(itertools.product(range(3),range(4),(False,True),range(2)))
 
 def select_top4(logits,noop,coefficients,state,basis,K=4):
     """No-op highest => empty; stable legal unique records only, no filling."""
-    if not np.isfinite(logits).all() or not np.isfinite(noop):return []
-    if noop>=float(np.max(logits,initial=-np.inf)):return []
+    if not np.isfinite(noop):return []
+    legal_logits=np.where(np.isfinite(logits),logits,-np.inf).copy()
+    for drop in state.protected_slots:legal_logits[drop]=-np.inf
+    if noop>=float(np.max(legal_logits,initial=-np.inf)):return []
     records=[];seen=[]
     order=sorted(np.ndindex(logits.shape),key=lambda i:(-float(logits[i]),i))
     for drop,mode in order:
-        if drop in state.protected_slots:continue
+        if drop in state.protected_slots or not np.isfinite(logits[drop,mode]):continue
         t=np.asarray(coefficients[drop,mode],complex)[:1+basis.Q.shape[1]];norm=la.norm(t)
         if not np.isfinite(t).all() or norm<1e-8:continue
         t/=norm
