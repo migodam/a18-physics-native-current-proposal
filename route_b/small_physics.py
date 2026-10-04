@@ -49,11 +49,15 @@ class SmallPhysics:
         a=self.numpy;d=step[0].cpu().numpy()-a['old_step'];check=directional_check(a['r'],a['r']+a['Jfull']@a['old_step'],a['Jfull']@d,a['old_step'],d,a['ell'],a['Lambda'])
         return {**check,'valid':bool(valid[0]),'normal_relative_residual':float(nr[0]),'step':step[0].cpu().numpy()}
 
-def teacher_best(cache,drops,*,starts=8,steps=40,seed=1801,deadline=None):
+def teacher_best(cache,drops,*,starts=8,steps=40,seed=1801,deadline=None,initials=None):
     """Bounded Adam + sphere/Stiefel retraction; every result is best-found."""
     start=time.perf_counter();rank=len(drops);dim=cache.rank+rank;rng=np.random.default_rng(seed)
     c=(rng.normal(size=(starts,dim,rank))+1j*rng.normal(size=(starts,dim,rank)))
     c[0]=0;c[0,:rank]=np.eye(rank)
+    for j,value in enumerate(initials or [],1):
+        if j>=starts:break
+        v=np.asarray(value).reshape(dim,rank)
+        if np.isfinite(v).all() and np.linalg.norm(v)>1e-8:c[j]=v
     retract=lambda x:torch.linalg.qr(x,mode="reduced")[0] if rank>1 else x/torch.linalg.vector_norm(x,dim=1,keepdim=True).clamp_min(1e-300)
     T=torch.nn.Parameter(retract(torch.as_tensor(c,dtype=torch.complex128,device=cache.device)))
     optimizer=torch.optim.Adam([T],lr=.03);best=np.zeros(starts);bestT=T.detach().clone();failures=0
@@ -75,7 +79,7 @@ def teacher_best(cache,drops,*,starts=8,steps=40,seed=1801,deadline=None):
         t=bestT[j].detach().cpu().numpy();g=float(best[j])
         check=cache.numpy_metrics(t,drops)
         if not check['valid'] or check['gain']<=check['tau']:continue
-        if rank==1 and any(abs(np.vdot(np.asarray(m["coefficients"]),t))>=.9 for m in modes):continue
+        if rank==1 and any(abs(np.vdot(np.asarray(m["coefficients"]),t))**2>=.9 for m in modes):continue
         modes.append({"gain":check['gain'],"tau":check['tau'],"coefficients":t,"start_index":int(j)})
         if len(modes)==(2 if rank==1 else 1):break
     return {"best_gain":max([m['gain'] for m in modes],default=0.),"raw_best_gain":float(best.max(initial=0)),"modes":modes,"starts":starts,"steps":steps,"wall_seconds":time.perf_counter()-start,"invalid_backtracks":failures,"status":"BEST_FOUND","global_optimality":False,"drops":list(drops),"positive_rule":"valid and finite gain > original A17 tau"}
