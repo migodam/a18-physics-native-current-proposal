@@ -1,0 +1,76 @@
+[
+  {
+    "id": "A-L01",
+    "claim": "Learning induced current is established prior art.",
+    "paper_id": "46d4482c011d514c283d9589b30d2f03c1294b43",
+    "url": "https://arxiv.org/pdf/2209.03567v2",
+    "evidence": "SOM-Net alternates learned current and analytical permittivity updates, ending with full current estimation.",
+    "evidence_tier": "A",
+    "locator": "PDF pages 1-4, Section II.B and Algorithm 1",
+    "relationship": "qualifies",
+    "study_context": "2D TM; supervised current/field/permittivity losses.",
+    "confidence": "high for the inspected method; not reproduced"
+  },
+  {
+    "id": "A-L02",
+    "claim": "The inspected SOM-Net includes deterministic-current preprocessing.",
+    "paper_id": "46d4482c011d514c283d9589b30d2f03c1294b43",
+    "url": "https://arxiv.org/pdf/2209.03567v2",
+    "evidence": "SVD-derived current and BP permittivity initialize its input.",
+    "evidence_tier": "A",
+    "locator": "PDF pages 2-4, Section II and Algorithm 1",
+    "relationship": "contextualizes",
+    "study_context": "Source reconstruction timing is not comparable to this Windows pilot.",
+    "confidence": "high for preprocessing; no transferred speed claim"
+  },
+  {
+    "id": "A-L03",
+    "claim": "Route A has a different implemented output and verification target.",
+    "paper_id": "46d4482c011d514c283d9589b30d2f03c1294b43",
+    "url": "https://arxiv.org/pdf/2209.03567v2",
+    "evidence": "Route A returns selected recipe/drop IDs and uses the shared original finite-utility verifier; SOM-Net predicts full currents.",
+    "evidence_tier": "A plus local implementation",
+    "locator": "route_a/INTERFACE_CONTRACT.md; SOM-Net II.B",
+    "relationship": "analyst_inference",
+    "study_context": "Task distinction, not superiority or global novelty.",
+    "confidence": "high for distinction; novelty unestablished"
+  },
+  {
+    "id": "A-C01",
+    "claim": "Lazy descriptors preserve useful actions at lower complete cost.",
+    "paper_id": null,
+    "evidence_tier": "REQUIRES_PHYSICAL_G1_G3",
+    "relationship": "unproven_at_implementation_snapshot",
+    "required_evidence": [
+      "common/original oracle and near-contact coverage",
+      "complete matched acquisition/incremental costs",
+      "same-budget analytic control"
+    ],
+    "confidence": "pending unified physical preflight"
+  },
+  {
+    "id": "A-C02",
+    "claim": "NN adds value beyond nonneural controls.",
+    "paper_id": null,
+    "evidence_tier": "REQUIRES_PHYSICAL_G2_G3_G6",
+    "relationship": "unproven_at_implementation_snapshot",
+    "required_evidence": [
+      "strongest control below .95 before training",
+      "practical validation gain or K2 cost branch",
+      "frozen object test with 2000 paired resamples"
+    ],
+    "confidence": "no training/blind-test evidence here"
+  },
+  {
+    "id": "A-C03",
+    "claim": "Physics edges or nonlinear imaging improve outcomes.",
+    "paper_id": null,
+    "evidence_tier": "REQUIRES_G5_G8",
+    "relationship": "NOT_RUN",
+    "required_evidence": [
+      "MLP/geometry/shuffled/physics controls after G3",
+      "sole-winner nonlinear transfer"
+    ],
+    "confidence": "no architecture/imaging claim"
+  }
+]

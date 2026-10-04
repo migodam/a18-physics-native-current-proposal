@@ -173,5 +173,16 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(len(actions),4);self.assertEqual(len({a.recipe_id for a in actions}),4)
         self.assertTrue(all(a.drop_index==1 for a in actions))
 
+    def test_known_receiver_noop_mask_preserves_first_useful_mode_without_projection(self):
+        s,b,_=fixture();rng=np.random.default_rng(8)
+        q=rng.normal(size=24)+1j*rng.normal(size=24);q-=s.U@(s.U.conj().T@q);q/=np.linalg.norm(q)
+        s.receiver_geometry_modes=np.column_stack((s.U,q))
+        f,recipes,audit=extract(s,b)
+        receiver=[(r.id,f.node_mask[j]) for j,r in enumerate(recipes) if r.family=="receiver"]
+        self.assertEqual(receiver,[("A1:receiver:000",False),("A1:receiver:001",False),
+                                   ("A1:receiver:002",False),("A1:receiver:003",True)])
+        self.assertEqual(analytic_actions(f)[0].recipe_id,"A1:receiver:003")
+        self.assertEqual(audit.calls["raw_currents"],0);self.assertEqual(b.calls,0)
+
 
 if __name__=="__main__":unittest.main()

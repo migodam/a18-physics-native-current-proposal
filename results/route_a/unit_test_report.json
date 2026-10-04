@@ -1,13 +1,13 @@
 {
   "scope": "synthetic_algebra_and_contract_tests_only",
-  "tests": 63,
+  "tests": 64,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
   "status": "PASS",
-  "wall_seconds": 0.32655695802532136,
+  "wall_seconds": 0.4993439170066267,
   "parameters": 34306,
-  "feature_schema_hash": "3a63f3bdd36f259b9a41cafbf4c5aa80f88691becdfa8cbe3bb149b7957f97e9",
+  "feature_schema_hash": "2a4c849e74a8d75d33aa67d4598e0ecd8f910b05e7397240b298c4d6c215cac8",
   "recipe_schema_hash": "6fa4488b53ed81e604bee423aabb3339a4e1bff728911592afad918e46eadeed",
   "physics_gate_pass": false,
   "NN_jobs_launched": 0

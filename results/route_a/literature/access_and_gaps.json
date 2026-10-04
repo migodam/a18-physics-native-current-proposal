@@ -1,0 +1,34 @@
+{
+  "search_date": "2026-10-04",
+  "transport": "scholarqa-cli collect and verify",
+  "search_status": "INCOMPLETE_RATE_LIMITED",
+  "failed_requests": 4,
+  "failed_status": 429,
+  "candidate_papers_from_collect": 0,
+  "identities_verified": 3,
+  "verification_scope": "Bibliographic identity only; claim support must be checked against the retrieved evidence.",
+  "sources": [
+    {
+      "doi": "10.1109/TGRS.2022.3217162",
+      "access": "arXiv v2 full PDF inspected",
+      "url": "https://arxiv.org/pdf/2209.03567v2",
+      "local_pdf_path": ".runtime/literature/somnet_2209.03567v2.pdf",
+      "local_sha256": "0b8d93737dc7a02051b6258083479fa6d3fe99eaad6b6964eacad3b37cdb4683",
+      "bytes": 3444711,
+      "pages_from_web_parse": 17,
+      "redistributed_in_git_or_release": false
+    },
+    {
+      "doi": "10.1109/TAP.2019.2922779",
+      "access": "verified metadata only in this audit",
+      "full_text_gap": "Author PDF 400 timeout; prior workspace access does not substitute for fresh inspected text"
+    },
+    {
+      "doi": "10.3390/s24144496",
+      "access": "verified metadata only in this audit",
+      "full_text_gap": "PMC challenge; earlier publisher429; no architecture inference from title"
+    }
+  ],
+  "exhaustive": false,
+  "global_novelty_certified": false
+}

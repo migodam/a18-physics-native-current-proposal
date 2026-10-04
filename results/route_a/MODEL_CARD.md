@@ -2,7 +2,7 @@
 
 Implementation snapshot: **IMPLEMENTED_UNTRAINED; SCIENTIFIC_DECISION_PENDING_INTEGRATOR**. No trained checkpoint or neural Maxwell result exists in this snapshot. Consult the unified final gate decision for later physical results and publication status.
 
-Policy: up to four lazy recipe/drop pairs or no-op for the existing frozen real-material endpoint. Family caps16/32/32/24/18 total at most122; smaller or unsupported banks are recorded honestly. Features204/32/32 contain no teacher, full current dictionary, atom–seed projections or anchor/workspace. Six O/P/M seeds and selected feedback powers are charged. Receiver geometry preprocessing is separate.
+Policy: up to four lazy recipe/drop pairs or no-op for the existing frozen real-material endpoint. Family caps16/32/32/24/18 total at most122; smaller or unsupported banks are recorded honestly. Features204/32/32 contain no teacher, full current dictionary, atom–seed projections or anchor/workspace. Six O/P/M seeds and selected feedback powers are charged. Receiver geometry preprocessing is separate. Known receiver modes already represented in current U are masked for both learned and analytic proposals, using receiver_mode_ids without atom projections. Pre-fix analytic results remain weak controls; their later recomputation requires the new feature schema hash.
 
 Network: node236→64→64 with GELU/LayerNorm, masked mean/max pool128, joint224→64→1 and no-op128→1. **34,306 trainable parameters.** AdamW lr1e-3, weight decay1e-5, batch16, maximum40epochs, clip1, seed1801, validation every5epochs and epoch10/patience10 stopping. J1 ceiling20minutes in the shared queue. Route A has launched no neural training.
 
