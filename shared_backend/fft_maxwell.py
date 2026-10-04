@@ -75,7 +75,7 @@ def backend_from_arrays(a,*,source_sha256="generated",rtol=1e-10,device="cpu",lo
         holder["b"].receipt.add("full_primal_illumination_rhs",rhs.shape[1])
         return out[:,0] if one else out
     def jaction(z):
-        rhs=inj(z);one=z.ndim==1;rhs=rhs[:,:,None] if one else rhs;out=np.empty((P,m,rhs.shape[2]),complex)
+        rhs=holder['b'].apply_B(z);one=z.ndim==1;rhs=rhs[:,:,None] if one else rhs;out=np.empty((P,m,rhs.shape[2]),complex)
         for i in range(P):
             for j in range(rhs.shape[2]):
                 v=rhs[:,i,j];op=LinearOperator((n,n),matvec=lambda c:holder["b"].apply_L(c),dtype=complex);t=time.perf_counter()
@@ -83,7 +83,7 @@ def backend_from_arrays(a,*,source_sha256="generated",rtol=1e-10,device="cpu",lo
                 rr=la.norm(holder["b"].apply_L(c)-v)/max(la.norm(v),1e-300)
                 solve_records.append({"info":int(info),"relative_residual":float(rr),"wall_seconds":time.perf_counter()-t})
                 if info or rr>max(5*rtol,1e-12):raise RuntimeError("FULL_J_SOLVE_FAILED")
-                out[i,:,j]=S@c
+                out[i,:,j]=holder['b'].apply_S(c)
         out=pack(out);return out[:,0] if one else out
     geom={"receivers":7*fibonacci(8),"channel_ids":tuple(range(m)),"historical_anchor_loaded":False,"current_dof":n}
     state_hash=hashlib.sha256("".join(array_hash(v) for k,v in sorted(a.items())).encode()).hexdigest()

@@ -1,0 +1,11 @@
+{
+  "job": "T1",
+  "status": "FAILED",
+  "error_type": "TypeError",
+  "error": "numpy bool is not JSON serializable in terminal summary",
+  "scientific_results_complete": true,
+  "repeated_physics": false,
+  "timing_rows": 240,
+  "source_commit": "dfdadcf",
+  "repair": "use jsonable for terminal print; reaggregate object statistics from preserved rows"
+}

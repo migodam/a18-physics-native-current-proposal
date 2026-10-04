@@ -41,6 +41,7 @@ def main():
     parser.add_argument("--job", required=True)
     parser.add_argument("--receipt-dir", default="results/gpu_jobs")
     parser.add_argument("--lock-dir", default=".gpu.lock")
+    parser.add_argument("--compute", choices=("cpu", "cuda"), default=None)
     parser.add_argument("command", nargs=argparse.REMAINDER)
     args = parser.parse_args()
     cmd = args.command[1:] if args.command[:1] == ["--"] else args.command
@@ -102,7 +103,8 @@ def main():
         if start is not None:
             row = {"job": args.job, "bucket": bucket, "status": status,
                    "returncode": returncode, "occupied_seconds": time.perf_counter() - start,
-                   "gpu_occupied_seconds": 0. if bucket == "teacher" else time.perf_counter() - start,
+                   "gpu_occupied_seconds": 0. if args.compute == "cpu" or (args.compute is None and bucket == "teacher") else time.perf_counter() - start,
+                   "compute": args.compute or ("cpu" if bucket == "teacher" else "cuda"),
                    "utc": datetime.now(timezone.utc).isoformat(), "command": cmd,
                    "note": "Occupied wall, not measured GPU kernel utilization; physics gates authorized by integrator"}
             with ledger.open("a", encoding="utf-8") as f:

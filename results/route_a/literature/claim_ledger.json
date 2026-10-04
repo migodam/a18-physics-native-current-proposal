@@ -40,26 +40,34 @@
     "claim": "Lazy descriptors preserve useful actions at lower complete cost.",
     "paper_id": null,
     "evidence_tier": "REQUIRES_PHYSICAL_G1_G3",
-    "relationship": "unproven_at_implementation_snapshot",
+    "relationship": "REGISTERED_BANK_FAILS_G1A_ON_EXPOSED_DEVELOPMENT",
     "required_evidence": [
       "common/original oracle and near-contact coverage",
       "complete matched acquisition/incremental costs",
       "same-budget analytic control"
     ],
-    "confidence": "pending unified physical preflight"
+    "confidence": "high for the measured registered-bank opportunity ceiling; no universal impossibility claim",
+    "empirical_evidence": {
+      "path": "results/route_a/preflight/FINAL_A_REVIEW.json",
+      "macro_common": 0.6182445286057869,
+      "near_common": 0.5187316376545128,
+      "macro_original": 0.9544209053846279,
+      "cost_status": "PASS_COLD_ACQUISITION; full warm Tinc NOT_MEASURED",
+      "strongest_legal_control_macro": 0.3745985431188596
+    }
   },
   {
     "id": "A-C02",
     "claim": "NN adds value beyond nonneural controls.",
     "paper_id": null,
     "evidence_tier": "REQUIRES_PHYSICAL_G2_G3_G6",
-    "relationship": "unproven_at_implementation_snapshot",
+    "relationship": "NOT_TESTED_G1A_FAILED",
     "required_evidence": [
       "strongest control below .95 before training",
       "practical validation gain or K2 cost branch",
       "frozen object test with 2000 paired resamples"
     ],
-    "confidence": "no training/blind-test evidence here"
+    "confidence": "A NN was not trained; no learned benefit or learned failure is established"
   },
   {
     "id": "A-C03",

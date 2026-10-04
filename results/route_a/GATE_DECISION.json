@@ -1,0 +1,89 @@
+{
+  "schema": "a18.route_a.gate_decision.v1",
+  "scientific_status": "NO_GO_A1_TESTED_BANK_REPRESENTATION",
+  "evidence_completion_status": "HOLD_MISSING_SCREENING_ACTION_TRACES_FULL_WARM_TIMING_AND_A0_REPLAY",
+  "publication_status": "NOT_YET_VERIFIED",
+  "scope": "Six exposed development objects, two states each; source-preserving full-vector Maxwell pilot; no locked-test generalization",
+  "aggregation": "Cov(object)=sum(state_gain)/sum(state_reference); macro=equal mean across positive complete objects",
+  "gates": {
+    "G0": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "results/shared/G0.json",
+          "sha256": "7629b6be1d1238b7d83416f99d410d2d620489e7c388de34289f1f79259d6c54"
+        },
+        {
+          "path": "results/shared/G0_FFT_cpu.json",
+          "sha256": "24837fee08cd62d908a1d54dfc3ea6a764116a15d32a4e46f19d7b8e39f0c4b7"
+        },
+        {
+          "path": "results/shared/G0_FFT.json",
+          "sha256": "23dd43040d50e68003043a32727baecc5ce3b8c7592d4ce4c9d82ccbd0606256"
+        }
+      ]
+    },
+    "G1A": {
+      "status": "FAIL",
+      "representation_status": "FAIL",
+      "macro": 0.6182445286057869,
+      "near_contact": 0.5187316376545128,
+      "macro_min": 0.85,
+      "near_contact_min": 0.7,
+      "acquisition_status": "PASS",
+      "acquisition_ratio_median": 0.03125749944743711,
+      "acquisition_ratio_p95": 0.03527583119419759
+    },
+    "G2": "NOT_RUN_G1A_FAILED",
+    "G3": "NOT_RUN_NO_A_NN",
+    "G5": "NOT_RUN_G1A_FAILED",
+    "G6": "NOT_RUN_NO_A_LOCKED_TEST",
+    "G8": "NOT_RUN_NO_A_WINNER"
+  },
+  "reference": {
+    "common": "audited singleton union; continuous BEST_FOUND is not global optimum",
+    "original_dictionary_macro": 0.9544209053846279,
+    "original_dictionary_near": 0.9299031119029997
+  },
+  "missing": {
+    "full_warm_Tinc": "NOT_MEASURED; warm proposal memo cost is separate",
+    "A0_historical_ID_gain_replay": "NOT_RUN",
+    "per_success_action_details": "NOT_RECORDED; ACTION_LEDGER.jsonl records explicit trace gaps"
+  },
+  "training_authorized": false,
+  "A_NN_jobs_launched": 0,
+  "checkpoint": null,
+  "A_parameter_count": 34306,
+  "locked_test_accessed": false,
+  "new_cohort_A_training": "NOT_RUN_G1A_FAILED",
+  "review": "results/route_a/preflight/FINAL_A_REVIEW.json",
+  "review_sha256": "d4a89b5980e652921c4fad0462e705d1155b9367e6a6b9ca30a8c32bef8480aa",
+  "reason": "At each tested initial frozen state, a selector cannot exceed the enumerated best singleton opportunity in its registered bank. Cost improvements cannot recover this failed initial-state representation threshold; sequential transfer remains untested.",
+  "global_impossibility_or_novelty_claim": false,
+  "numerical_floor_statistics": {
+    "zero_reference_states": 0,
+    "missing_reference_states": 0,
+    "reference_tiny64_floor_states": 0,
+    "raw_action_floor_counts": "NOT_MEASURED_FROM_T0_AGGREGATES; full action ledger is separate",
+    "training_loss_floor_counts": "NOT_RUN_NO_TRAINING"
+  },
+  "config_sha256": "c957e7148c78ec90b0b31f90aa042ed745b67febf9078ea0405f6099ee5eeb55",
+  "evidence_scope": "real_vector_maxwell",
+  "screening_process_failure": {
+    "status": "FAILED_AFTER_VALID_ATOMIC_RESULT_WRITE",
+    "error": "terminal json.dumps of numpy.bool_; 240 physical timing rows and all results had already been atomically written",
+    "results_valid_after_atomic_write": true,
+    "physics_repeated": false
+  },
+  "strongest_legal_analytic": {
+    "policy_id": 6,
+    "policy": {
+      "order": 1,
+      "degree": 0,
+      "drop_rule": 0
+    },
+    "macro_common": 0.3745985431188596,
+    "near_common": 0.22624285076513334,
+    "scope": "selected on exposed development; not unbiased validation"
+  }
+}
