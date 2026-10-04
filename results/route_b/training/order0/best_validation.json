@@ -1,0 +1,742 @@
+{
+  "macro": 0.34304607932764586,
+  "near": 0.3669497857252024,
+  "rows": [
+    {
+      "object_id": "pilot_validation_00",
+      "state_id": "state0",
+      "family": "separated",
+      "union_reference": 7.477058187920475,
+      "gain": 1.537402245829339,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": -0.6287004844342116,
+          "tau": 9.94206324972506e-10,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 8.761374717484128e-16
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": -4.310829701041879,
+          "tau": 1.0039548999044897e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 2.0193548872822695e-15
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": -1.948502798692281,
+          "tau": 9.786694870612913e-10,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.3443175388323287e-15
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": 1.537402245829339,
+          "tau": 9.855389056255736e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 7.337850264195182e-16
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_00",
+      "state_id": "state1",
+      "family": "separated",
+      "union_reference": 7.514684912544339,
+      "gain": 3.0010555862387767,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": 1.3922157902693528,
+          "tau": 9.85736867668044e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 8.252560960332394e-16
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": -1.4256089722365364,
+          "tau": 9.920861446535715e-10,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 9.65187757527008e-16
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": 1.360222018900685,
+          "tau": 9.625223891233358e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 7.474326491986162e-16
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": 3.0010555862387767,
+          "tau": 9.73593658157942e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 1.319230184197633e-15
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_01",
+      "state_id": "state0",
+      "family": "separated",
+      "union_reference": 3.7177282394432867,
+      "gain": 0.0,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": -6.580597327882699,
+          "tau": 1.415717005093417e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 8.813147721459527e-16
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": -12.540488445705169,
+          "tau": 1.4430888987260878e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.4246538356792748e-15
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": -3.7353917900003792,
+          "tau": 1.4081139533105073e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 2.3472863627088704e-15
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": -4.5608881569299955,
+          "tau": 1.4155659550043127e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.113111634412185e-15
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_01",
+      "state_id": "state1",
+      "family": "separated",
+      "union_reference": 3.4821277934876935,
+      "gain": 0.0,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": -6.081589121514462,
+          "tau": 1.2855030656559547e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.1112185888768922e-15
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": -11.852202280780551,
+          "tau": 1.3120925695920486e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 2.3792995838672883e-15
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": -3.45188415073024,
+          "tau": 1.2785337710309317e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 3.4745503795791427e-15
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": -4.264800238539774,
+          "tau": 1.2856878387658513e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.036915633571351e-15
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_02",
+      "state_id": "state0",
+      "family": "separated",
+      "union_reference": 9.767343684898476,
+      "gain": 0.0,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": -4.6624135034188985,
+          "tau": 2.0005737642115103e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.4046038190572476e-15
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": -0.8940871206869438,
+          "tau": 1.999970823036847e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 7.926207220913509e-16
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": -2.937626506527163,
+          "tau": 2.0152515900972234e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 7.332212816178879e-16
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": -11.387176355750018,
+          "tau": 2.0222683934645674e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.3393500292200567e-15
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_02",
+      "state_id": "state1",
+      "family": "separated",
+      "union_reference": 9.892698520975335,
+      "gain": 0.0,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": -3.357146070242509,
+          "tau": 1.8884805090949115e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.9502069067654715e-15
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": -0.5201931697512522,
+          "tau": 1.8907529988121348e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 8.717976186763223e-16
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": -1.9499186048921104,
+          "tau": 1.9046469159174492e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 8.345960073456594e-16
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": -9.620647728323007,
+          "tau": 1.908987300701237e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 5.93953471926793e-16
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_03",
+      "state_id": "state0",
+      "family": "near",
+      "union_reference": 16.263165660187372,
+      "gain": 5.862840483820715,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": 4.636008751493032,
+          "tau": 1.2119039603160723e-09,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 1.186596980089014e-15
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": 5.862840483820715,
+          "tau": 1.206215339262455e-09,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 4.304942195785028e-16
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": -8.05308814633749,
+          "tau": 1.2266571806506223e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.1795794948035993e-15
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": -2.0983223617199354,
+          "tau": 1.2066755525400089e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.5670112602442124e-15
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_03",
+      "state_id": "state1",
+      "family": "near",
+      "union_reference": 15.911571383774223,
+      "gain": 6.941308238602753,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": 5.151191808614704,
+          "tau": 1.0808178715594642e-09,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 8.440523039848989e-16
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": 6.941308238602753,
+          "tau": 1.075515209053348e-09,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 1.4561675113910898e-15
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": -6.899615743281517,
+          "tau": 1.1025727867731228e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.3130538595224698e-15
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": -0.44017864205070445,
+          "tau": 1.0775968897097031e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 9.982406221378992e-16
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_04",
+      "state_id": "state0",
+      "family": "near",
+      "union_reference": 23.924541372159354,
+      "gain": 16.499445060308005,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": -6.394003810095941,
+          "tau": 8.711839262215414e-10,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.4987005535063175e-15
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": 16.499445060308005,
+          "tau": 9.011478840785348e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 1.3324584421216947e-15
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": 15.164488370791593,
+          "tau": 8.842402169067287e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 7.911991265045266e-16
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": -6.467593711944659,
+          "tau": 8.989505877235379e-10,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.784895330410042e-15
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_04",
+      "state_id": "state1",
+      "family": "near",
+      "union_reference": 23.888128856596957,
+      "gain": 16.122926858128725,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": -7.627527202523739,
+          "tau": 8.439786884075601e-10,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.3907179546470256e-15
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": 16.122926858128725,
+          "tau": 8.65226064373377e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 1.338721900309571e-15
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": 14.778272530762035,
+          "tau": 8.527038991177412e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 8.678076092917285e-16
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": -8.330173777665644,
+          "tau": 8.688013321719364e-10,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 9.738575687864924e-16
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_05",
+      "state_id": "state0",
+      "family": "near",
+      "union_reference": 13.998899109132793,
+      "gain": 0.0,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": -8.37120525017216,
+          "tau": 1.6524571874247022e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.0217184587656765e-15
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": -7.489824254632416,
+          "tau": 1.6353810140338279e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 3.323092785232595e-15
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": -0.2276221697059217,
+          "tau": 1.631054737516069e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 8.7719441163977e-16
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": -3.9992019689833382,
+          "tau": 1.6625989317980458e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.6874697755632662e-15
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_05",
+      "state_id": "state1",
+      "family": "near",
+      "union_reference": 13.613851741879632,
+      "gain": 0.568745876364692,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": -4.221184945694221,
+          "tau": 1.5306386579437661e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.1294265078271571e-15
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": -4.222718385571709,
+          "tau": 1.514418165080913e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 1.2688214622270436e-15
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": 0.568745876364692,
+          "tau": 1.5219538294134419e-09,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 3.6755383124796266e-15
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": -1.370394738928948,
+          "tau": 1.545720899650245e-09,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 8.949192442139268e-16
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_06",
+      "state_id": "state0",
+      "family": "high",
+      "union_reference": 63.891641107924,
+      "gain": 54.17330149456477,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": 50.051812732621535,
+          "tau": 9.818438404638772e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 2.1029289018862037e-15
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": 52.70720044635141,
+          "tau": 9.518582254170462e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 2.2247452153615825e-15
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": 48.264983658954336,
+          "tau": 9.171601732205362e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 1.6222518360214975e-15
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": 54.17330149456477,
+          "tau": 9.37070988050668e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 3.0871952091175717e-15
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_06",
+      "state_id": "state1",
+      "family": "high",
+      "union_reference": 62.95455900046132,
+      "gain": 55.212470939873654,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": 48.95393899351453,
+          "tau": 9.457677829809368e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 1.5420635441124039e-15
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": 52.96700935107609,
+          "tau": 8.962241781143904e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 5.211680651852342e-15
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": 50.32029409275739,
+          "tau": 8.68653752697264e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 4.132980414037578e-15
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": 55.212470939873654,
+          "tau": 8.85303023793126e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 2.849038864010539e-15
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_07",
+      "state_id": "state0",
+      "family": "high",
+      "union_reference": 8.979250603604234,
+      "gain": 4.859579346523465,
+      "selected": [
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": -10.868720619421664,
+          "tau": 6.194970662136082e-10,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 2.239718445188647e-15
+        },
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": 0.8511651849913084,
+          "tau": 5.772767249513391e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 1.9599616605574857e-15
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": 4.317029315655538,
+          "tau": 5.781637129981969e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 9.611511869290641e-16
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": 4.859579346523465,
+          "tau": 5.790767078686494e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 1.253788912335162e-15
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    },
+    {
+      "object_id": "pilot_validation_07",
+      "state_id": "state1",
+      "family": "high",
+      "union_reference": 9.250982384025962,
+      "gain": 3.8624780320340157,
+      "selected": [
+        {
+          "drop": 7,
+          "mode": 0,
+          "gain": 0.5515484400813109,
+          "tau": 5.47208707287758e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 2.684298590054911e-15
+        },
+        {
+          "drop": 6,
+          "mode": 0,
+          "gain": -9.557039596215658,
+          "tau": 5.843775971092362e-10,
+          "feasible": true,
+          "positive": false,
+          "normal_relative_residual": 2.3472605481565284e-15
+        },
+        {
+          "drop": 5,
+          "mode": 0,
+          "gain": 3.8624780320340157,
+          "tau": 5.469507347059663e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 1.6870808720648857e-15
+        },
+        {
+          "drop": 4,
+          "mode": 0,
+          "gain": 3.5309889719037457,
+          "tau": 5.455364434926975e-10,
+          "feasible": true,
+          "positive": true,
+          "normal_relative_residual": 2.285550251468869e-15
+        }
+      ],
+      "scope": "exact FP64 cached initial frozen endpoints; not nonlinear or online cost"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "a18.frozen_rules.v1",
+  "checkpoints": {
+    "B-main": "D:/AI/A18_PHYSICS_NATIVE_CURRENT_PROPOSAL/checkpoints/route_b/main/best.pt",
+    "B-order0": "D:/AI/A18_PHYSICS_NATIVE_CURRENT_PROPOSAL/checkpoints/route_b/order0/best.pt"
+  },
+  "control_weights": "D:/AI/A18_PHYSICS_NATIVE_CURRENT_PROPOSAL/results/route_b/J0/fitted_controls.npz",
+  "a17_root": "D:/AI/A17_CURRENT_EXCHANGE",
+  "B_poly_policy_id": 36,
+  "A_policy": {
+    "order": 1,
+    "degree": 0,
+    "drop_rule": 0
+  },
+  "methods": [
+    "B-main",
+    "B-order0",
+    "B-poly",
+    "control:ridge_0.01_m1",
+    "control:KNN3_objects_m1",
+    "A-analytic",
+    "D-full",
+    "D-recommended"
+  ],
+  "primary_rank": 8,
+  "transfer_ranks": [
+    4,
+    16
+  ],
+  "selected_K": 4,
+  "noop": "highest logit returns empty",
+  "max_acceptances": 3,
+  "scientific_scope": "DIAGNOSTIC_FROZEN_NEGATIVE_RESULT; no deployment winner, no optimizer or rule changes after test access",
+  "transfer_protocol": "Frozen exact cached FP64 endpoint quality at k4/k16; full transfer deployment timing skipped after epoch20 stop gate",
+  "full_timing_protocol": "k8, all eight methods, five rotated repetitions, actual cold and warm verification; cap3 sequential deployment is not advanced after failed gates"
+}

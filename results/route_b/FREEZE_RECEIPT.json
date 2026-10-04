@@ -1,0 +1,39 @@
+{
+  "status": "FROZEN",
+  "checkpoints": [
+    {
+      "name": "B-main",
+      "path": "D:/AI/A18_PHYSICS_NATIVE_CURRENT_PROPOSAL/checkpoints/route_b/main/best.pt",
+      "artifact_path": "checkpoints/route_b/main/best.pt",
+      "sha256": "1b0d6f97351e28d1e2084474b79c9c35018672e69b591d9e7487112dfe1449c3"
+    },
+    {
+      "name": "B-order0",
+      "path": "D:/AI/A18_PHYSICS_NATIVE_CURRENT_PROPOSAL/checkpoints/route_b/order0/best.pt",
+      "artifact_path": "checkpoints/route_b/order0/best.pt",
+      "sha256": "4e0bf755fdb7d73b4524945488e2a72f8623e388cf3874c67b8d069f4f26a5f5"
+    },
+    {
+      "name": "train_fitted_controls",
+      "path": "D:/AI/A18_PHYSICS_NATIVE_CURRENT_PROPOSAL/results/route_b/J0/fitted_controls.npz",
+      "artifact_path": "results/route_b/J0/fitted_controls.npz",
+      "sha256": "6497af1e3cc129c9616a842aa1c73a8951f6e6f8521a0e82ac892455da7a19ca"
+    }
+  ],
+  "rules": [
+    {
+      "path": "D:/AI/A18_PHYSICS_NATIVE_CURRENT_PROPOSAL/code_v009/results/route_b/frozen_rules.json",
+      "artifact_path": "results/route_b/frozen_rules.json",
+      "sha256": "46222fc5ee9147fdd04d4cfe7101f670e2669f2b16d9b62a783009b38e42302b"
+    }
+  ],
+  "config_sha256": "c957e7148c78ec90b0b31f90aa042ed745b67febf9078ea0405f6099ee5eeb55",
+  "dataset_sha256": "0b1168137bff33edbb642059653783adb95703ec330b31068700afff8e0ddea9",
+  "no_locked_test_selection": true,
+  "no_deployment_winner": true,
+  "reason": "A G1 fails; both registered B models stop at epoch20 below strongest same-space non-NN validation control",
+  "paired_baseline_fixed_before_test": "B-poly policy36",
+  "primary_candidate_fixed_before_test": "B-main seed1801 lambda_order0.001",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 2026100418
+}
