@@ -6,8 +6,8 @@ Route A's implemented recipe/drop output and shared finite-utility acceptance de
 
 |Claim|Evidence required|Implementation snapshot|
 |---|---|---|
-|Cheap descriptors retain useful exchanges|G1A oracle/common/original references and full acquisition costs|Await unified actual preflight|
-|NN adds practical value|G2 headroom, G3 validation coverage/cost, G6 frozen objects|Untrained; no claim|
+|Cheap descriptors retain useful exchanges|G1A oracle/common/original references and full acquisition costs|G1A common oracle fails: macro0.6182 / near0.5187; cost recheck pending|
+|NN adds practical value|G2 headroom, G3 validation coverage/cost, G6 frozen objects|NOT_TESTED: A training stopped at G1A|
 |Physics architecture helps|G3 before GNN; equal parameters and geometry/shuffled controls|NOT_RUN|
 |Nonlinear imaging improves|Sole-winner G8 with unchanged line search/constraints|NOT_RUN|
 
