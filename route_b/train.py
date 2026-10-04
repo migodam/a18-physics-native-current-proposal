@@ -70,14 +70,14 @@ def train_one(train,val,config,out,seed=1801,lambda_order=.001,device='cuda',sec
     started=time.perf_counter();best=-np.inf;last=0;history=[];reason='MAX_EPOCHS';cfg=config['route_B']
     for epoch in range(1,epochs_max+1):
         if time.perf_counter()-started>=seconds_cap:reason='TIME_CAP';break
-        model.train();order=rng.permutation(len(train));losses=[];invalid=0
+        model.train();order=rng.permutation(len(train));losses=[];invalid=0;signed=[]
         with cached_only_epoch() as counter:
             for first in range(0,len(order),8):
                 batch=[train[int(i)] for i in order[first:first+8]];t,logits,noop,_=model(*pack(batch,norm,device));terms=[physical_loss(t[j],logits[j],noop[j],s['cache'],s['teachers'],s['reference'],s['basis_layers'],lambda_order) for j,s in enumerate(batch)];loss=torch.stack([x['loss'] for x in terms]).mean()
                 if not torch.isfinite(loss):raise RuntimeError('nonfinite physical loss')
-                optimizer.zero_grad(set_to_none=True);loss.backward();torch.nn.utils.clip_grad_norm_(model.parameters(),1.);optimizer.step();losses.append(float(loss.detach()));invalid+=sum(x['invalid'] for x in terms)
+                optimizer.zero_grad(set_to_none=True);loss.backward();torch.nn.utils.clip_grad_norm_(model.parameters(),1.);optimizer.step();losses.append(float(loss.detach()));invalid+=sum(x['invalid'] for x in terms);signed.extend(g for x in terms for g in x['raw_gains'])
         assert counter['Maxwell_action_count']==0 and not counter['attempted_Maxwell_operations']
-        record={'epoch':epoch,'loss':float(np.mean(losses)),'invalid_endpoints':invalid,**counter,'seconds':time.perf_counter()-started}
+        record={'epoch':epoch,'loss':float(np.mean(losses)),'invalid_endpoints':invalid,'raw_signed_gains':signed,**counter,'seconds':time.perf_counter()-started}
         if epoch%5==0:
             metrics=validate(model,val,norm);record.update(validation_macro=metrics['macro'],validation_near=metrics['near'])
             if metrics['macro']>best:
