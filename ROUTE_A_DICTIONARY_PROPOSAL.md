@@ -53,7 +53,7 @@ Fourier projections 可对少量 seed 做 batched FFT 后随机访问频率；Ha
 
 ## A5. 三种编码器及物理边的诚实定义
 
-**默认 A-MLP：**node MLP $[d_j,\xi]\to h_j\in\mathbb R^{64}$；pool mean/max；共享 action head $[h_j,\mathrm{pool}(h),o_i]\to\ell_{ji}$。参数目标 0.05–0.15M。
+**默认 A-MLP：**node MLP $[d_j,\xi]\to h_j\in\mathbb R^{64}$；pool mean/max；共享 action head $[h_j,\mathrm{pool}(h),o_i]\to\ell_{ji}$。参数目标 0.03–0.08M。
 
 **A-Set：**相同输入、相近参数规模的两层 attention，hidden 64，4 heads，最多 16 inducing tokens。仅在 MLP 有正向 headroom 时作为控制。[R19]
 

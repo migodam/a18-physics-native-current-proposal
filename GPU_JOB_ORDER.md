@@ -16,7 +16,7 @@
 |---|---|---:|---|---|---|---|
 |P0 physics cache|确实缺 labels且 backend 可用|无 NN|12-state preflight，再最多96states|按首2states实测外推；硬上限60min|<6GiB，实际记录|oracle/cost不通过就停，不生成全dataset|
 |J0 smoke/calibration|CPU tests和schema通过|极小|2states，20steps|2–5min（10min）|<1.5GiB|NaN、packing/adjoint错、warmup超内存即停|
-|J1 A1-MLP|A-lazy可随机访问|0.05–0.15M|batch16 states，40epochs|5–15min（20min）|<1.5GiB|epoch10无validation机会改善；patience10|
+|J1 A1-MLP|A-lazy可随机访问|0.03–0.08M|batch16 states，40epochs|5–15min（20min）|<1.5GiB|epoch10无validation机会改善；patience10|
 |J2 B-MLP|B representation/cost gate通过|0.2–0.5M|batch8 states，80epochs|15–35min（45min）|<2.5GiB|epoch20不优于no-NN；patience15|
 |J3 A1-GNN|J1有headroom；边可廉价构造|0.1–0.25M|同J1，40epochs|10–20min（25min）|<2.5GiB|epoch15与MLP差<.01就停结构探索|
 |J4 B-Set|J2通过且尚有>=.05headroom|0.2–0.5M|同J2，最多60epochs|15–30min（35min）|<3GiB|epoch20无优势停止，不加层|
