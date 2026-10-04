@@ -1,0 +1,226 @@
+[
+  {
+    "id": "R01",
+    "title": "X.-D. Chen, Subspace-Based Optimization Method for Solving Inverse-Scattering Problems, TGRS 48, 42–49 (2010).",
+    "url": "https://doi.org/10.1109/TGRS.2009.2025122",
+    "access_depth": "author-publication-list + A17 references",
+    "note": "SOM bibliographic identity and current-subspace framing; not a fresh full-paper replication."
+  },
+  {
+    "id": "R02",
+    "title": "Y. Zhong and X. Chen, Twofold Subspace-Based Optimization Method, Inverse Problems 25, 085003 (2009); FFT-TSOM, TAP 59, 914–927 (2011).",
+    "url": "https://doi.org/10.1088/0266-5611/25/8/085003",
+    "access_depth": "author/institution abstract",
+    "note": "Additional primary identity: https://doi.org/10.1109/TAP.2010.2103027 ; author abstract: https://www.math.uci.edu/node/33832"
+  },
+  {
+    "id": "R03",
+    "title": "SOM-Net: Unrolling the Subspace-based Optimization for Solving Full-wave Inverse Scattering Problems.",
+    "url": "https://arxiv.org/abs/2209.03567",
+    "access_depth": "author abstract",
+    "note": "Full HTML retrieval failed; compare stated unrolling target, not uninspected implementation details."
+  },
+  {
+    "id": "R04",
+    "title": "Z. Wei and X. Chen, Physics-Inspired Convolutional Neural Network for Solving Full-Wave Inverse Scattering Problems, TAP 67, 6138–6148 (2019).",
+    "url": "https://www.ece.nus.edu.sg/stfpage/elechenx/Papers/Wei_TAP_2019.pdf",
+    "access_depth": "author full-text parsed",
+    "note": "DOI 10.1109/TAP.2019.2922779. PDF screenshot retrieval failed; textual architecture discussion inspected, no figure-based numerical claims."
+  },
+  {
+    "id": "R05",
+    "title": "Physics Embedded Deep Neural Network for Solving Full-Wave Inverse Scattering Problems, TAP 70, 6148–6159 (2022; online 2021).",
+    "url": "https://ieeexplore.ieee.org/document/9509361/",
+    "access_depth": "primary metadata only",
+    "note": "DOI 10.1109/TAP.2021.3102135. Primary full text/abstract not available in this session; detailed architectural exclusion remains open."
+  },
+  {
+    "id": "R06",
+    "title": "Neural Born Iteration Method For Solving Inverse Scattering Problems: 2D Cases, TAP 71, 818–829 (2023).",
+    "url": "https://arxiv.org/abs/2112.09831",
+    "access_depth": "author abstract",
+    "note": "DOI 10.1109/TAP.2022.3217333; preprint first submitted 2021. Alternating field/contrast update learning."
+  },
+  {
+    "id": "R07",
+    "title": "T. Yin, K. Tan and X. Chen, Far-Field Approximation Learning Method for Millimeter-Wave Short-Range Imaging (2023).",
+    "url": "https://ieeexplore.ieee.org/document/10041854",
+    "access_depth": "primary identity; access gap",
+    "note": "DOI 10.1109/TAP.2023.3242424. Primary detailed content not retrieved; do not base a priority claim on a secondary abstract."
+  },
+  {
+    "id": "R08",
+    "title": "Neural Green’s Operators for Parametric Partial Differential Equations.",
+    "url": "https://arxiv.org/abs/2406.01857",
+    "access_depth": "author abstract and HTML text",
+    "note": "https://arxiv.org/html/2406.01857v1 ; coefficient-dependent/forcing-linear Green representation is prior art."
+  },
+  {
+    "id": "R09",
+    "title": "VarMiON: A variationally mimetic operator network.",
+    "url": "https://arxiv.org/abs/2209.12871",
+    "access_depth": "author abstract",
+    "note": "Variational-discretization-inspired basis/coefficient architecture."
+  },
+  {
+    "id": "R10",
+    "title": "Render unto Numerics: Orthogonal Polynomial Neural Operator for PDEs with Non-periodic Boundary Conditions.",
+    "url": "https://arxiv.org/abs/2206.12698",
+    "access_depth": "author abstract",
+    "note": "OPNO; boundary-aware spatial spectral representation, not automatic stability of p(L)."
+  },
+  {
+    "id": "R11",
+    "title": "Spectral Neural Operators.",
+    "url": "https://arxiv.org/abs/2205.10573",
+    "access_depth": "author abstract",
+    "note": "Fourier/Chebyshev coefficient maps already combine spectral numerics and neural learning."
+  },
+  {
+    "id": "R12",
+    "title": "Physics-Informed Chebyshev Polynomial Neural Operator for Parametric Partial Differential Equations (submitted 2026-02-02).",
+    "url": "https://arxiv.org/abs/2602.01737",
+    "access_depth": "author abstract",
+    "note": "Current research entry verified on 2026-10-04; no empirical results reproduced here."
+  },
+  {
+    "id": "R13",
+    "title": "LanczosNet: Multi-Scale Deep Graph Convolutional Networks, ICLR 2019.",
+    "url": "https://arxiv.org/abs/1901.01484",
+    "access_depth": "author abstract",
+    "note": "Graph-Laplacian low-rank decomposition and learned spectral filters."
+  },
+  {
+    "id": "R14",
+    "title": "Neural Krylov Iteration for Accelerating Linear System Solving, NeurIPS 2024.",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/e88870ec82f2469b0ddf32c817920c68-Abstract-Conference.html",
+    "access_depth": "primary proceedings abstract",
+    "note": "Learned invariant/subspace structures for linear solving; not novel to learn Krylov-related subspaces."
+  },
+  {
+    "id": "R15",
+    "title": "M. Crouzeix and C. Palencia, The Numerical Range is a (1+sqrt(2))-Spectral Set, SIAM 2017.",
+    "url": "https://epubs.siam.org/doi/10.1137/17M1116672",
+    "access_depth": "primary abstract and author preprint",
+    "note": "https://arxiv.org/abs/1702.00668 ; used for complete numerical-range polynomial norm bound."
+  },
+  {
+    "id": "R16",
+    "title": "B. Beckermann and L. Reichel, Error Estimates and Evaluation of Matrix Functions via the Faber Transform.",
+    "url": "https://epubs.siam.org/doi/10.1137/080741744",
+    "access_depth": "primary abstract",
+    "note": "Faber transform, field of values and Arnoldi/rational approximation error analysis."
+  },
+  {
+    "id": "R17",
+    "title": "S. Pozza and V. Simoncini, Inexact Arnoldi residual estimates and decay properties for functions of non-Hermitian matrices, BIT 59, 969–986 (2019).",
+    "url": "https://doi.org/10.1007/s10543-019-00763-6",
+    "access_depth": "primary abstract/metadata",
+    "note": "Non-Hermitian Arnoldi/Faber analysis reference; no transfer of unverified approximation bounds."
+  },
+  {
+    "id": "R18",
+    "title": "J. Chen, Graph Neural Preconditioners for Iterative Solutions of Sparse Linear Systems, ICLR 2025.",
+    "url": "https://research.ibm.com/publications/graph-neural-preconditioners-for-iterative-solutions-of-sparse-linear-systems--1",
+    "access_depth": "author/institution abstract",
+    "note": "General sparse-system learned preconditioners; measured construction and solve overhead are relevant controls."
+  },
+  {
+    "id": "R19",
+    "title": "J. Lee et al., Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks, ICML 2019.",
+    "url": "https://proceedings.mlr.press/v97/lee19d.html",
+    "access_depth": "primary proceedings abstract",
+    "note": "Set permutation invariance/attention is generic ML prior art."
+  },
+  {
+    "id": "R20",
+    "title": "W. Kool, H. van Hoof and M. Welling, Attention, Learn to Solve Routing Problems!, ICLR 2019.",
+    "url": "https://arxiv.org/abs/1803.08475",
+    "access_depth": "author abstract",
+    "note": "Learned constructive combinatorial heuristics; not a new general paradigm here."
+  },
+  {
+    "id": "R21",
+    "title": "DIFUSCO: Graph-based Diffusion Solvers for Combinatorial Optimization.",
+    "url": "https://arxiv.org/abs/2302.08224",
+    "access_depth": "author abstract",
+    "note": "Conditional/generative combinatorial solution proposals are established."
+  },
+  {
+    "id": "R22",
+    "title": "Low-Rank Determinantal Point Processes, AAAI 2017.",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/10869",
+    "access_depth": "primary proceedings abstract",
+    "note": "DOI 10.1609/aaai.v31i1.10869; diversity/subset learning control, not a model of all positive pair synergy."
+  },
+  {
+    "id": "R23",
+    "title": "Derivative-Informed Neural Operator: An Efficient Framework for High-Dimensional Parametric Derivative Learning.",
+    "url": "https://arxiv.org/abs/2206.10745",
+    "access_depth": "author abstract",
+    "note": "DINO; JCP 496, 112555 (2024), DOI 10.1016/j.jcp.2023.112555."
+  },
+  {
+    "id": "R24",
+    "title": "Derivative-informed neural operator acceleration of geometric MCMC for infinite-dimensional Bayesian inverse problems, JMLR 26 (2025).",
+    "url": "https://jmlr.org/beta/papers/v26/24-0745.html",
+    "access_depth": "primary abstract",
+    "note": "Author preprint https://arxiv.org/abs/2403.08220 ; learned proposal plus high-fidelity correction is not a new generic idea."
+  },
+  {
+    "id": "R25",
+    "title": "Physics-informed surrogates for electromagnetic dynamics using Transformers and graph neural networks (2024).",
+    "url": "https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/mia2.12463",
+    "access_depth": "primary abstract",
+    "note": "EM dynamics surrogate; adjacent to but not identical with current-space exchange."
+  },
+  {
+    "id": "R26",
+    "title": "P. Hausner, O. Oktem and J. Sjolund, Neural incomplete factorization: learning preconditioners for the conjugate gradient method (2023).",
+    "url": "https://arxiv.org/abs/2305.16368",
+    "access_depth": "author abstract",
+    "note": "NeuralIF; matrix-inspired GNN structure and preconditioner loss are prior art."
+  },
+  {
+    "id": "R27",
+    "title": "Adaptive Reduced Basis Trust Region Methods for Parameter Identification Problems.",
+    "url": "https://arxiv.org/abs/2309.07627",
+    "access_depth": "A17 cited primary identity",
+    "note": "DOI 10.1007/s44207-024-00002-z; high-fidelity model-management/acceptance not claimed as new."
+  },
+  {
+    "id": "R28",
+    "title": "A Learned-SVD Approach to the Electromagnetic Inverse Source Problem, Sensors 24, 4496 (2024).",
+    "url": "https://www.mdpi.com/1424-8220/24/14/4496",
+    "access_depth": "primary abstract and discussion",
+    "note": "DOI 10.3390/s24144496; learned current-distribution prior in a scalar inverse-source setting."
+  },
+  {
+    "id": "R29",
+    "title": "Solving Combined Field Integral Equations with Physics-informed Residual Learning, ACES 2023.",
+    "url": "https://ieeexplore.ieee.org/document/10114780/",
+    "access_depth": "primary abstract",
+    "note": "DOI 10.23919/ACES57841.2023.10114780; GNN on triangular meshes for PEC electromagnetic scattering."
+  },
+  {
+    "id": "R30",
+    "title": "ScaGNN: a Graph Neural Network for Multiple Scattering Simulations (submitted 2026-09-29).",
+    "url": "https://arxiv.org/abs/2609.37509",
+    "access_depth": "author abstract",
+    "note": "Dynamic adaptive edge sampling for boundary-trace prediction; do not infer 3D vector-Maxwell scope from the abstract."
+  },
+  {
+    "id": "R31",
+    "title": "PIBNet: a Physics-Inspired Boundary Network for Multiple Scattering Simulations.",
+    "url": "https://arxiv.org/abs/2512.02049",
+    "access_depth": "author abstract",
+    "note": "Graph-based long-range interaction and boundary-trace learning; adjacent multiple-scattering reference."
+  },
+  {
+    "id": "R32",
+    "title": "Physics Embedded Deep Neural Network for Solving Volume Integral Equation: 2D Case.",
+    "url": "https://www.eledia.org/eledia-unitn/news/physics-embedded-deep-neural-network-for-solving-volume-integral-equation-2d-case/",
+    "access_depth": "research-center primary identity",
+    "note": "DOI 10.1109/TAP.2021.3070152; primary detailed architecture not retrieved."
+  }
+]

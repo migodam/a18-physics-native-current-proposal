@@ -1,0 +1,40 @@
+{
+  "as_of": "2026-10-04",
+  "user_attachment": {
+    "description": "User-supplied A18 direction memo, 1210 parsed lines",
+    "sha256": "009b98b0f18a8929e25a02e96021cc6609c3ff835cb502391679c62b318fa68a",
+    "redistributed": false
+  },
+  "project_refs": [
+    {
+      "repository": "migodam/a17-maxwell-certified-exchange",
+      "observed_main_commit": "df61a1b533682a883cdaf65259b4528c354bd832",
+      "used_paths": [
+        "closure_final/manuscript/CORE_THEORY.tex",
+        "closure_final/manuscript/CONDITIONAL_EXCHANGE_THEORY.tex",
+        "closure_final/manuscript/FINAL_EXCHANGE_METHOD.tex",
+        "efficiency_followup/GPT_REVIEW_CONTEXT.md"
+      ],
+      "historical_stage0_base": "56097653e6a814399581c3759fc3e3e8f0c2284c"
+    },
+    {
+      "repository": "migodam/a18-nn-native-maxwell-stage0",
+      "observed_main_commit": "5d874e0d9a179138054959c9045595de3894eca0",
+      "used_paths": [
+        "START_HERE.md"
+      ]
+    },
+    {
+      "repository": "migodam/a18-b-maxwell-feedback-closure",
+      "observed_main_commit": "8ab88b3637bd07a8a220da9a99f244c73457b81e",
+      "used_paths": [
+        "START_HERE.md"
+      ]
+    }
+  ],
+  "limitations": [
+    "Commit refs observed using connected GitHub GET actions; source repositories/data are not cloned into this package.",
+    "No remote repository was created or pushed.",
+    "No A17 backend replay or NN training executed in this session."
+  ]
+}

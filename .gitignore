@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+data/
+cache/
+checkpoints/
+.gpu.lock/
+*.pt
+*.pth
+*.npz
+*.npy
+*.log
+.DS_Store

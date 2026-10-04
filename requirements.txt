@@ -1,0 +1,3 @@
+numpy>=1.24
+# Only the dense algebra smoke tests need this dependency.
+# Keep the production A17 and NN environments independently pinned.

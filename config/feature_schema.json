@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "authoritative_description": "FEATURE_CONTRACT.md",
+  "state_common_real": 192,
+  "state_A_real": 204,
+  "node_A_real": 32,
+  "outgoing_real": 32,
+  "state_B_real": 1552,
+  "B_blocks": [
+    {
+      "name": "xi",
+      "real_count": 192
+    },
+    {
+      "name": "chain_H",
+      "real_count": 72
+    },
+    {
+      "name": "chain_to_joint",
+      "real_count": 864
+    },
+    {
+      "name": "seed_coordinates",
+      "real_count": 288
+    },
+    {
+      "name": "norms",
+      "real_count": 18
+    },
+    {
+      "name": "rank_mask",
+      "real_count": 24
+    },
+    {
+      "name": "layer_onehot",
+      "real_count": 72
+    },
+    {
+      "name": "seed_active",
+      "real_count": 6
+    },
+    {
+      "name": "diagnostics",
+      "real_count": 16
+    }
+  ],
+  "online_forbidden": [
+    "full_J",
+    "full_H",
+    "full_optimal_step",
+    "ground_truth_material",
+    "anchor64",
+    "workspace128",
+    "exact_future_gain",
+    "teacher_only"
+  ],
+  "normalization": "training_objects_only",
+  "missing_values": "zero_with_declared_mask",
+  "source_phase": "known_incident_phase_canonicalization"
+}

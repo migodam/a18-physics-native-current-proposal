@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "errors": [],
+  "required_documents_present": true,
+  "local_links_checked": 37,
+  "feature_dimension_B": 1552,
+  "recipe_cap": 122,
+  "nn_job_cap_minutes": 240,
+  "scope": "delivery consistency, not scientific pilot verification"
+}

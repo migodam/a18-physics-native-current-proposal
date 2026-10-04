@@ -1,0 +1,19 @@
+{
+  "as_of": "2026-10-04",
+  "status": "ALGEBRA_TESTED_SPEC_READY",
+  "maxwell_pilot": "NOT_RUN",
+  "neural_training": "NOT_RUN",
+  "gpu_measurement": "NOT_RUN",
+  "remote_publication": "NOT_PERFORMED_READ_ONLY_CONNECTOR",
+  "planned_primary": "B_conditional_on_gates",
+  "planned_secondary": "A",
+  "route_C": "THEORY_ONLY",
+  "dense_algebra_tests": {
+    "count": 17,
+    "passed": true,
+    "scope": "synthetic_CPU_only"
+  },
+  "neural_models_implemented": false,
+  "maxwell_adapter_implemented": false,
+  "route_training_CLIs": "specified_for_Codex_not_implemented_here"
+}

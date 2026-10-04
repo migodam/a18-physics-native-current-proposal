@@ -1,0 +1,22 @@
+test_affine_krylov_equivalence (test_algebra.AlgebraTests.test_affine_krylov_equivalence) ... ok
+test_compressed_teacher_endpoint (test_algebra.AlgebraTests.test_compressed_teacher_endpoint) ... ok
+test_dark_observation_retained_loop (test_algebra.AlgebraTests.test_dark_observation_retained_loop) ... ok
+test_expected_coverage_surrogate_exact_iid (test_algebra.AlgebraTests.test_expected_coverage_surrogate_exact_iid) ... ok
+test_finite_gain_identity_and_cache_update (test_algebra.AlgebraTests.test_finite_gain_identity_and_cache_update) ... ok
+test_full_input_output_elimination (test_algebra.AlgebraTests.test_full_input_output_elimination) ... ok
+test_increment_and_retained_equations (test_algebra.AlgebraTests.test_increment_and_retained_equations) ... ok
+test_joint_flag_orthogonality_and_layer_penalty (test_algebra.AlgebraTests.test_joint_flag_orthogonality_and_layer_penalty) ... ok
+test_leave_out_lift_keeps_partial_rotation (test_algebra.AlgebraTests.test_leave_out_lift_keeps_partial_rotation) ... ok
+test_metric_whitening (test_algebra.AlgebraTests.test_metric_whitening) ... ok
+test_multiple_illuminations_real_material (test_algebra.AlgebraTests.test_multiple_illuminations_real_material) ... ok
+test_negative_singletons_positive_pair (test_algebra.AlgebraTests.test_negative_singletons_positive_pair) ... ok
+test_nonnormal_eigenvalues_do_not_bound_action (test_algebra.AlgebraTests.test_nonnormal_eigenvalues_do_not_bound_action) ... ok
+test_phase_and_block_gauge_invariance (test_algebra.AlgebraTests.test_phase_and_block_gauge_invariance) ... ok
+test_schur_formula_and_adjoint (test_algebra.AlgebraTests.test_schur_formula_and_adjoint) ... ok
+test_singular_common_core_valid_endpoints (test_algebra.AlgebraTests.test_singular_common_core_valid_endpoints) ... ok
+test_zero_seed_is_not_randomly_replaced (test_algebra.AlgebraTests.test_zero_seed_is_not_randomly_replaced) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.012s
+
+OK

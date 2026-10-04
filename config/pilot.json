@@ -1,0 +1,214 @@
+{
+  "version": "1.0",
+  "as_of": "2026-10-04",
+  "status": "SPEC_READY_NOT_TRAINED",
+  "physics": {
+    "backend": "A17_adapter_required",
+    "residual_sign": "predicted_minus_observed",
+    "material_coordinates": "shared_real",
+    "current_metric": "whitened",
+    "n_illuminations_pilot": 4,
+    "primary_current_rank": 8,
+    "transfer_current_ranks": [
+      4,
+      16
+    ],
+    "material_dimension_preferred": 24,
+    "current_stability_relative": 1e-10,
+    "normal_residual_relative": 1e-10,
+    "acceptance_tolerance": "import_original_A17_unchanged"
+  },
+  "proposal": {
+    "K": 4,
+    "max_accepted_exchanges": 3,
+    "two_candidate_ablation_K": 2,
+    "protected_slots": "inherit_backend",
+    "fallback": "no_op_unless_separately_metered"
+  },
+  "data": {
+    "preflight_objects_max": 6,
+    "preflight_states_max": 12,
+    "pilot_objects_target": 48,
+    "states_per_object": 2,
+    "new_manifest_split_objects": {
+      "train": 32,
+      "validation": 8,
+      "test": 8
+    },
+    "allow_resplit_existing_manifest": false,
+    "teacher_cpu_minutes_cap": 120,
+    "teacher_gpu_minutes_cap": 60,
+    "locked_test_evaluations": 1
+  },
+  "seeds": {
+    "families": [
+      "O1",
+      "O2",
+      "P1",
+      "P2",
+      "M1",
+      "M2"
+    ],
+    "operators": [
+      "adjoint",
+      "adjoint",
+      "forward",
+      "forward",
+      "forward",
+      "forward"
+    ],
+    "degrees": [
+      0,
+      1,
+      2
+    ],
+    "rank_default_max": 18,
+    "rank_hard_cap": 24,
+    "relative_seed_floor": 1e-10,
+    "arnoldi_breakdown_floor": 1e-12,
+    "orthogonality_floor": 1e-10,
+    "sketch_seed": 180018,
+    "order_weights": [
+      0,
+      3,
+      8
+    ]
+  },
+  "route_A": {
+    "status": "implement_then_gate",
+    "recipes": {
+      "receiver": 16,
+      "fourier": 32,
+      "haar": 32,
+      "random": 24,
+      "feedback": 18
+    },
+    "max_recipes": 122,
+    "state_features": 204,
+    "node_features": 32,
+    "outgoing_features": 32,
+    "hidden": 64,
+    "batch_states": 16,
+    "epochs_max": 40,
+    "check_epoch": 10,
+    "patience_epochs": 10,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "loss_weights": {
+      "list": 1.0,
+      "cover": 1.0,
+      "duplicate": 0.01
+    }
+  },
+  "route_B": {
+    "status": "primary_conditional",
+    "state_features": 1552,
+    "outgoing_features": 32,
+    "hidden": 128,
+    "modes_per_drop": 2,
+    "complex_coefficient_padded": 25,
+    "batch_states": 8,
+    "epochs_max": 80,
+    "check_epoch": 20,
+    "patience_epochs": 15,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "loss_weights": {
+      "cover": 1.0,
+      "list": 0.25,
+      "projective": 0.2,
+      "diversity": 0.01,
+      "order": 0.001
+    },
+    "teacher_preflight": {
+      "starts_per_drop": 8,
+      "steps": 40
+    },
+    "teacher_expansion": {
+      "starts_per_drop": 4,
+      "steps": 24
+    },
+    "teacher_lr": 0.03,
+    "teacher_backtracks": 5,
+    "teacher_mode_overlap_max": 0.9
+  },
+  "route_C": {
+    "status": "THEORY_ONLY",
+    "training_enabled": false,
+    "gpu_minutes": 0
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "validation_every_epochs": 5,
+    "gradient_clip": 1.0,
+    "first_seed": 1801,
+    "winner_extra_seeds": [
+      1802,
+      1803
+    ],
+    "maxwell_calls_per_epoch": 0,
+    "total_nn_gpu_minutes_cap": 240
+  },
+  "evaluation": {
+    "paired_bootstrap_objects": 2000,
+    "timing_repetitions": 5,
+    "gain_reference": "common_audited_union_and_original_dictionary",
+    "no_positive_reference": "NA_report_separately",
+    "nonlinear_gpu_minutes_cap": 60
+  },
+  "gates": {
+    "A_oracle_macro_min": 0.85,
+    "A_oracle_near_min": 0.7,
+    "B_oracle_macro_min": 0.9,
+    "B_oracle_near_min": 0.75,
+    "B_shared_root_loss_max": 0.05,
+    "acquisition_median_ratio_max": 0.5,
+    "acquisition_p95_ratio_max": 1.0,
+    "noNN_headroom_ceiling": 0.95,
+    "NN_coverage_improvement_min": 0.05,
+    "near_degradation_max": 0.02,
+    "architecture_coverage_improvement_min": 0.03
+  },
+  "jobs": {
+    "P0": {
+      "bucket": "physics",
+      "minutes_cap": 60
+    },
+    "J0": {
+      "bucket": "nn",
+      "minutes_cap": 10
+    },
+    "J1": {
+      "bucket": "nn",
+      "minutes_cap": 20
+    },
+    "J2": {
+      "bucket": "nn",
+      "minutes_cap": 45
+    },
+    "J3": {
+      "bucket": "nn",
+      "minutes_cap": 25
+    },
+    "J4": {
+      "bucket": "nn",
+      "minutes_cap": 35
+    },
+    "J5": {
+      "bucket": "nn",
+      "minutes_cap": 60
+    },
+    "J6": {
+      "bucket": "nn",
+      "minutes_cap": 15
+    },
+    "J7": {
+      "bucket": "nn",
+      "minutes_cap": 30
+    },
+    "N0": {
+      "bucket": "nonlinear",
+      "minutes_cap": 60
+    }
+  }
+}

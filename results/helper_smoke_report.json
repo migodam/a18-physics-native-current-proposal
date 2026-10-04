@@ -1,0 +1,15 @@
+{
+  "scope": "CPU subprocess helper smoke tests on this container, not RTX4060 or Windows validation",
+  "checks": {
+    "foreground_success_receipted": true,
+    "timeout_terminates_and_receipts": true,
+    "exhausted_job_refuses_launch": true,
+    "existing_lock_refused_not_deleted": true,
+    "failed_time_counted": true,
+    "gpu_queue.py_help": true,
+    "publish_github.py_help": true
+  },
+  "passed": true,
+  "gpu_used": false,
+  "remote_publish_executed": false
+}
