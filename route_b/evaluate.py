@@ -67,7 +67,7 @@ def benchmark_state(public,oid,sid,rank,methods,proposer,repetitions=5,sequence=
             if sequence and rep==0:
                 # Separate action domain: cumulative cap-3 gain is never used as
                 # singleton coverage. Each acceptance invalidates U-dependent caches.
-                st=time.perf_counter();before=b.receipt.snapshot();total=0.;applied=[];rounds=[];current_results=results;current_actions=actions;extra_acq=0.
+                st=time.perf_counter();before=b.receipt.snapshot();total=0.;applied=[];rounds=[];current_results=warm_results;current_actions=actions;extra_acq=0.
                 for turn in range(3):
                     eligible=[(j,r) for j,r in enumerate(current_results) if r.get('accepted')]
                     if not eligible:break
