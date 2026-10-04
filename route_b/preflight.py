@@ -57,7 +57,7 @@ def a_data(b,s,Jfull):
         actions=analytic_actions(features,**p);policy_gains.append(max([labels["positive"][ids[a.recipe_id],a.drop_index] for a in actions],default=0.))
     return {"features":features,"recipes":recipes,"bank":np.column_stack(bank),"labels":labels,"policy_gains":policy_gains,"policies":policies,"acquisition":acquisition}
 
-def benchmark(public,oid,sid,a17_root,policy,repetitions=5):
+def benchmark(public,oid,sid,a17_root,policy,repetitions=5,a_policy=None):
     """Fresh method order is rotated. Verification uses actual full GMRES Jd."""
     methods=("B-poly","D-full","D-recommended","A-analytic");rows=[]
     for rep in range(repetitions):
@@ -73,7 +73,7 @@ def benchmark(public,oid,sid,a17_root,policy,repetitions=5):
                 from route_a.recipes import LazyCache
                 from route_a.audit import AcquisitionAudit
                 from route_a.baselines import analytic_actions
-                bridge=ReceiptBackend(b);cache=LazyCache();audit=AcquisitionAudit();view=bridge.online_view(s,audit);features,rs,audit=extract(view,bridge,cache,audit);actions=[a.to_shared() for a in analytic_actions(features)];recipes={r.id:(lambda r=r:r.materialize(view,bridge,cache,audit)) for r in rs}
+                bridge=ReceiptBackend(b);cache=LazyCache();audit=AcquisitionAudit();view=bridge.online_view(s,audit);features,rs,audit=extract(view,bridge,cache,audit);actions=[a.to_shared() for a in analytic_actions(features,**(a_policy or {}))];recipes={r.id:(lambda r=r:r.materialize(view,bridge,cache,audit)) for r in rs}
             Tacq=time.perf_counter()-acq;acqcost=b.receipt.delta(before);verifier=VerifiedExchange(b,s,recipes);begin=time.perf_counter();results=[verifier.evaluate(a) for a in actions];verification=time.perf_counter()-begin
             # An exact-same-configuration cache hit only replays prior logits /
             # coefficient records. This is explicitly distinct from cold deploy.
