@@ -1,0 +1,27 @@
+{
+  "status": "FROZEN_BEFORE_ANY_J2_OPTIMIZATION",
+  "first_seed": 1801,
+  "chosen_device": "cpu",
+  "models": [
+    {
+      "name": "main",
+      "lambda_order": 0.001
+    },
+    {
+      "name": "order0",
+      "lambda_order": 0.0
+    }
+  ],
+  "same_epoch_cap": 35,
+  "same_training_wall_cap_seconds": 1350,
+  "J2_total_wall_cap_seconds": 2700,
+  "measured_minibatch_median_seconds": 1.5519162999698892,
+  "batches_per_epoch": 8,
+  "predicted_two_model_training_seconds": 869.073127983138,
+  "reason": "Reserve remaining cumulative J2 wall for real matched validation timing including full Jd. 80 is the registered upper bound; equal 35-epoch ceilings selected using J0 before training, not test metrics.",
+  "Maxwell_action_count_per_epoch_required": 0,
+  "validation_every_epochs": 5,
+  "check_epoch": 20,
+  "patience": 15,
+  "locked_test_opened": false
+}
