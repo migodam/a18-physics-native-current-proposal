@@ -6,6 +6,7 @@ import json
 import time
 import numpy as np
 from scipy import linalg as la
+from .isolation import assert_operator_allowed
 
 TOL = 1e-10
 SEED_SCHEMA = "opm-six-current-u-v1"
@@ -181,6 +182,7 @@ class OperatorBackend:
         self._J,self._receiver=Jaction,receiver
         self.metadata=dict(metadata);self.receipt=CostReceipt();self._seeds={};self._basis={}
     def _call(self,name,fn,a,axis=1):
+        assert_operator_allowed(name)
         a=np.asarray(a); count=1 if a.ndim==1 else a.shape[axis]
         t=time.perf_counter(); out=fn(a); self.receipt.add(name,count,time.perf_counter()-t);return out
     def apply_L(self,C): return self._call("L_rhs",self._L,C)
@@ -188,16 +190,20 @@ class OperatorBackend:
     def apply_S(self,C): return self._call("S_rhs",self._S,C)
     def apply_S_adjoint(self,W): return self._call("S_adjoint_rhs",self._SH,W)
     def apply_B(self,z,illumination=None):
+        assert_operator_allowed('B')
         z=np.asarray(z);n=1 if z.ndim==1 else z.shape[1];t=time.perf_counter();out=self._B(z)
         self.receipt.add("B_illumination_rhs",4*n,time.perf_counter()-t)
         return out if illumination is None else out[:,illumination]
     def material_dual(self,W,illumination=None):
+        assert_operator_allowed('B_adjoint')
         t=time.perf_counter();out=self._BH(W,illumination);self.receipt.add("B_adjoint_illumination_rhs",4 if illumination is None else 1,time.perf_counter()-t);return out
     def project_B(self,C): return self._call("B_projection_current_columns",self._PB,C)
     def full_J_action(self,z):
+        assert_operator_allowed('full_J')
         t=time.perf_counter();z=np.asarray(z);n=1 if z.ndim==1 else z.shape[1]
         out=self._J(z);self.receipt.add("full_J_directions",n,time.perf_counter()-t);self.receipt.add("full_J_illumination_rhs",4*n);return out
     def get_receiver_basis(self,count):
+        assert_operator_allowed('receiver_geometry')
         t=time.perf_counter();out=self._receiver(count);self.receipt.add("receiver_mode_accesses",1,time.perf_counter()-t);return out
     def freeze_state(self,U,*,object_id,state_id,split="development",receiver_mode_ids=(),accepted_count=0,protected_slots=(),_paid_maps=None):
         U=np.asarray(U,complex)
