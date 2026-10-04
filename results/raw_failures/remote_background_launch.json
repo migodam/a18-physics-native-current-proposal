@@ -1,0 +1,7 @@
+{
+  "status": "STARTUP_FAILURE",
+  "reason": "SSH lifetime terminated un-detached background child before queue receipt",
+  "scientific_result": false,
+  "counted_gpu_seconds": 0,
+  "evidence": "No lock, log or queue receipt after launch"
+}

@@ -1,0 +1,123 @@
+{
+  "schema": "a18.G0_FFT.v1",
+  "status": "PASS",
+  "threshold_relative": 1e-09,
+  "rows": [
+    {
+      "object_id": "train_00",
+      "state_id": "state0",
+      "device": "cpu",
+      "current_dof": 2592,
+      "errors": {
+        "L": 0.0,
+        "L_adjoint": 0.0,
+        "S": 0.0,
+        "B": 7.930527352186382e-17,
+        "material_dual": 5.516973870742803e-16,
+        "endpoint_0": 4.8271286780220106e-11,
+        "endpoint_1": 5.4619461432374686e-11,
+        "full_Jd": 7.764514268346445e-16,
+        "finite_gain": 2.053098765937163e-16,
+        "tau": 0.0
+      },
+      "gain": 8.652076894067049,
+      "tau": 2.3700676376506024e-09,
+      "normal_relative_residual": [
+        6.796292667703369e-16,
+        1.2561443387895027e-15
+      ],
+      "source_sha256": "e67bc39e39dee440e89f5c5cb744fb252cb35d9180fbf346fbe617a01ee4ba75",
+      "material_gauge_sha256": "509afbab7055df7836aac9726e4ba8b0a1359df9be84dc0026be180bc7e2efc9",
+      "wall_seconds": 0.15086195897310972,
+      "cost": {
+        "counters": {
+          "whitelisted_state_load": 1,
+          "forcing_construction": 4,
+          "receiver_mode_accesses": 1,
+          "L_rhs": 182,
+          "S_rhs": 26,
+          "B_projection_current_columns": 24,
+          "L_adjoint_rhs": 2,
+          "B_illumination_rhs": 4,
+          "B_adjoint_illumination_rhs": 4,
+          "full_J_directions": 3,
+          "full_J_illumination_rhs": 12
+        },
+        "wall_seconds": {
+          "whitelisted_state_load": 0.007678958005271852,
+          "forcing_construction": 0.0,
+          "receiver_mode_accesses": 0.0017623750027269125,
+          "L_rhs": 0.04881049622781575,
+          "S_rhs": 9.783299174159765e-05,
+          "B_projection_current_columns": 0.0004919989733025432,
+          "L_adjoint_rhs": 0.0006351249758154154,
+          "B_illumination_rhs": 0.0001091670710593462,
+          "B_adjoint_illumination_rhs": 0.0005974579835310578,
+          "full_J_directions": 0.05074904183857143,
+          "full_J_illumination_rhs": 0.0
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "object_id": "train_08",
+      "state_id": "state0",
+      "device": "cpu",
+      "current_dof": 3456,
+      "errors": {
+        "L": 0.0,
+        "L_adjoint": 0.0,
+        "S": 0.0,
+        "B": 1.0160728539308548e-16,
+        "material_dual": 7.575834002125809e-16,
+        "endpoint_0": 1.3021105312055352e-11,
+        "endpoint_1": 1.647347947003698e-11,
+        "full_Jd": 1.0610152049949334e-15,
+        "finite_gain": 1.5088616184781124e-14,
+        "tau": 1.4807382111792485e-16
+      },
+      "gain": 0.8240979638904053,
+      "tau": 1.3965679522348983e-09,
+      "normal_relative_residual": [
+        1.0272531755922516e-15,
+        1.5507564715034453e-15
+      ],
+      "source_sha256": "3e8cba145b6e3ad40ffc53e94651f3588652d4a02402fb86d848bdb2f99ccc17",
+      "material_gauge_sha256": "509afbab7055df7836aac9726e4ba8b0a1359df9be84dc0026be180bc7e2efc9",
+      "wall_seconds": 0.22326929098926485,
+      "cost": {
+        "counters": {
+          "whitelisted_state_load": 1,
+          "forcing_construction": 4,
+          "receiver_mode_accesses": 1,
+          "L_rhs": 214,
+          "S_rhs": 26,
+          "B_projection_current_columns": 24,
+          "L_adjoint_rhs": 2,
+          "B_illumination_rhs": 4,
+          "B_adjoint_illumination_rhs": 4,
+          "full_J_directions": 3,
+          "full_J_illumination_rhs": 12
+        },
+        "wall_seconds": {
+          "whitelisted_state_load": 0.018190959002822638,
+          "forcing_construction": 0.0,
+          "receiver_mode_accesses": 0.0019793750252574682,
+          "L_rhs": 0.07399683201219887,
+          "S_rhs": 0.00011408294085413218,
+          "B_projection_current_columns": 0.0006404168670997024,
+          "L_adjoint_rhs": 0.0008043749257922173,
+          "B_illumination_rhs": 0.00011249992530792952,
+          "B_adjoint_illumination_rhs": 0.0010291249491274357,
+          "full_J_directions": 0.0772849990753457,
+          "full_J_illumination_rhs": 0.0
+        }
+      },
+      "status": "PASS"
+    }
+  ],
+  "reference_physics_source_sha256": "022738d96f8eb720f1622d25df14b41e71cafc6e974e1e3b8ec01fdfae70b0f7",
+  "reference_execution": "unaltered numerical AST nodes; portable import isolation only",
+  "historical_anchor_or_closure_used": false,
+  "new_backend_online_teacher_members": false
+}

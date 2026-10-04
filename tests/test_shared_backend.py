@@ -57,5 +57,18 @@ class SharedTests(unittest.TestCase):
         action=lambda ts,hs:ActionSpec("B",hs,s.configuration_id,(3,),1.,coefficient_real=tuple(ts.real),coefficient_imag=tuple(ts.imag),basis_gauge_sha256=hs)
         r1=VerifiedExchange(b,s).evaluate(action(t,h));phase=np.exp(.3j);h2=b.register_basis(s,Q*phase);t2=t.copy();t2[1:]/=phase;r2=VerifiedExchange(b,s).evaluate(action(t2,h2))
         self.assertAlmostEqual(r1["gain"],r2["gain"],places=9)
+    def test_cache_hash_depends_on_residual_and_prior(self):
+        b,_,_,_=dense_backend();U=b.get_receiver_basis(4);s=b.freeze_state(U,object_id="x",state_id="0");b.metadata["r"]*=2
+        s2=b.freeze_state(U,object_id="x",state_id="0");self.assertNotEqual(s.configuration_id,s2.configuration_id)
+        b.metadata["ell"]=np.ones(4);s3=b.freeze_state(U,object_id="x",state_id="0");self.assertNotEqual(s2.state_sha256,s3.state_sha256)
+    def test_known_source_phase_canonicalized_seeds(self):
+        b,_,_,_=dense_backend();U=b.get_receiver_basis(4);s=b.freeze_state(U,object_id="x",state_id="0");seed=b.get_opm_seeds(s);ph=np.exp(1j*np.array([.2,.5,.8,1.1]));old=b._B
+        b.metadata["r"]*=ph[:,None];b.metadata["forcing"]=b.metadata["forcing"]*ph[None,:];b.metadata["source_phase"]=ph;b._B=lambda z:old(z)*ph[None,:,None]
+        s2=b.freeze_state(U,object_id="x",state_id="0");seed2=b.get_opm_seeds(s2);np.testing.assert_allclose(seed.vectors,seed2.vectors,atol=1e-12)
+    def test_sketch_stable_channel_order(self):
+        from dataclasses import replace
+        b,_,_,_=dense_backend();s=b.freeze_state(b.get_receiver_basis(4),object_id="x",state_id="0");x=b.shared_state_features(s)[0];order=[2,0,1]
+        s2=replace(s,r=s.r[:,order],SU=s.SU[order],geometry={"channel_ids":tuple(order)})
+        x2=b.shared_state_features(s2)[0];np.testing.assert_allclose(x[64:128],x2[64:128],atol=1e-12)
 
 if __name__=="__main__":unittest.main()

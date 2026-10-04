@@ -1,5 +1,6 @@
 """Current-estimate-only 192/32 schema; no teacher capabilities are called."""
 import time
+import hashlib
 import numpy as np
 from scipy import linalg as la
 
@@ -18,12 +19,16 @@ def shared_features(backend,s):
     from .core import stability
     reduced=s.forcing-s.LU@la.solve(s.D,s.U.conj().T@s.forcing)
     x[32:48]=[la.norm(s.r),float(abs(s.r).mean()),float(abs(s.r).std()),float(abs(s.r).max()),*la.norm(s.r,axis=1),*la.norm(s.forcing,axis=0),*la.norm(reduced,axis=0)]
-    dm=s.D;gradient=np.zeros_like(s.ell)
-    # Endpoint gradient is already paid by freeze_state; report its normal residual
-    # as the reduced-gradient norm bound; no extra injection is made here.
-    x[48:64]=[s.U.shape[1],len(s.ell),s.lambda_scalar,la.norm(s.ell),la.norm(s.step_old),stability(dm)["relative"],s.normal_relative_residual,float(abs(dm).mean()),float(abs(dm).max()),float(np.trace(dm).real),float(np.trace(dm).imag),la.norm(s.SU),la.norm(s.LU),0.,s.accepted_count,0.]
+    dm=s.D
+    x[48:64]=[s.U.shape[1],len(s.ell),s.lambda_scalar,la.norm(s.ell),la.norm(s.step_old),stability(dm)["relative"],s.normal_relative_residual,float(abs(dm).mean()),float(abs(dm).max()),float(np.trace(dm).real),float(np.trace(dm).imag),la.norm(s.SU),la.norm(s.LU),s.reduced_gradient_norm,s.accepted_count,0.]
     x[list(NORM_CHANNELS)]=np.log1p(x[list(NORM_CHANNELS)])
-    rng=np.random.default_rng(180018);r=(s.r/s.source_phase[:,None]).ravel();w=(rng.choice([-1,1],(32,len(r)))+1j*rng.choice([-1,1],(32,len(r))))/np.sqrt(2*len(r));sk=w.conj()@r
+    ids=s.geometry.get("channel_ids",tuple(range(s.r.shape[1])));order=np.argsort(ids,kind="stable");r=(s.r[:,order]/s.source_phase[:,None]).ravel();w=np.empty((32,len(r)),complex)
+    for j in range(32):
+        for p in range(4):
+            for col,index in enumerate(order):
+                h=hashlib.sha256(f"180018|{s.receiver_geometry_sha256}|{p}:{ids[index]}|{j}".encode()).digest()[0]
+                w[j,p*s.r.shape[1]+col]=((1 if h&1 else -1)+1j*(1 if h&2 else -1))/np.sqrt(2*len(r))
+    sk=w.conj()@r
     x[64:128]=np.r_[sk.real,sk.imag]
     freq=sorted([(i,j,k) for i in range(-3,4) for j in range(-3,4) for k in range(-3,4)],key=lambda a:(sum(v*v for v in a),a))[:32]
     coord=(pts-ctr)/np.where(sides>0,sides,1);tests=np.exp(2j*np.pi*np.asarray(freq)@coord.T);ms=tests.conj()@chi*s.cell_volume
