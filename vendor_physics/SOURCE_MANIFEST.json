@@ -1,0 +1,23 @@
+[
+  {
+    "file": "common_physics_only.py",
+    "source": "A18_B_PILOT/code/common_physics_only.py",
+    "sha256": "67767f75b9b27a2d0d604dd3e0486606789609137bd6284b8ff2adf19a41256c",
+    "transformation": "none; byte-for-byte source copy",
+    "licensing": "No new license granted; existing project rights status retained"
+  },
+  {
+    "file": "full_maxwell.py",
+    "source": "Gaussian/A8/code/full_maxwell.py",
+    "sha256": "2b7b740e7bea39bae4ae5d170cc8a79803fd783c93756adb2d5c34b26a5f44ee",
+    "transformation": "none; byte-for-byte source copy",
+    "licensing": "No new license granted; existing project rights status retained"
+  },
+  {
+    "file": "maxwell_kernel.py",
+    "source": "Gaussian/A8/code/maxwell_kernel.py",
+    "sha256": "4f705616097bdbe6979eb008bcc92678b0e47554b9af59f17fc43404fe9654d9",
+    "transformation": "none; byte-for-byte source copy",
+    "licensing": "No new license granted; existing project rights status retained"
+  }
+]

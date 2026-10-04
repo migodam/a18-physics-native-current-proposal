@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "scope": "two real Maxwell states, identical small direct endpoints; bank used for implementation check only",
+  "rows": [
+    {
+      "object_id": "train_00",
+      "status": "PASS",
+      "gain_relative_error": 1.3736821374910697e-11,
+      "tau_relative_error": 3.825795771291808e-13,
+      "valid_mask_equal": true,
+      "scalar_seconds": 0.02272595907561481,
+      "batched_seconds": 0.013988041086122394,
+      "current_dof": 2592,
+      "source_sha256": "5ce96d7c0739b90d8c54e58c4ae675699c17075e8a085b8d323f9c029a01fb87"
+    },
+    {
+      "object_id": "train_08",
+      "status": "PASS",
+      "gain_relative_error": 5.099426712343564e-12,
+      "tau_relative_error": 7.345063053433575e-14,
+      "valid_mask_equal": true,
+      "scalar_seconds": 0.025437582982704043,
+      "batched_seconds": 0.015037334058433771,
+      "current_dof": 3456,
+      "source_sha256": "ea93a48a9bf633c79901d7be2a4d900c9d3454d6ef146c0c2c5d85fcff3b4488"
+    }
+  ],
+  "wall_seconds": 0.12133741693105549
+}
