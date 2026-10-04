@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "as_of": "2026-10-04",
-  "status": "SPEC_READY_NOT_TRAINED",
+  "status": "G0_A17_PASS_G0_FFT_LOCAL_PASS_PREFLIGHT_READY",
   "physics": {
     "backend": "A17_adapter_required",
     "residual_sign": "predicted_minus_observed",
@@ -38,7 +38,8 @@
     "allow_resplit_existing_manifest": false,
     "teacher_cpu_minutes_cap": 120,
     "teacher_gpu_minutes_cap": 60,
-    "locked_test_evaluations": 1
+    "locked_test_evaluations": 1,
+    "new_master_seed": 2026100418
   },
   "seeds": {
     "families": [
@@ -209,6 +210,14 @@
     "N0": {
       "bucket": "nonlinear",
       "minutes_cap": 60
+    },
+    "T0": {
+      "bucket": "teacher",
+      "minutes_cap": 120
+    },
+    "T1": {
+      "bucket": "teacher",
+      "minutes_cap": 120
     }
   }
 }
