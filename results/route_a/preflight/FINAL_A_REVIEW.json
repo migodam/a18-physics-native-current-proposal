@@ -1,0 +1,1525 @@
+{
+  "schema": "a18.route_a.final_development_review.v1",
+  "source_file": "results/preflight_review/FINAL_INTEGRATED_PREFLIGHT.json",
+  "source_sha256": "3ae6809bc763edc1c2efde0d4f39de602a1309a283bca04e4db75321e5e55bc3",
+  "timing_file": "results/preflight_review/timings.json",
+  "timing_sha256": "4ac728674d07b6a3bf23f4394802dafde830f060bab2d784cff96b46f27581c9",
+  "scope": "Exposed development only; A stopped at G1A; not locked test",
+  "aggregation": "per-parent sum(gain)/sum(reference), then equal parent macro",
+  "A_gates": {
+    "status": "FAIL",
+    "checks": {
+      "macro_coverage": false,
+      "near_coverage": false,
+      "acq_median_ratio": true,
+      "acq_P95_ratio": true
+    },
+    "coverage_macro_union": 0.618244528605787,
+    "coverage_near_union": 0.5187316376545126
+  },
+  "oracle_union": {
+    "objects": [
+      {
+        "object_id": "test_geometry_00",
+        "family": "geometry",
+        "gain": 50.56465159637739,
+        "reference": 68.70999525323745,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.7359140603927622,
+        "complete": true
+      },
+      {
+        "object_id": "train_00",
+        "family": "separated",
+        "gain": 24.25661390404359,
+        "reference": 33.523700118089714,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.7235661283986515,
+        "complete": true
+      },
+      {
+        "object_id": "train_01",
+        "family": "separated",
+        "gain": 11.943788563127566,
+        "reference": 21.420840461398832,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.5575779617354756,
+        "complete": true
+      },
+      {
+        "object_id": "train_08",
+        "family": "near",
+        "gain": 9.991879849057536,
+        "reference": 17.873268785228262,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.5590404289849619,
+        "complete": true
+      },
+      {
+        "object_id": "train_09",
+        "family": "near",
+        "gain": 15.9671735704561,
+        "reference": 33.37460510746725,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.4784228463240633,
+        "complete": true
+      },
+      {
+        "object_id": "train_16",
+        "family": "high",
+        "gain": 25.29798429198027,
+        "reference": 38.6260762120463,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.6549457457988083,
+        "complete": true
+      }
+    ],
+    "macro": 0.618244528605787,
+    "near_contact": 0.5187316376545126,
+    "family_means": {
+      "geometry": 0.7359140603927622,
+      "separated": 0.6405720450670636,
+      "near": 0.5187316376545126,
+      "high": 0.6549457457988083
+    },
+    "missing_states": 0,
+    "zero_reference_states": 0,
+    "independent_objects": 6,
+    "positive_complete_objects": 6
+  },
+  "strongest_legal_analytic": {
+    "policy_id": 6,
+    "policy": {
+      "order": 1,
+      "degree": 0,
+      "drop_rule": 0
+    },
+    "metrics": {
+      "objects": [
+        {
+          "object_id": "test_geometry_00",
+          "family": "geometry",
+          "gain": 44.50927574760764,
+          "reference": 68.70999525323745,
+          "states": 2,
+          "no_reference_states": 0,
+          "missing_states": 0,
+          "coverage": 0.6477845848127964,
+          "complete": true
+        },
+        {
+          "object_id": "train_00",
+          "family": "separated",
+          "gain": 16.506239441152275,
+          "reference": 33.523700118089714,
+          "states": 2,
+          "no_reference_states": 0,
+          "missing_states": 0,
+          "coverage": 0.49237522657128613,
+          "complete": true
+        },
+        {
+          "object_id": "train_01",
+          "family": "separated",
+          "gain": 0.0,
+          "reference": 21.420840461398832,
+          "states": 2,
+          "no_reference_states": 0,
+          "missing_states": 0,
+          "coverage": 0.0,
+          "complete": true
+        },
+        {
+          "object_id": "train_08",
+          "family": "near",
+          "gain": 4.382387226870153,
+          "reference": 17.873268785228262,
+          "states": 2,
+          "no_reference_states": 0,
+          "missing_states": 0,
+          "coverage": 0.2451922633476015,
+          "complete": true
+        },
+        {
+          "object_id": "train_09",
+          "family": "near",
+          "gain": 6.918336640715623,
+          "reference": 33.37460510746725,
+          "states": 2,
+          "no_reference_states": 0,
+          "missing_states": 0,
+          "coverage": 0.20729343818266516,
+          "complete": true
+        },
+        {
+          "object_id": "train_16",
+          "family": "high",
+          "gain": 25.29798429198027,
+          "reference": 38.6260762120463,
+          "states": 2,
+          "no_reference_states": 0,
+          "missing_states": 0,
+          "coverage": 0.6549457457988083,
+          "complete": true
+        }
+      ],
+      "macro": 0.3745985431188596,
+      "near_contact": 0.22624285076513334,
+      "family_means": {
+        "geometry": 0.6477845848127964,
+        "separated": 0.24618761328564306,
+        "near": 0.22624285076513334,
+        "high": 0.6549457457988083
+      },
+      "missing_states": 0,
+      "zero_reference_states": 0,
+      "independent_objects": 6,
+      "positive_complete_objects": 6
+    }
+  },
+  "all_legal_A_policies": [
+    {
+      "policy_id": 0,
+      "policy": {
+        "order": 0,
+        "degree": 0,
+        "drop_rule": 0
+      },
+      "metrics": {
+        "objects": [
+          {
+            "object_id": "test_geometry_00",
+            "family": "geometry",
+            "gain": 31.9111871090221,
+            "reference": 68.70999525323745,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.46443296919771687,
+            "complete": true
+          },
+          {
+            "object_id": "train_00",
+            "family": "separated",
+            "gain": 17.066918815955752,
+            "reference": 33.523700118089714,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.509100092049394,
+            "complete": true
+          },
+          {
+            "object_id": "train_01",
+            "family": "separated",
+            "gain": 0.0,
+            "reference": 21.420840461398832,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_08",
+            "family": "near",
+            "gain": 5.2673719892948005,
+            "reference": 17.873268785228262,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.2947066959373503,
+            "complete": true
+          },
+          {
+            "object_id": "train_09",
+            "family": "near",
+            "gain": 0.0,
+            "reference": 33.37460510746725,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_16",
+            "family": "high",
+            "gain": 7.3440801393500195,
+            "reference": 38.6260762120463,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.19013269944979874,
+            "complete": true
+          }
+        ],
+        "macro": 0.24306207610570998,
+        "near_contact": 0.14735334796867516,
+        "family_means": {
+          "geometry": 0.46443296919771687,
+          "separated": 0.254550046024697,
+          "near": 0.14735334796867516,
+          "high": 0.19013269944979874
+        },
+        "missing_states": 0,
+        "zero_reference_states": 0,
+        "independent_objects": 6,
+        "positive_complete_objects": 6
+      }
+    },
+    {
+      "policy_id": 1,
+      "policy": {
+        "order": 0,
+        "degree": 0,
+        "drop_rule": 1
+      },
+      "metrics": {
+        "objects": [
+          {
+            "object_id": "test_geometry_00",
+            "family": "geometry",
+            "gain": 31.9111871090221,
+            "reference": 68.70999525323745,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.46443296919771687,
+            "complete": true
+          },
+          {
+            "object_id": "train_00",
+            "family": "separated",
+            "gain": 17.066918815955752,
+            "reference": 33.523700118089714,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.509100092049394,
+            "complete": true
+          },
+          {
+            "object_id": "train_01",
+            "family": "separated",
+            "gain": 0.0,
+            "reference": 21.420840461398832,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_08",
+            "family": "near",
+            "gain": 5.2673719892948005,
+            "reference": 17.873268785228262,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.2947066959373503,
+            "complete": true
+          },
+          {
+            "object_id": "train_09",
+            "family": "near",
+            "gain": 0.0,
+            "reference": 33.37460510746725,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_16",
+            "family": "high",
+            "gain": 7.3440801393500195,
+            "reference": 38.6260762120463,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.19013269944979874,
+            "complete": true
+          }
+        ],
+        "macro": 0.24306207610570998,
+        "near_contact": 0.14735334796867516,
+        "family_means": {
+          "geometry": 0.46443296919771687,
+          "separated": 0.254550046024697,
+          "near": 0.14735334796867516,
+          "high": 0.19013269944979874
+        },
+        "missing_states": 0,
+        "zero_reference_states": 0,
+        "independent_objects": 6,
+        "positive_complete_objects": 6
+      }
+    },
+    {
+      "policy_id": 2,
+      "policy": {
+        "order": 0,
+        "degree": 1,
+        "drop_rule": 0
+      },
+      "metrics": {
+        "objects": [
+          {
+            "object_id": "test_geometry_00",
+            "family": "geometry",
+            "gain": 31.9111871090221,
+            "reference": 68.70999525323745,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.46443296919771687,
+            "complete": true
+          },
+          {
+            "object_id": "train_00",
+            "family": "separated",
+            "gain": 17.066918815955752,
+            "reference": 33.523700118089714,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.509100092049394,
+            "complete": true
+          },
+          {
+            "object_id": "train_01",
+            "family": "separated",
+            "gain": 0.0,
+            "reference": 21.420840461398832,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_08",
+            "family": "near",
+            "gain": 5.2673719892948005,
+            "reference": 17.873268785228262,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.2947066959373503,
+            "complete": true
+          },
+          {
+            "object_id": "train_09",
+            "family": "near",
+            "gain": 0.0,
+            "reference": 33.37460510746725,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_16",
+            "family": "high",
+            "gain": 7.3440801393500195,
+            "reference": 38.6260762120463,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.19013269944979874,
+            "complete": true
+          }
+        ],
+        "macro": 0.24306207610570998,
+        "near_contact": 0.14735334796867516,
+        "family_means": {
+          "geometry": 0.46443296919771687,
+          "separated": 0.254550046024697,
+          "near": 0.14735334796867516,
+          "high": 0.19013269944979874
+        },
+        "missing_states": 0,
+        "zero_reference_states": 0,
+        "independent_objects": 6,
+        "positive_complete_objects": 6
+      }
+    },
+    {
+      "policy_id": 3,
+      "policy": {
+        "order": 0,
+        "degree": 1,
+        "drop_rule": 1
+      },
+      "metrics": {
+        "objects": [
+          {
+            "object_id": "test_geometry_00",
+            "family": "geometry",
+            "gain": 31.9111871090221,
+            "reference": 68.70999525323745,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.46443296919771687,
+            "complete": true
+          },
+          {
+            "object_id": "train_00",
+            "family": "separated",
+            "gain": 17.066918815955752,
+            "reference": 33.523700118089714,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.509100092049394,
+            "complete": true
+          },
+          {
+            "object_id": "train_01",
+            "family": "separated",
+            "gain": 0.0,
+            "reference": 21.420840461398832,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_08",
+            "family": "near",
+            "gain": 5.2673719892948005,
+            "reference": 17.873268785228262,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.2947066959373503,
+            "complete": true
+          },
+          {
+            "object_id": "train_09",
+            "family": "near",
+            "gain": 0.0,
+            "reference": 33.37460510746725,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_16",
+            "family": "high",
+            "gain": 7.3440801393500195,
+            "reference": 38.6260762120463,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.19013269944979874,
+            "complete": true
+          }
+        ],
+        "macro": 0.24306207610570998,
+        "near_contact": 0.14735334796867516,
+        "family_means": {
+          "geometry": 0.46443296919771687,
+          "separated": 0.254550046024697,
+          "near": 0.14735334796867516,
+          "high": 0.19013269944979874
+        },
+        "missing_states": 0,
+        "zero_reference_states": 0,
+        "independent_objects": 6,
+        "positive_complete_objects": 6
+      }
+    },
+    {
+      "policy_id": 4,
+      "policy": {
+        "order": 0,
+        "degree": 2,
+        "drop_rule": 0
+      },
+      "metrics": {
+        "objects": [
+          {
+            "object_id": "test_geometry_00",
+            "family": "geometry",
+            "gain": 31.9111871090221,
+            "reference": 68.70999525323745,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.46443296919771687,
+            "complete": true
+          },
+          {
+            "object_id": "train_00",
+            "family": "separated",
+            "gain": 17.066918815955752,
+            "reference": 33.523700118089714,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.509100092049394,
+            "complete": true
+          },
+          {
+            "object_id": "train_01",
+            "family": "separated",
+            "gain": 0.0,
+            "reference": 21.420840461398832,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_08",
+            "family": "near",
+            "gain": 5.2673719892948005,
+            "reference": 17.873268785228262,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.2947066959373503,
+            "complete": true
+          },
+          {
+            "object_id": "train_09",
+            "family": "near",
+            "gain": 0.0,
+            "reference": 33.37460510746725,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_16",
+            "family": "high",
+            "gain": 7.3440801393500195,
+            "reference": 38.6260762120463,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.19013269944979874,
+            "complete": true
+          }
+        ],
+        "macro": 0.24306207610570998,
+        "near_contact": 0.14735334796867516,
+        "family_means": {
+          "geometry": 0.46443296919771687,
+          "separated": 0.254550046024697,
+          "near": 0.14735334796867516,
+          "high": 0.19013269944979874
+        },
+        "missing_states": 0,
+        "zero_reference_states": 0,
+        "independent_objects": 6,
+        "positive_complete_objects": 6
+      }
+    },
+    {
+      "policy_id": 5,
+      "policy": {
+        "order": 0,
+        "degree": 2,
+        "drop_rule": 1
+      },
+      "metrics": {
+        "objects": [
+          {
+            "object_id": "test_geometry_00",
+            "family": "geometry",
+            "gain": 31.9111871090221,
+            "reference": 68.70999525323745,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.46443296919771687,
+            "complete": true
+          },
+          {
+            "object_id": "train_00",
+            "family": "separated",
+            "gain": 17.066918815955752,
+            "reference": 33.523700118089714,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.509100092049394,
+            "complete": true
+          },
+          {
+            "object_id": "train_01",
+            "family": "separated",
+            "gain": 0.0,
+            "reference": 21.420840461398832,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_08",
+            "family": "near",
+            "gain": 5.2673719892948005,
+            "reference": 17.873268785228262,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.2947066959373503,
+            "complete": true
+          },
+          {
+            "object_id": "train_09",
+            "family": "near",
+            "gain": 0.0,
+            "reference": 33.37460510746725,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_16",
+            "family": "high",
+            "gain": 7.3440801393500195,
+            "reference": 38.6260762120463,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.19013269944979874,
+            "complete": true
+          }
+        ],
+        "macro": 0.24306207610570998,
+        "near_contact": 0.14735334796867516,
+        "family_means": {
+          "geometry": 0.46443296919771687,
+          "separated": 0.254550046024697,
+          "near": 0.14735334796867516,
+          "high": 0.19013269944979874
+        },
+        "missing_states": 0,
+        "zero_reference_states": 0,
+        "independent_objects": 6,
+        "positive_complete_objects": 6
+      }
+    },
+    {
+      "policy_id": 6,
+      "policy": {
+        "order": 1,
+        "degree": 0,
+        "drop_rule": 0
+      },
+      "metrics": {
+        "objects": [
+          {
+            "object_id": "test_geometry_00",
+            "family": "geometry",
+            "gain": 44.50927574760764,
+            "reference": 68.70999525323745,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.6477845848127964,
+            "complete": true
+          },
+          {
+            "object_id": "train_00",
+            "family": "separated",
+            "gain": 16.506239441152275,
+            "reference": 33.523700118089714,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.49237522657128613,
+            "complete": true
+          },
+          {
+            "object_id": "train_01",
+            "family": "separated",
+            "gain": 0.0,
+            "reference": 21.420840461398832,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_08",
+            "family": "near",
+            "gain": 4.382387226870153,
+            "reference": 17.873268785228262,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.2451922633476015,
+            "complete": true
+          },
+          {
+            "object_id": "train_09",
+            "family": "near",
+            "gain": 6.918336640715623,
+            "reference": 33.37460510746725,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.20729343818266516,
+            "complete": true
+          },
+          {
+            "object_id": "train_16",
+            "family": "high",
+            "gain": 25.29798429198027,
+            "reference": 38.6260762120463,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.6549457457988083,
+            "complete": true
+          }
+        ],
+        "macro": 0.3745985431188596,
+        "near_contact": 0.22624285076513334,
+        "family_means": {
+          "geometry": 0.6477845848127964,
+          "separated": 0.24618761328564306,
+          "near": 0.22624285076513334,
+          "high": 0.6549457457988083
+        },
+        "missing_states": 0,
+        "zero_reference_states": 0,
+        "independent_objects": 6,
+        "positive_complete_objects": 6
+      }
+    },
+    {
+      "policy_id": 7,
+      "policy": {
+        "order": 1,
+        "degree": 0,
+        "drop_rule": 1
+      },
+      "metrics": {
+        "objects": [
+          {
+            "object_id": "test_geometry_00",
+            "family": "geometry",
+            "gain": 44.50927574760764,
+            "reference": 68.70999525323745,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.6477845848127964,
+            "complete": true
+          },
+          {
+            "object_id": "train_00",
+            "family": "separated",
+            "gain": 16.506239441152275,
+            "reference": 33.523700118089714,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.49237522657128613,
+            "complete": true
+          },
+          {
+            "object_id": "train_01",
+            "family": "separated",
+            "gain": 0.0,
+            "reference": 21.420840461398832,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_08",
+            "family": "near",
+            "gain": 4.382387226870153,
+            "reference": 17.873268785228262,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.2451922633476015,
+            "complete": true
+          },
+          {
+            "object_id": "train_09",
+            "family": "near",
+            "gain": 6.918336640715623,
+            "reference": 33.37460510746725,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.20729343818266516,
+            "complete": true
+          },
+          {
+            "object_id": "train_16",
+            "family": "high",
+            "gain": 25.29798429198027,
+            "reference": 38.6260762120463,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.6549457457988083,
+            "complete": true
+          }
+        ],
+        "macro": 0.3745985431188596,
+        "near_contact": 0.22624285076513334,
+        "family_means": {
+          "geometry": 0.6477845848127964,
+          "separated": 0.24618761328564306,
+          "near": 0.22624285076513334,
+          "high": 0.6549457457988083
+        },
+        "missing_states": 0,
+        "zero_reference_states": 0,
+        "independent_objects": 6,
+        "positive_complete_objects": 6
+      }
+    },
+    {
+      "policy_id": 8,
+      "policy": {
+        "order": 1,
+        "degree": 1,
+        "drop_rule": 0
+      },
+      "metrics": {
+        "objects": [
+          {
+            "object_id": "test_geometry_00",
+            "family": "geometry",
+            "gain": 32.093299362375845,
+            "reference": 68.70999525323745,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.46708341696274075,
+            "complete": true
+          },
+          {
+            "object_id": "train_00",
+            "family": "separated",
+            "gain": 16.506239441152275,
+            "reference": 33.523700118089714,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.49237522657128613,
+            "complete": true
+          },
+          {
+            "object_id": "train_01",
+            "family": "separated",
+            "gain": 0.0,
+            "reference": 21.420840461398832,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_08",
+            "family": "near",
+            "gain": 4.382387226870153,
+            "reference": 17.873268785228262,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.2451922633476015,
+            "complete": true
+          },
+          {
+            "object_id": "train_09",
+            "family": "near",
+            "gain": 6.918336640715623,
+            "reference": 33.37460510746725,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.20729343818266516,
+            "complete": true
+          },
+          {
+            "object_id": "train_16",
+            "family": "high",
+            "gain": 25.29798429198027,
+            "reference": 38.6260762120463,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.6549457457988083,
+            "complete": true
+          }
+        ],
+        "macro": 0.34448168181051697,
+        "near_contact": 0.22624285076513334,
+        "family_means": {
+          "geometry": 0.46708341696274075,
+          "separated": 0.24618761328564306,
+          "near": 0.22624285076513334,
+          "high": 0.6549457457988083
+        },
+        "missing_states": 0,
+        "zero_reference_states": 0,
+        "independent_objects": 6,
+        "positive_complete_objects": 6
+      }
+    },
+    {
+      "policy_id": 9,
+      "policy": {
+        "order": 1,
+        "degree": 1,
+        "drop_rule": 1
+      },
+      "metrics": {
+        "objects": [
+          {
+            "object_id": "test_geometry_00",
+            "family": "geometry",
+            "gain": 32.093299362375845,
+            "reference": 68.70999525323745,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.46708341696274075,
+            "complete": true
+          },
+          {
+            "object_id": "train_00",
+            "family": "separated",
+            "gain": 16.506239441152275,
+            "reference": 33.523700118089714,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.49237522657128613,
+            "complete": true
+          },
+          {
+            "object_id": "train_01",
+            "family": "separated",
+            "gain": 0.0,
+            "reference": 21.420840461398832,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_08",
+            "family": "near",
+            "gain": 4.382387226870153,
+            "reference": 17.873268785228262,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.2451922633476015,
+            "complete": true
+          },
+          {
+            "object_id": "train_09",
+            "family": "near",
+            "gain": 6.918336640715623,
+            "reference": 33.37460510746725,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.20729343818266516,
+            "complete": true
+          },
+          {
+            "object_id": "train_16",
+            "family": "high",
+            "gain": 25.29798429198027,
+            "reference": 38.6260762120463,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.6549457457988083,
+            "complete": true
+          }
+        ],
+        "macro": 0.34448168181051697,
+        "near_contact": 0.22624285076513334,
+        "family_means": {
+          "geometry": 0.46708341696274075,
+          "separated": 0.24618761328564306,
+          "near": 0.22624285076513334,
+          "high": 0.6549457457988083
+        },
+        "missing_states": 0,
+        "zero_reference_states": 0,
+        "independent_objects": 6,
+        "positive_complete_objects": 6
+      }
+    },
+    {
+      "policy_id": 10,
+      "policy": {
+        "order": 1,
+        "degree": 2,
+        "drop_rule": 0
+      },
+      "metrics": {
+        "objects": [
+          {
+            "object_id": "test_geometry_00",
+            "family": "geometry",
+            "gain": 42.20654408039776,
+            "reference": 68.70999525323745,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.6142708047765305,
+            "complete": true
+          },
+          {
+            "object_id": "train_00",
+            "family": "separated",
+            "gain": 16.506239441152275,
+            "reference": 33.523700118089714,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.49237522657128613,
+            "complete": true
+          },
+          {
+            "object_id": "train_01",
+            "family": "separated",
+            "gain": 0.0,
+            "reference": 21.420840461398832,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_08",
+            "family": "near",
+            "gain": 4.382387226870153,
+            "reference": 17.873268785228262,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.2451922633476015,
+            "complete": true
+          },
+          {
+            "object_id": "train_09",
+            "family": "near",
+            "gain": 6.918336640715623,
+            "reference": 33.37460510746725,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.20729343818266516,
+            "complete": true
+          },
+          {
+            "object_id": "train_16",
+            "family": "high",
+            "gain": 25.29798429198027,
+            "reference": 38.6260762120463,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.6549457457988083,
+            "complete": true
+          }
+        ],
+        "macro": 0.36901291311281526,
+        "near_contact": 0.22624285076513334,
+        "family_means": {
+          "geometry": 0.6142708047765305,
+          "separated": 0.24618761328564306,
+          "near": 0.22624285076513334,
+          "high": 0.6549457457988083
+        },
+        "missing_states": 0,
+        "zero_reference_states": 0,
+        "independent_objects": 6,
+        "positive_complete_objects": 6
+      }
+    },
+    {
+      "policy_id": 11,
+      "policy": {
+        "order": 1,
+        "degree": 2,
+        "drop_rule": 1
+      },
+      "metrics": {
+        "objects": [
+          {
+            "object_id": "test_geometry_00",
+            "family": "geometry",
+            "gain": 42.20654408039776,
+            "reference": 68.70999525323745,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.6142708047765305,
+            "complete": true
+          },
+          {
+            "object_id": "train_00",
+            "family": "separated",
+            "gain": 16.506239441152275,
+            "reference": 33.523700118089714,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.49237522657128613,
+            "complete": true
+          },
+          {
+            "object_id": "train_01",
+            "family": "separated",
+            "gain": 0.0,
+            "reference": 21.420840461398832,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_08",
+            "family": "near",
+            "gain": 4.382387226870153,
+            "reference": 17.873268785228262,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.2451922633476015,
+            "complete": true
+          },
+          {
+            "object_id": "train_09",
+            "family": "near",
+            "gain": 6.918336640715623,
+            "reference": 33.37460510746725,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.20729343818266516,
+            "complete": true
+          },
+          {
+            "object_id": "train_16",
+            "family": "high",
+            "gain": 25.29798429198027,
+            "reference": 38.6260762120463,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.6549457457988083,
+            "complete": true
+          }
+        ],
+        "macro": 0.36901291311281526,
+        "near_contact": 0.22624285076513334,
+        "family_means": {
+          "geometry": 0.6142708047765305,
+          "separated": 0.24618761328564306,
+          "near": 0.22624285076513334,
+          "high": 0.6549457457988083
+        },
+        "missing_states": 0,
+        "zero_reference_states": 0,
+        "independent_objects": 6,
+        "positive_complete_objects": 6
+      }
+    },
+    {
+      "policy_id": 12,
+      "policy": {
+        "kind": "cheap_fixed"
+      },
+      "metrics": {
+        "objects": [
+          {
+            "object_id": "test_geometry_00",
+            "family": "geometry",
+            "gain": 31.9111871090221,
+            "reference": 68.70999525323745,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.46443296919771687,
+            "complete": true
+          },
+          {
+            "object_id": "train_00",
+            "family": "separated",
+            "gain": 17.066918815955752,
+            "reference": 33.523700118089714,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.509100092049394,
+            "complete": true
+          },
+          {
+            "object_id": "train_01",
+            "family": "separated",
+            "gain": 0.0,
+            "reference": 21.420840461398832,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_08",
+            "family": "near",
+            "gain": 5.2673719892948005,
+            "reference": 17.873268785228262,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.2947066959373503,
+            "complete": true
+          },
+          {
+            "object_id": "train_09",
+            "family": "near",
+            "gain": 0.0,
+            "reference": 33.37460510746725,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_16",
+            "family": "high",
+            "gain": 7.3440801393500195,
+            "reference": 38.6260762120463,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.19013269944979874,
+            "complete": true
+          }
+        ],
+        "macro": 0.24306207610570998,
+        "near_contact": 0.14735334796867516,
+        "family_means": {
+          "geometry": 0.46443296919771687,
+          "separated": 0.254550046024697,
+          "near": 0.14735334796867516,
+          "high": 0.19013269944979874
+        },
+        "missing_states": 0,
+        "zero_reference_states": 0,
+        "independent_objects": 6,
+        "positive_complete_objects": 6
+      }
+    },
+    {
+      "policy_id": 13,
+      "policy": {
+        "kind": "opm_balanced"
+      },
+      "metrics": {
+        "objects": [
+          {
+            "object_id": "test_geometry_00",
+            "family": "geometry",
+            "gain": 44.50927574760764,
+            "reference": 68.70999525323745,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.6477845848127964,
+            "complete": true
+          },
+          {
+            "object_id": "train_00",
+            "family": "separated",
+            "gain": 5.638021485021413,
+            "reference": 33.523700118089714,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.16818016702097519,
+            "complete": true
+          },
+          {
+            "object_id": "train_01",
+            "family": "separated",
+            "gain": 0.1017839612630394,
+            "reference": 21.420840461398832,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.00475163247896169,
+            "complete": true
+          },
+          {
+            "object_id": "train_08",
+            "family": "near",
+            "gain": 0.0,
+            "reference": 17.873268785228262,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.0,
+            "complete": true
+          },
+          {
+            "object_id": "train_09",
+            "family": "near",
+            "gain": 8.155760020043179,
+            "reference": 33.37460510746725,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.24437023280968817,
+            "complete": true
+          },
+          {
+            "object_id": "train_16",
+            "family": "high",
+            "gain": 5.140007372371519,
+            "reference": 38.6260762120463,
+            "states": 2,
+            "no_reference_states": 0,
+            "missing_states": 0,
+            "coverage": 0.13307091675981592,
+            "complete": true
+          }
+        ],
+        "macro": 0.19969292231370625,
+        "near_contact": 0.12218511640484409,
+        "family_means": {
+          "geometry": 0.6477845848127964,
+          "separated": 0.08646589974996843,
+          "near": 0.12218511640484409,
+          "high": 0.13307091675981592
+        },
+        "missing_states": 0,
+        "zero_reference_states": 0,
+        "independent_objects": 6,
+        "positive_complete_objects": 6
+      }
+    }
+  ],
+  "acquisition_ratios": {
+    "median": 0.03125749944743711,
+    "P95": 0.03527583119419759,
+    "per_state": [
+      0.031637211297333385,
+      0.03114689363124851,
+      0.03156193909355023,
+      0.03095732657954912,
+      0.03136810526362571,
+      0.031645616643784374,
+      0.02645261007065547,
+      0.029706178317848997,
+      0.03012893095288042,
+      0.03040948858322322,
+      0.03521798722364139,
+      0.03534652938043295
+    ]
+  },
+  "costs": [
+    {
+      "method": "A-analytic",
+      "timing_rows": 60,
+      "cold_acquisition_median": 0.18672215001424775,
+      "cold_verification_median": 1.5822835500002839,
+      "cold_increment_median": 1.8272809999762103,
+      "cold_total_with_state_median": 2.002149849955458,
+      "memo_proposal_only_median": 4.00003045797348e-06,
+      "full_warm_Tinc": "NOT_MEASURED"
+    },
+    {
+      "method": "D-full",
+      "timing_rows": 60,
+      "cold_acquisition_median": 5.876185299945064,
+      "cold_verification_median": 1.5699223499977961,
+      "cold_increment_median": 7.3770073499763384,
+      "cold_total_with_state_median": 7.529484749946278,
+      "memo_proposal_only_median": 1.2499978765845299e-05,
+      "full_warm_Tinc": "NOT_MEASURED"
+    },
+    {
+      "method": "D-recommended",
+      "timing_rows": 60,
+      "cold_acquisition_median": 5.864836299966555,
+      "cold_verification_median": 0.622781949932687,
+      "cold_increment_median": 6.473105549928732,
+      "cold_total_with_state_median": 6.6271659499034286,
+      "memo_proposal_only_median": 6.9999368861317635e-06,
+      "full_warm_Tinc": "NOT_MEASURED"
+    }
+  ],
+  "active_nodes_per_state": [
+    114,
+    114,
+    114,
+    114,
+    114,
+    114,
+    114,
+    114,
+    114,
+    114,
+    114,
+    114
+  ],
+  "process_status": "FAILED_AFTER_VALID_ATOMIC_RESULT_WRITE",
+  "process_error": "terminal json.dumps of numpy.bool_; 240 physical timing rows and all results had already been atomically written",
+  "failure_evidence": "results/raw_failures/T1_terminal_serialization.json",
+  "physics_repeated_for_statistics": false,
+  "A_NN_launched": false,
+  "locked_test_accessed": false,
+  "success_action_details": "NOT_RECORDED; ACTION_LEDGER.jsonl records explicit trace gaps",
+  "full_warm_Tinc": "NOT_MEASURED; warm proposal memo cost is separate",
+  "A0_historical_replay": "NOT_RUN",
+  "numerical_floor_action_statistics": "NOT_MEASURED_FROM_AGGREGATES",
+  "timing_unit": "seconds"
+}

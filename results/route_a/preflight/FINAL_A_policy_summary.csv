@@ -1,0 +1,15 @@
+policy_id,policy_json,macro_common,near_common,scope
+0,"{""order"":0,""degree"":0,""drop_rule"":0}",0.24306207610570998,0.14735334796867516,development_selected_not_unbiased
+1,"{""order"":0,""degree"":0,""drop_rule"":1}",0.24306207610570998,0.14735334796867516,development_selected_not_unbiased
+2,"{""order"":0,""degree"":1,""drop_rule"":0}",0.24306207610570998,0.14735334796867516,development_selected_not_unbiased
+3,"{""order"":0,""degree"":1,""drop_rule"":1}",0.24306207610570998,0.14735334796867516,development_selected_not_unbiased
+4,"{""order"":0,""degree"":2,""drop_rule"":0}",0.24306207610570998,0.14735334796867516,development_selected_not_unbiased
+5,"{""order"":0,""degree"":2,""drop_rule"":1}",0.24306207610570998,0.14735334796867516,development_selected_not_unbiased
+6,"{""order"":1,""degree"":0,""drop_rule"":0}",0.3745985431188596,0.22624285076513334,development_selected_not_unbiased
+7,"{""order"":1,""degree"":0,""drop_rule"":1}",0.3745985431188596,0.22624285076513334,development_selected_not_unbiased
+8,"{""order"":1,""degree"":1,""drop_rule"":0}",0.34448168181051697,0.22624285076513334,development_selected_not_unbiased
+9,"{""order"":1,""degree"":1,""drop_rule"":1}",0.34448168181051697,0.22624285076513334,development_selected_not_unbiased
+10,"{""order"":1,""degree"":2,""drop_rule"":0}",0.36901291311281526,0.22624285076513334,development_selected_not_unbiased
+11,"{""order"":1,""degree"":2,""drop_rule"":1}",0.36901291311281526,0.22624285076513334,development_selected_not_unbiased
+12,"{""kind"":""cheap_fixed""}",0.24306207610570998,0.14735334796867516,development_selected_not_unbiased
+13,"{""kind"":""opm_balanced""}",0.19969292231370625,0.12218511640484409,development_selected_not_unbiased
