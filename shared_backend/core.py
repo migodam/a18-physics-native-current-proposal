@@ -46,7 +46,7 @@ def endpoint_from_maps(D, SU, NB, r, ell, Lambda):
     s = -la.cho_solve(la.cho_factor(H, lower=True), h)
     nr = float(la.norm(H@s+h)/max(la.norm(h), np.finfo(float).tiny))
     if not np.isfinite(nr) or nr > TOL: raise ValueError("NORMAL_RESIDUAL_FAILED")
-    return {"step": s, "J": J, "Jstep": J@s, "stability": info,
+    return {"step": s, "J": J, "Jstep": J@s, "stability": info,"reduced_gradient_norm":float(la.norm(H@s+h)),
             "normal_relative_residual": nr, "coefficients": C}
 
 def directional_check(r,u,z,x,d,ell,Lambda):
@@ -109,6 +109,7 @@ class FrozenState:
     receiver_mode_ids: tuple = ()
     accepted_count: int = 0
     online_provenance: dict = field(default_factory=lambda:{"origin":"FrozenState.current_estimate"})
+    reduced_gradient_norm: float = 0.
     def __post_init__(self):
         for key in ("chi","current_polarizability","points","r","forcing","U","LU","SU","D","step_old","ell","Lambda","source_phase"):
             object.__setattr__(self,key,readonly(getattr(self,key)))
@@ -121,6 +122,10 @@ class FrozenState:
         v=float(self.Lambda[0,0])
         if not np.allclose(self.Lambda,np.eye(len(self.ell))*v,rtol=0,atol=1e-14): raise ValueError("v1 scalar prior required")
         return v
+    @property
+    def state_sha256(self):return self.online_provenance["state_sha256"]
+    @property
+    def state_hash(self):return self.state_sha256
 
 @dataclass(frozen=True)
 class SeedBundle:
@@ -193,8 +198,11 @@ class OperatorBackend:
     def freeze_state(self,U,*,object_id,state_id,split="development",receiver_mode_ids=(),accepted_count=0):
         U=np.asarray(U,complex);LU=self.apply_L(U);SU=self.apply_S(U);D=U.conj().T@LU
         m=self.metadata;ep=endpoint_from_maps(D,SU,self.project_B(U),m["r"],m["ell"],m["Lambda"])
-        config=sha256((m["state_hash"]+array_hash(U)+m["material_gauge_sha256"]+SEED_SCHEMA+"tol=1e-10").encode()).hexdigest()
-        return FrozenState(object_id,state_id,split,config,m["material_gauge_sha256"],m["receiver_geometry_sha256"],m["chi"],m["a"],m["points"],tuple(m["grid_shape"]),m["cell_volume"],m["wavenumber"],m["r"],m["forcing"],U,LU,SU,D,ep["step"],m["ell"],m["Lambda"],m.get("source_phase",np.ones(4,complex)),ep["normal_relative_residual"],m.get("geometry",{}),(),tuple(receiver_mode_ids),accepted_count)
+        phases=m.get("source_phase",np.ones(4,complex))
+        state_hash=sha256((m["state_hash"]+"".join(array_hash(m[k]) for k in ("chi","a","r","forcing","ell","Lambda"))+array_hash(phases)+m["material_gauge_sha256"]+m["receiver_geometry_sha256"]).encode()).hexdigest()
+        config=sha256((state_hash+array_hash(U)+SEED_SCHEMA+"seed=1e-10;breakdown=1e-12;orth=1e-10;phase=maxabs;schema=192v2").encode()).hexdigest()
+        if not receiver_mode_ids:receiver_mode_ids=tuple(range(U.shape[1])) if np.allclose(U,self.get_receiver_basis(U.shape[1]),rtol=0,atol=TOL) else (-1,)*U.shape[1]
+        return FrozenState(object_id,state_id,split,config,m["material_gauge_sha256"],m["receiver_geometry_sha256"],m["chi"],m["a"],m["points"],tuple(m["grid_shape"]),m["cell_volume"],m["wavenumber"],m["r"],m["forcing"],U,LU,SU,D,ep["step"],m["ell"],m["Lambda"],phases,ep["normal_relative_residual"],m.get("geometry",{}),(),tuple(receiver_mode_ids),accepted_count,{"origin":"FrozenState.current_estimate","state_sha256":state_hash},ep["reduced_gradient_norm"])
     def get_old_endpoint(self,state):
         return endpoint_from_maps(state.D,state.SU,self.project_B(state.U),state.r,state.ell,state.Lambda)
     def get_opm_seeds(self,state):
@@ -203,11 +211,11 @@ class OperatorBackend:
         if not stability(D)["stable"]:raise ValueError("ROOT_UNSTABLE")
         rng=np.random.default_rng(180018);mix=(rng.choice([-1,1],(4,2))+1j*rng.choice([-1,1],(4,2)))/np.sqrt(8)
         p=lambda v:v-U@(U.conj().T@v)
-        O=self.apply_S_adjoint(state.r.T@mix)
+        O=self.apply_S_adjoint((state.r/state.source_phase[:,None]).T@mix)
         Ocor=self.apply_L_adjoint(U@la.solve(D.conj().T,U.conj().T@O))
         z=rng.choice([-1.,1.],(len(state.ell),2))/np.sqrt(len(state.ell))
-        Bz=self.apply_B(z);M=np.einsum("npi,pi->ni",Bz,mix,optimize=True)
-        Psrc=state.forcing@mix;srcs=[O,Psrc,M];vec=[];norms=[];scales=[];active=[];phases=[]
+        Bz=self.apply_B(z);M=np.einsum("npi,pi->ni",Bz/state.source_phase[None,:,None],mix,optimize=True)
+        Psrc=(state.forcing/state.source_phase[None,:])@mix;srcs=[O,Psrc,M];vec=[];norms=[];scales=[];active=[];phases=[]
         for family,src in enumerate(srcs):
             cor=Ocor if family==0 else LU@la.solve(D,U.conj().T@src)
             v=p(src-cor)
@@ -251,11 +259,12 @@ class VerifiedExchange:
         else:
             recipe=self.recipes[action.recipe_id];C=recipe() if callable(recipe) else recipe.materialize(s,b)
             C=np.asarray(C);C=C[:,None] if C.ndim==1 else C
+        b.receipt.add("current_materializations",len(ds));raw_norm=la.norm(C)
         retained=np.delete(s.U,ds,axis=1)
         for _ in range(2): C=C-retained@(retained.conj().T@C)
         Q,R=la.qr(C,mode="economic")
-        if Q.shape[1]!=len(ds) or min(abs(np.diag(R)),default=0)<1e-8:raise ValueError("DEGENERATE_ACTION")
-        b.receipt.add("current_materializations",len(ds));return retained,Q
+        if Q.shape[1]!=len(ds) or min(abs(np.diag(R)),default=0)<=TOL*raw_norm:raise ValueError("DEGENERATE_ACTION")
+        return retained,Q
     def evaluate(self,action):
         b,s=self.backend,self.state;before=b.receipt.snapshot();t=time.perf_counter()
         try:

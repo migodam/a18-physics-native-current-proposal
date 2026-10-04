@@ -1,0 +1,124 @@
+{
+  "schema": "a18.G0.v1",
+  "status": "PASS",
+  "threshold_relative": 1e-09,
+  "rows": [
+    {
+      "object_id": 2007,
+      "phase": "early",
+      "device": "cuda",
+      "illuminations": 6,
+      "real_material_dimension": 54,
+      "endpoint_relative_error": [
+        4.026478075250289e-14,
+        1.9944164835844351e-13
+      ],
+      "Jstep_relative_error": [
+        1.5308405669260589e-15,
+        4.987384094108037e-15
+      ],
+      "finite_gain_relative_error": 0.0,
+      "material_adjoint_relative_error": 1.5270174596969026e-16,
+      "gain": -1.3013059932953337e-06,
+      "tau": 6.862186232711956e-13,
+      "stability": [
+        {
+          "stable": true,
+          "relative": 0.9321698277286947,
+          "sigma_min": 0.9484331350161926,
+          "sigma_max": 1.017446721406039
+        },
+        {
+          "stable": true,
+          "relative": 0.9321697512478622,
+          "sigma_min": 0.9484329774172827,
+          "sigma_max": 1.0174466358167593
+        }
+      ],
+      "normal_relative_residual": [
+        2.7723874795817793e-16,
+        2.686239356495376e-16
+      ],
+      "material_gauge": {
+        "legacy_material_gauge": false,
+        "portable_material_gauge": true,
+        "coefficient_gauge_status": "saved_exact_basis",
+        "basis_fingerprint": "8f41638a421faa7c8ea9a4f49e9e170f02751445c2c3b0c71f87049d1981bc4f",
+        "saved_basis_fingerprint": "8f41638a421faa7c8ea9a4f49e9e170f02751445c2c3b0c71f87049d1981bc4f",
+        "scope": "exact saved physical orthonormal tangent; ell/steps require same fingerprint",
+        "shared_tangent_reused": false,
+        "restore_and_validation_wall_s": 0.027179199969395995,
+        "bookkeeping_scope": "paid CPU Tangent construction, saved-basis/ell/shared-cache validation; included in actual job wall"
+      },
+      "inputs": {
+        "inputs/object_2007/common_data.npz": "fc24b4ede802ce1b5e3e26bd54ddb7422697d629ca86dd9f33cb1698ed647d7a",
+        "inputs/object_2007/anchor_00.npz": "fd36b56bf459c5aa89cff54bf63064c55677abd00aa95250a7a4b59407f982c6",
+        "inputs/object_2007/step_00.npz": "6474eb6ce2d2e0a07d6d2760598bc89382e24eb2f83fe6fde90be36c701492c0"
+      },
+      "state_hash": "25387349f2beb0f96d242ca9b954a62e6bfcc22e30747f954ca70f472e65a2bd",
+      "wall_seconds": 33.079398400033824,
+      "status": "PASS"
+    },
+    {
+      "object_id": 2012,
+      "phase": "middle",
+      "device": "cuda",
+      "illuminations": 6,
+      "real_material_dimension": 3456,
+      "endpoint_relative_error": [
+        9.13731882882742e-13,
+        8.996729462808371e-13
+      ],
+      "Jstep_relative_error": [
+        5.227895976978005e-13,
+        5.052691583223027e-13
+      ],
+      "finite_gain_relative_error": 0.0,
+      "material_adjoint_relative_error": 1.0803072069662669e-15,
+      "gain": -7.128489526252664e-06,
+      "tau": 3.840867283221551e-14,
+      "stability": [
+        {
+          "stable": true,
+          "relative": 0.9262349984776157,
+          "sigma_min": 0.9216077454460552,
+          "sigma_max": 0.99500423430429
+        },
+        {
+          "stable": true,
+          "relative": 0.9263331049885004,
+          "sigma_min": 0.9215761792572662,
+          "sigma_max": 0.9948647784413435
+        }
+      ],
+      "normal_relative_residual": [
+        7.889829729225976e-16,
+        8.51088607133217e-16
+      ],
+      "material_gauge": {
+        "legacy_material_gauge": false,
+        "portable_material_gauge": true,
+        "coefficient_gauge_status": "saved_exact_basis",
+        "basis_fingerprint": "a11e138d5fa77a6af8f594c1f57df00a71b16ba8b569843afae7719bb1187524",
+        "saved_basis_fingerprint": "a11e138d5fa77a6af8f594c1f57df00a71b16ba8b569843afae7719bb1187524",
+        "scope": "exact saved physical orthonormal tangent; ell/steps require same fingerprint",
+        "shared_tangent_reused": false,
+        "restore_and_validation_wall_s": 0.00042729999404400587,
+        "bookkeeping_scope": "paid CPU Tangent construction, saved-basis/ell/shared-cache validation; included in actual job wall"
+      },
+      "inputs": {
+        "inputs/object_2012/common_data.npz": "0fc12d8667b26e789a7e4a5ea6460d097375d6bb8a5356536aafb2ecb47f212f",
+        "inputs/object_2012/anchor_03.npz": "23508de329d5d7297f05379d76aafa8645a4494f9e57f5139ccba224a63dc7dd",
+        "inputs/object_2012/step_03.npz": "8194993b9de09a20d4e9f28a40d99e17ebce6cc84f04f0eb36580cc5ab44d44b"
+      },
+      "state_hash": "6bb612278b131a2b4bd62344122f5a462651f080d63727a172cd273e16664884",
+      "wall_seconds": 21.247512300033122,
+      "status": "PASS"
+    }
+  ],
+  "tau_relative_error": 0.0,
+  "tau_source_sha256": "0cb18fc4b91f377c8a1cc96c426bbcff7e000a846b515aa53e59a384466cb8bf",
+  "source_manifest_sha256": "b47422c1ec7c945a6cea536ec479c3515ab322a631d088d62eed25c2655e34db",
+  "original_sources_modified": false,
+  "scope": "Two actual A17 frozen states, exact saved gauge; implementation G0, not proposal coverage or NN evidence"
+}
