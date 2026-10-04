@@ -11,3 +11,6 @@ checkpoints/
 *.npy
 *.log
 .DS_Store
+execution_private/
+runs/
+release_assets/
