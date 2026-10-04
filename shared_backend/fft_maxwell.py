@@ -59,7 +59,9 @@ def backend_from_arrays(a,*,source_sha256="generated",rtol=1e-10,device="cpu",lo
     forcing=(a["a"].ravel()[:,None,None]*inc).reshape(n,4)
     basis_cache={}
     def receiver(count):
-        if "all" not in basis_cache:basis_cache["all"]=la.svd(S,full_matrices=False)[2].conj().T
+        if "all" not in basis_cache:
+            t=time.perf_counter();basis_cache["all"]=la.svd(S,full_matrices=False)[2].conj().T
+            holder["b"].receipt.add("geometry_SVD",1,time.perf_counter()-t)
         return basis_cache["all"][:,:count].copy()
     holder={};solve_records=[]
     def solve_current(rhs):
