@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "candidate_count": 259,
+  "reachable_history_blob_count": 226,
+  "release_archives": 5,
+  "release_members_scanned": 647,
+  "issues": [],
+  "scope": "Known credential formats/private key markers and restricted extensions; manual source/rights review is RIGHTS_AND_PROVENANCE.md; not an exhaustive security proof",
+  "third_party_papers_redistributed": false,
+  "license_change": false,
+  "private_transport_profile_included": false,
+  "full_source_original_modules": "Source hashes retained; A17 portable runtime path is disclosed"
+}

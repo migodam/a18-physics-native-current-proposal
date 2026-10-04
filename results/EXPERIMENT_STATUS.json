@@ -1,19 +1,10 @@
 {
-  "as_of": "2026-10-04",
-  "status": "ALGEBRA_TESTED_SPEC_READY",
-  "maxwell_pilot": "NOT_RUN",
-  "neural_training": "NOT_RUN",
-  "gpu_measurement": "NOT_RUN",
-  "remote_publication": "NOT_PERFORMED_READ_ONLY_CONNECTOR",
-  "planned_primary": "B_conditional_on_gates",
-  "planned_secondary": "A",
-  "route_C": "THEORY_ONLY",
-  "dense_algebra_tests": {
-    "count": 17,
-    "passed": true,
-    "scope": "synthetic_CPU_only"
-  },
-  "neural_models_implemented": false,
-  "maxwell_adapter_implemented": false,
-  "route_training_CLIs": "specified_for_Codex_not_implemented_here"
+  "status": "RESEARCH_COMPLETED_WITH_NEGATIVE_GATES",
+  "scientific_conclusion": "NO_GO_BOTH",
+  "publication_status": "LOCAL_EVIDENCE_COMPLETE_REMOTE_VERIFICATION_PENDING",
+  "authoritative_decision": "GATE_DECISION.json",
+  "raw_timing_rows": 1280,
+  "all_NN_epochs_Maxwell_calls": 0,
+  "C": "THEORY_ONLY",
+  "nonlinear": "NOT_RUN_NO_WINNER"
 }

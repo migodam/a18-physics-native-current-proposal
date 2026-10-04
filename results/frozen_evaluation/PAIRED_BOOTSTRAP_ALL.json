@@ -1,0 +1,228 @@
+{
+  "comparisons": [
+    {
+      "rank": 8,
+      "candidate": "B-main",
+      "baseline": "B-poly",
+      "point_difference": 0.0345129143794107,
+      "CI95": [
+        -0.028798904029781143,
+        0.09690334802622341
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    },
+    {
+      "rank": 8,
+      "candidate": "B-order0",
+      "baseline": "B-poly",
+      "point_difference": 0.01617057258799295,
+      "CI95": [
+        -0.06393855667502767,
+        0.07733842591184359
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    },
+    {
+      "rank": 8,
+      "candidate": "B-poly",
+      "baseline": "B-poly",
+      "point_difference": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    },
+    {
+      "rank": 8,
+      "candidate": "control:ridge_0.01_m1",
+      "baseline": "B-poly",
+      "point_difference": 0.03656587523742996,
+      "CI95": [
+        -0.1429875100550589,
+        0.19979425787670907
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    },
+    {
+      "rank": 8,
+      "candidate": "control:KNN3_objects_m1",
+      "baseline": "B-poly",
+      "point_difference": 0.06265049215778958,
+      "CI95": [
+        -0.024599952883855837,
+        0.1398536474774678
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    },
+    {
+      "rank": 4,
+      "candidate": "B-main",
+      "baseline": "B-poly",
+      "point_difference": 0.0775274255735403,
+      "CI95": [
+        -0.08547164365439038,
+        0.22693242382859516
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    },
+    {
+      "rank": 4,
+      "candidate": "B-order0",
+      "baseline": "B-poly",
+      "point_difference": -0.17374761352897233,
+      "CI95": [
+        -0.33258068605047975,
+        -0.04603330898710617
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    },
+    {
+      "rank": 4,
+      "candidate": "B-poly",
+      "baseline": "B-poly",
+      "point_difference": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    },
+    {
+      "rank": 4,
+      "candidate": "control:ridge_0.01_m1",
+      "baseline": "B-poly",
+      "point_difference": -0.17374761352897233,
+      "CI95": [
+        -0.33258068605047975,
+        -0.04603330898710617
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    },
+    {
+      "rank": 4,
+      "candidate": "control:KNN3_objects_m1",
+      "baseline": "B-poly",
+      "point_difference": 0.12813428783100048,
+      "CI95": [
+        0.034787532990251835,
+        0.243308126807103
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    },
+    {
+      "rank": 16,
+      "candidate": "B-main",
+      "baseline": "B-poly",
+      "point_difference": -0.053126862620751066,
+      "CI95": [
+        -0.25171489060980407,
+        0.11547308122518321
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    },
+    {
+      "rank": 16,
+      "candidate": "B-order0",
+      "baseline": "B-poly",
+      "point_difference": -0.03812887695991172,
+      "CI95": [
+        -0.2446850847512928,
+        0.1272751918243971
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    },
+    {
+      "rank": 16,
+      "candidate": "B-poly",
+      "baseline": "B-poly",
+      "point_difference": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    },
+    {
+      "rank": 16,
+      "candidate": "control:ridge_0.01_m1",
+      "baseline": "B-poly",
+      "point_difference": -0.04965650287963945,
+      "CI95": [
+        -0.2798227617048384,
+        0.14856903541035468
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    },
+    {
+      "rank": 16,
+      "candidate": "control:KNN3_objects_m1",
+      "baseline": "B-poly",
+      "point_difference": -0.16625018858469398,
+      "CI95": [
+        -0.3646765535064423,
+        0.05026592998115615
+      ],
+      "objects": 8,
+      "replicates": 2000,
+      "selection_role": "DESCRIPTIVE_ONLY_PRIMARY_PAIR_PRE_FROZEN",
+      "familywise_correction": "NONE_NO_MULTI_METHOD_SUPERIORITY_CLAIM"
+    }
+  ],
+  "aggregation": "Two states summed per parent before resampling; seed2026100418; 2000 resamples",
+  "primary_pair": {
+    "candidate": "B-main",
+    "baseline": "B-poly",
+    "object_count": 8,
+    "replicates": 2000,
+    "point_difference": 0.0345129143247111,
+    "CI95": [
+      -0.028798903968696825,
+      0.09690334796610288
+    ],
+    "status": "HOLD",
+    "scope": "Paired parent objects; two states aggregated before resampling. Eight parents are tiny feasibility only."
+  }
+}

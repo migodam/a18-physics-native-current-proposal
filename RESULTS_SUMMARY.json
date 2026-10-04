@@ -1,0 +1,308 @@
+{
+  "scientific_conclusion": "NO_GO_BOTH",
+  "publication_status": "LOCAL_EVIDENCE_COMPLETE_REMOTE_VERIFICATION_PENDING",
+  "implementation": {
+    "real_G0": "PASS",
+    "new_two_state_physics": "PASS",
+    "cap3_train_audit": "PASS",
+    "neural_parameters_each": 249703,
+    "A_neural_status": "UNTRAINED_34306_PARAMETERS"
+  },
+  "development": {
+    "G0": {
+      "status": "PASS"
+    },
+    "G1A": {
+      "status": "FAIL",
+      "checks": {
+        "macro_coverage": false,
+        "near_coverage": false,
+        "acq_median_ratio": true,
+        "acq_P95_ratio": true
+      },
+      "coverage_macro_union": 0.618244528605787,
+      "coverage_near_union": 0.5187316376545126
+    },
+    "G1B": {
+      "status": "PASS",
+      "checks": {
+        "macro_coverage": true,
+        "near_coverage": true,
+        "shared_root_loss": true,
+        "acq_median_ratio": true,
+        "acq_P95_ratio": true
+      },
+      "coverage_macro_union": 0.9933720261969906,
+      "coverage_near_union": 0.9912626530537965,
+      "shared_root_loss_union": -0.004333516390381709
+    },
+    "G2": {
+      "status": "PASS",
+      "meaning": "positive learning headroom",
+      "strongest_same_space_nonNN_coverage": 0.38647505629734785
+    }
+  },
+  "validation": {
+    "B-main": {
+      "macro": 0.36301511885906484,
+      "near": 0.5377637954177806
+    },
+    "B-order0": {
+      "macro": 0.34304607932764586,
+      "near": 0.3669497857252024
+    },
+    "strongest_nonNN": {
+      "method": "B-poly36",
+      "macro": 0.40863481259721557,
+      "near": 0.6640831220698281
+    }
+  },
+  "locked_k8": {
+    "A-analytic": {
+      "macro_union": 0.4222122356428375,
+      "macro_original": 0.5130398466969551,
+      "near_union": 0.3083668977718575,
+      "state_count": 16,
+      "object_count": 8,
+      "all_five_cold_warm": true,
+      "Tacq_median": 0.18064800003776327,
+      "Tinc_median": 1.5115562999271788,
+      "Tinc_warm_median": 1.0638326999614947
+    },
+    "B-main": {
+      "macro_union": 0.4107581631744602,
+      "macro_original": 0.5034869299157843,
+      "near_union": 0.4517117229345653,
+      "state_count": 16,
+      "object_count": 8,
+      "all_five_cold_warm": true,
+      "Tacq_median": 0.21611885004676878,
+      "Tinc_median": 1.540748649975285,
+      "Tinc_warm_median": 1.1012559999362566
+    },
+    "B-order0": {
+      "macro_union": 0.39241582137093717,
+      "macro_original": 0.4795795535370593,
+      "near_union": 0.4610936413376425,
+      "state_count": 16,
+      "object_count": 8,
+      "all_five_cold_warm": true,
+      "Tacq_median": 0.21501680003711954,
+      "Tinc_median": 1.513574399985373,
+      "Tinc_warm_median": 1.0737789000268094
+    },
+    "B-poly": {
+      "macro_union": 0.3762452488497491,
+      "macro_original": 0.45264040599903865,
+      "near_union": 0.4043314280401622,
+      "state_count": 16,
+      "object_count": 8,
+      "all_five_cold_warm": true,
+      "Tacq_median": 0.2313377499813214,
+      "Tinc_median": 1.5374757999670692,
+      "Tinc_warm_median": 1.0689322000253014
+    },
+    "D-full": {
+      "macro_union": 0.7837741648233558,
+      "macro_original": 0.9874272648020264,
+      "near_union": 0.7546450964840075,
+      "state_count": 16,
+      "object_count": 8,
+      "all_five_cold_warm": true,
+      "Tacq_median": 5.019148399995174,
+      "Tinc_median": 6.199754349945579,
+      "Tinc_warm_median": 1.069554449932184
+    },
+    "D-recommended": {
+      "macro_union": 0.7769875246295337,
+      "macro_original": 0.9795803939616317,
+      "near_union": 0.7369785395573079,
+      "state_count": 16,
+      "object_count": 8,
+      "all_five_cold_warm": true,
+      "Tacq_median": 5.020851950044744,
+      "Tinc_median": 5.478055549960118,
+      "Tinc_warm_median": 0.2777135500218719
+    },
+    "control:KNN3_objects_m1": {
+      "macro_union": 0.43889574098036205,
+      "macro_original": 0.5365429009341721,
+      "near_union": 0.4469838445303405,
+      "state_count": 16,
+      "object_count": 8,
+      "all_five_cold_warm": true,
+      "Tacq_median": 0.31587794999359176,
+      "Tinc_median": 1.6284604500397108,
+      "Tinc_warm_median": 1.072021899977699
+    },
+    "control:ridge_0.01_m1": {
+      "macro_union": 0.41281112401042,
+      "macro_original": 0.5058595466310694,
+      "near_union": 0.2992314136019067,
+      "state_count": 16,
+      "object_count": 8,
+      "all_five_cold_warm": true,
+      "Tacq_median": 0.2214274499565363,
+      "Tinc_median": 1.3881909000338055,
+      "Tinc_warm_median": 0.9452830000082031
+    }
+  },
+  "primary_paired_bootstrap": {
+    "candidate": "B-main",
+    "baseline": "B-poly",
+    "object_count": 8,
+    "replicates": 2000,
+    "point_difference": 0.0345129143247111,
+    "CI95": [
+      -0.028798903968696825,
+      0.09690334796610288
+    ],
+    "status": "HOLD",
+    "scope": "Paired parent objects; two states aggregated before resampling. Eight parents are tiny feasibility only."
+  },
+  "transfer": {
+    "8": {
+      "metrics": {
+        "B-main": {
+          "macro_union": 0.41075816316553754,
+          "macro_original": 0.5034869298970761,
+          "near_union": 0.45171172286326583
+        },
+        "B-order0": {
+          "macro_union": 0.3924158213741198,
+          "macro_original": 0.4795795535445352,
+          "near_union": 0.4610936413037914
+        },
+        "B-poly": {
+          "macro_union": 0.37624524878612686,
+          "macro_original": 0.4526404059215031,
+          "near_union": 0.40433142796970795
+        },
+        "control:ridge_0.01_m1": {
+          "macro_union": 0.4128111240235568,
+          "macro_original": 0.5058595466624551,
+          "near_union": 0.2992314136626903
+        },
+        "control:KNN3_objects_m1": {
+          "macro_union": 0.4388957409439164,
+          "macro_original": 0.5365429008870642,
+          "near_union": 0.446983844505947
+        }
+      },
+      "primary_CI95": [
+        -0.028798904029781143,
+        0.09690334802622341
+      ],
+      "scope": "cached_exact_FP64_only"
+    },
+    "4": {
+      "metrics": {
+        "B-main": {
+          "macro_union": 0.2512750391025126,
+          "macro_original": 0.3888416643301069,
+          "near_union": 0.15110065033298803
+        },
+        "B-order0": {
+          "macro_union": 0.0,
+          "macro_original": 0.0,
+          "near_union": 0.0
+        },
+        "B-poly": {
+          "macro_union": 0.17374761352897233,
+          "macro_original": 0.2425204907471817,
+          "near_union": 0.32007241744581955
+        },
+        "control:ridge_0.01_m1": {
+          "macro_union": 0.0,
+          "macro_original": 0.0,
+          "near_union": 0.0
+        },
+        "control:KNN3_objects_m1": {
+          "macro_union": 0.3018819013599728,
+          "macro_original": 0.45348895858843563,
+          "near_union": 0.3133623174203248
+        }
+      },
+      "primary_CI95": [
+        -0.08547164365439038,
+        0.22693242382859516
+      ],
+      "scope": "cached_exact_FP64_only"
+    },
+    "16": {
+      "metrics": {
+        "B-main": {
+          "macro_union": 0.27600203446552996,
+          "macro_original": 0.36535342198473625,
+          "near_union": 0.12742951388529294
+        },
+        "B-order0": {
+          "macro_union": 0.2910000201263693,
+          "macro_original": 0.3883841718964965,
+          "near_union": 0.14052202364512478
+        },
+        "B-poly": {
+          "macro_union": 0.329128897086281,
+          "macro_original": 0.8283924945432464,
+          "near_union": 0.3960805483921752
+        },
+        "control:ridge_0.01_m1": {
+          "macro_union": 0.27947239420664155,
+          "macro_original": 0.377567987940335,
+          "near_union": 0.19522528615715926
+        },
+        "control:KNN3_objects_m1": {
+          "macro_union": 0.16287870850158698,
+          "macro_original": 0.1983261221697537,
+          "near_union": 0.0
+        }
+      },
+      "primary_CI95": [
+        -0.25171489060980407,
+        0.11547308122518321
+      ],
+      "scope": "cached_exact_FP64_only"
+    }
+  },
+  "budgets": {
+    "physics": {
+      "charged_wall_minutes": 14.138564918331879,
+      "limit_minutes": 60.0,
+      "status": "PASS"
+    },
+    "teacher": {
+      "charged_wall_minutes": 112.55089923500199,
+      "limit_minutes": 120.0,
+      "status": "PASS"
+    },
+    "nn": {
+      "charged_wall_minutes": 54.199137336667626,
+      "limit_minutes": 240.0,
+      "status": "PASS"
+    },
+    "nonlinear": {
+      "charged_wall_minutes": 0.0,
+      "limit_minutes": 60.0,
+      "status": "PASS"
+    }
+  },
+  "failure_count": 2,
+  "dataset": {
+    "master_seed": 2026100418,
+    "objects": 48,
+    "states": 96,
+    "split_objects": {
+      "train": 32,
+      "validation": 8,
+      "locked_test": 8
+    },
+    "initialization": "TRUTH_SEEDED_LOCAL_PERTURBATION_NOT_GLOBAL_RECOVERY"
+  },
+  "limitations": [
+    "Eight locked parents only",
+    "BEST_FOUND continuous reference, not global optimum",
+    "G7 overlap interpretation unresolved",
+    "No nonlinear material quality claim",
+    "Literature429 and incomplete full-text coverage"
+  ]
+}

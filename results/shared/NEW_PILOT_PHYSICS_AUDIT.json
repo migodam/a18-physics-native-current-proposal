@@ -1,0 +1,161 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "object_id": "pilot_train_00",
+      "state_id": "state0",
+      "current_dof": 2592,
+      "feature_dimension": 1552,
+      "basis_rank": 18,
+      "Feff_adjoint_relative_error": 4.440380853869074e-15,
+      "material_adjoint_relative_error": 1.0201331921919034e-15,
+      "one_forward_adjoint_action_cost": {
+        "counters": {
+          "whitelisted_state_load": 0,
+          "forcing_construction": 0,
+          "geometry_SVD": 0,
+          "receiver_mode_accesses": 0,
+          "L_rhs": 1,
+          "S_rhs": 0,
+          "B_projection_current_columns": 0,
+          "L_adjoint_rhs": 1
+        },
+        "wall_seconds": {
+          "whitelisted_state_load": 0.0,
+          "forcing_construction": 0.0,
+          "geometry_SVD": 0.0,
+          "receiver_mode_accesses": 0.0,
+          "L_rhs": 0.0006220999639481306,
+          "S_rhs": 0.0,
+          "B_projection_current_columns": 0.0,
+          "L_adjoint_rhs": 0.0008747000247240067
+        }
+      },
+      "orthogonality": 3.061629153181778e-15,
+      "U_overlap": 3.110795309680281e-16,
+      "configuration_id": "76155e1ef45b145cc97423c71a76ad76a3a9a0ceb855efc938cf29ce4a5fc1e0",
+      "basis_gauge_sha256": "d63664f4e7158697157d8cb6bced762c2d3428c856e19ca04ed526ae8d172c78",
+      "forbidden_online_members_present": false,
+      "historical_anchor_loaded": false,
+      "status": "PASS",
+      "selected_gain_relative_error": 9.09567663466206e-11,
+      "selected_step_relative_error": 1.7784046815474913e-13,
+      "selected_verifier_cost": {
+        "counters": {
+          "whitelisted_state_load": 0,
+          "forcing_construction": 0,
+          "geometry_SVD": 0,
+          "receiver_mode_accesses": 0,
+          "L_rhs": 107,
+          "S_rhs": 9,
+          "B_projection_current_columns": 8,
+          "S_adjoint_rhs": 0,
+          "L_adjoint_rhs": 0,
+          "B_illumination_rhs": 8,
+          "current_materializations": 1,
+          "endpoint_solves": 1,
+          "full_J_directions": 2,
+          "full_J_illumination_rhs": 8
+        },
+        "wall_seconds": {
+          "whitelisted_state_load": 0.0,
+          "forcing_construction": 0.0,
+          "geometry_SVD": 0.0,
+          "receiver_mode_accesses": 0.0,
+          "L_rhs": 0.0496098994044587,
+          "S_rhs": 0.0006087000947445631,
+          "B_projection_current_columns": 0.0003792999777942896,
+          "S_adjoint_rhs": 0.0,
+          "L_adjoint_rhs": 0.0,
+          "B_illumination_rhs": 0.0004699999699369073,
+          "current_materializations": 0.0,
+          "endpoint_solves": 0.0,
+          "full_J_directions": 0.061323899892158806,
+          "full_J_illumination_rhs": 0.0
+        }
+      },
+      "selected_gain": 25.36292626929889,
+      "selected_tau": 1.6242504453623986e-09,
+      "selected_normal_relative_residual": 1.7892185618849246e-16
+    },
+    {
+      "object_id": "pilot_train_11",
+      "state_id": "state0",
+      "current_dof": 3456,
+      "feature_dimension": 1552,
+      "basis_rank": 18,
+      "Feff_adjoint_relative_error": 3.953477439251257e-15,
+      "material_adjoint_relative_error": 2.951568803515441e-16,
+      "one_forward_adjoint_action_cost": {
+        "counters": {
+          "whitelisted_state_load": 0,
+          "forcing_construction": 0,
+          "geometry_SVD": 0,
+          "receiver_mode_accesses": 0,
+          "L_rhs": 1,
+          "S_rhs": 0,
+          "B_projection_current_columns": 0,
+          "L_adjoint_rhs": 1
+        },
+        "wall_seconds": {
+          "whitelisted_state_load": 0.0,
+          "forcing_construction": 0.0,
+          "geometry_SVD": 0.0,
+          "receiver_mode_accesses": 0.0,
+          "L_rhs": 0.0006805999437347054,
+          "S_rhs": 0.0,
+          "B_projection_current_columns": 0.0,
+          "L_adjoint_rhs": 0.0010443999199196696
+        }
+      },
+      "orthogonality": 3.0745834346937683e-15,
+      "U_overlap": 3.3098593903887295e-16,
+      "configuration_id": "1662f6a3e8c3f2af2f7ca05f8d35c66273d2818b03d80fde80dd04190fd41ce3",
+      "basis_gauge_sha256": "a1d6fb4a2c5f196d89895c60874e06d38413095309d1744b4baf3007e3c0a688",
+      "forbidden_online_members_present": false,
+      "historical_anchor_loaded": false,
+      "status": "PASS",
+      "selected_gain_relative_error": 1.62599433606876e-11,
+      "selected_step_relative_error": 1.6331975497756591e-12,
+      "selected_verifier_cost": {
+        "counters": {
+          "whitelisted_state_load": 0,
+          "forcing_construction": 0,
+          "geometry_SVD": 0,
+          "receiver_mode_accesses": 0,
+          "L_rhs": 129,
+          "S_rhs": 9,
+          "B_projection_current_columns": 8,
+          "S_adjoint_rhs": 0,
+          "L_adjoint_rhs": 0,
+          "B_illumination_rhs": 8,
+          "current_materializations": 1,
+          "endpoint_solves": 1,
+          "full_J_directions": 2,
+          "full_J_illumination_rhs": 8
+        },
+        "wall_seconds": {
+          "whitelisted_state_load": 0.0,
+          "forcing_construction": 0.0,
+          "geometry_SVD": 0.0,
+          "receiver_mode_accesses": 0.0,
+          "L_rhs": 0.07443200028501451,
+          "S_rhs": 0.0008318000473082066,
+          "B_projection_current_columns": 0.00039109995122998953,
+          "S_adjoint_rhs": 0.0,
+          "L_adjoint_rhs": 0.0,
+          "B_illumination_rhs": 0.0004126999992877245,
+          "current_materializations": 0.0,
+          "endpoint_solves": 0.0,
+          "full_J_directions": 0.09142430010251701,
+          "full_J_illumination_rhs": 0.0
+        }
+      },
+      "selected_gain": 8.435539430209912,
+      "selected_tau": 1.3690784316419579e-09,
+      "selected_normal_relative_residual": 6.170184360747892e-16
+    }
+  ],
+  "scope": "Real new-cohort two-state physical implementation audit; not held-out quality",
+  "locked_test_opened": false
+}

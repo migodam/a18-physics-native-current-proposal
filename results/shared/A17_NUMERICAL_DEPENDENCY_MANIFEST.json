@@ -1,0 +1,245 @@
+{
+  "status": "SOURCE_PRESERVED",
+  "original_source_manifest_sha256": "b47422c1ec7c945a6cea536ec479c3515ab322a631d088d62eed25c2655e34db",
+  "verified_G0_source_manifest_sha256": "b47422c1ec7c945a6cea536ec479c3515ab322a631d088d62eed25c2655e34db",
+  "same_manifest": true,
+  "files": [
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "sha256": "b47422c1ec7c945a6cea536ec479c3515ab322a631d088d62eed25c2655e34db",
+      "bytes": 39443
+    },
+    {
+      "path": "code/endpoint_batch.py",
+      "sha256": "eb505112d990fad2f179990e191f9367291a13fb40699d755e77a8ed939d8cc2",
+      "bytes": 14302
+    },
+    {
+      "path": "code/exchange_core.py",
+      "sha256": "beaa7565ab5685b889952eb42114e50f04c6682f2f4252223dac4edfcea9c96c",
+      "bytes": 12024
+    },
+    {
+      "path": "code/maxwell_state.py",
+      "sha256": "8f12cc187b67fd6d5ed0378dd62b39055e28c8512289fb5bc893ad987e04eb51",
+      "bytes": 6817
+    },
+    {
+      "path": "code/pinned_runtime.py",
+      "sha256": "edea3e8138cb4ab774ab02e82b641e86dcfa72cb51d72b9b13bf9b6b719dc504",
+      "bytes": 2048
+    },
+    {
+      "path": "vendor/Gaussian/A10/code/a10_common.py",
+      "sha256": "2f839f86bc79c89ec5deba08d68624cf43b155f90c8a843906fc1bca5fe27f8d",
+      "bytes": 4562
+    },
+    {
+      "path": "vendor/Gaussian/A10/code/anchored_rom.py",
+      "sha256": "daca797b622c79f39612e250896f0ea1cadac81da823360fe0e87141d143633f",
+      "bytes": 3788
+    },
+    {
+      "path": "vendor/Gaussian/A10/code/cair.py",
+      "sha256": "e8b6ae0a97de23db232d3c2731a642b0e2a238e13590636f803eafb1e23c36b8",
+      "bytes": 6805
+    },
+    {
+      "path": "vendor/Gaussian/A10/code/feasible_step.py",
+      "sha256": "779b729e71fbd9d46e748cb6f79284435994a1a4fbcac91439cca98ff69473f6",
+      "bytes": 1718
+    },
+    {
+      "path": "vendor/Gaussian/A10/code/reduced_normal.py",
+      "sha256": "c64c3dafb0982cb9cd88fae6340f252fa0e5c8add9db62bdacd10476adba5281",
+      "bytes": 6333
+    },
+    {
+      "path": "vendor/Gaussian/A12/code/campaign_common.py",
+      "sha256": "8d8af32accd40ba1efaa84ad08b4ef1bce75c8d04612c34cd78f658293f83f05",
+      "bytes": 4212
+    },
+    {
+      "path": "vendor/Gaussian/A12/code/galerkin_rom.py",
+      "sha256": "d68abbeb3dbfee8790769c451569e5b9069a74cc8799bbdd030b599d7f4eeede",
+      "bytes": 7836
+    },
+    {
+      "path": "vendor/Gaussian/A14/src/pairtsom_adapter.py",
+      "sha256": "b554e7873012ef1e8bf37e68efb2869c89217de09f1cdf21ee0974ffe0d31604",
+      "bytes": 44043
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/anchor_permission.py",
+      "sha256": "afc3795eb474bf3a9e937ca84738a00abf7ebe0f19201732984acc86968f702b",
+      "bytes": 1227
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/check_declared_import_paths.py",
+      "sha256": "0e65c42bc1036d42b80fc4512e610109eb72b19d90bd31d223002e3704092d53",
+      "bytes": 12932
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/check_import_runtime.py",
+      "sha256": "c857838bdd09de19630388660786d7db44b1b546836772c794b93914b4b81328",
+      "bytes": 12471
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/collect_cost_ledger.py",
+      "sha256": "316f0b44319d810e0257f624e1a3db3a5754e94840e1105408b541cf925f47d7",
+      "bytes": 31864
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/collect_results.py",
+      "sha256": "b0d9050b6d6a4afcb621815711395b26ec1410182e1a69a5a39e1ab6a8b1adab",
+      "bytes": 25601
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/diagnostic_replay.py",
+      "sha256": "29921e5b2d0390ac63471e5a9f6084f6f58d46b37d27c1102d44685338898ca3",
+      "bytes": 3013
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/fast_contractions.py",
+      "sha256": "a03471ef83e90fda7d49fb1f25d84b3f36b2eb8a203d97f0c1a9cb7172798eeb",
+      "bytes": 4288
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/frozen_statistics.py",
+      "sha256": "4942d73146898efc320b0dc732f7a3184bc8ef86b0ffeac1b9a6c3c6ec218dc0",
+      "bytes": 18042
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/headroom_diagnostics.py",
+      "sha256": "853e08bc8d82e4f43ad6811a3d40379de427b66d0c0df5f5ccc99e4f3308e202",
+      "bytes": 3635
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/material_gauge_persistence.py",
+      "sha256": "f064e378d13df5a0835e4338a9c7d9b4914e1c89fbd365cdded735047f2641cc",
+      "bytes": 6732
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/mechanism_ablation_helpers.py",
+      "sha256": "a2e12508231ee4a39655c1542bbfd78318e9d569fa5eaf199ae24ff6b91e2997",
+      "bytes": 13369
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/offline_material_control.py",
+      "sha256": "b7c7092da1bb5b75fd9615b9ca0d64575405edd75e83b631d33eeec60a4490c6",
+      "bytes": 8530
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/offline_metrics.py",
+      "sha256": "675840da8883057ccc59c8c3ce87c08b69d4ae7ddd92e3699960828e1be04436",
+      "bytes": 14307
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/operators.py",
+      "sha256": "09c7d7285a7d238cbeb5c8c376c185e2f055c26b6d08e4c6c68122691552f9c9",
+      "bytes": 18344
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/plot_headroom.py",
+      "sha256": "ea7e5943023bc0767869f049acc4fde503e031fd6c53365904ae2c4d7da328f2",
+      "bytes": 15456
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/plot_results.py",
+      "sha256": "7e8e41cec87c176b05cc1a08f84dc3bbabec8de761471319f1b3e49886081c73",
+      "bytes": 7941
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/plot_scene_manifest.py",
+      "sha256": "186bf672e55dd55b231221eea2ba0971fb68eb3bd0bbf301ab0ad947b7c617bd",
+      "bytes": 8726
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/profile_compressed_kernels.py",
+      "sha256": "cba2447d954cfd87330375dee8a855051388d3fc1795362d5e50182b215695ab",
+      "bytes": 9202
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/run_core_bundle.py",
+      "sha256": "638f0c588428dab8706f3547b911fbe8acc9f50b5ce22c62add6b29613346937",
+      "bytes": 1876
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/run_development_queue.py",
+      "sha256": "b3c6b10b805ca35472ef515575155477cc77a5dc61361f6b8550444fb1fe43c9",
+      "bytes": 5213
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/run_development_recovery.py",
+      "sha256": "1e2855335d83fb72fb9768af08be4acbe768359928519176595e89218afb1554",
+      "bytes": 11678
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/run_frozen.py",
+      "sha256": "f7a9a4572be9972886f50d9440f410e37938c95e510de10ba8a14f701c06f61e",
+      "bytes": 26321
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/run_mechanism_controls.py",
+      "sha256": "dd2d3394575171245407e70777affed64ae5afff11ce42f43defe08a19beda7e",
+      "bytes": 26805
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/run_monitored.py",
+      "sha256": "57aab8f0d6cdd1d552dc6bcfbdd0329bdf12ad5bcb16ae6740649012447095e8",
+      "bytes": 6308
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/run_reference.py",
+      "sha256": "eef9525bb5fe613e3f877bd3d2f078605f0c10f2e1673b6fc19b2077eccb09f7",
+      "bytes": 9339
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/run_validation_queue.py",
+      "sha256": "ce74a8373b335284e2ab376d2c6e14a92c5bab5504ef8391eb7ba0162a19a94b",
+      "bytes": 33803
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/scenes.py",
+      "sha256": "087389a8f9968e5775c4bb9a858fd261351d6e208d3a203f4c5cbd1401c93f91",
+      "bytes": 5890
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/selector_coordinates.py",
+      "sha256": "4bfd9747d67201f6e7216a0a41c560ead5a6139be5be2b5b0d8490fff78315c2",
+      "bytes": 9244
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/selectors_current.py",
+      "sha256": "419d2fbe7f3a95ba02e9debd97445769ed739a95582b052dd09f59b1cdbfeeae",
+      "bytes": 38432
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/signed_round_reuse.py",
+      "sha256": "f1e64c6b7423b7bdd95830b184879754cfc2b2ea0b51a5b2b26d2a15ab115e04",
+      "bytes": 2624
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/snapshot_completed.py",
+      "sha256": "e70a4c1a55163fc086ae8f5d40b119217021ddcefaccc6b07d5530c25eb51b6f",
+      "bytes": 1393
+    },
+    {
+      "path": "vendor/Gaussian/A16/CURRENT_SELECTION_R1/code/snapshot_terminal.py",
+      "sha256": "07ef0a5e188dca920b8478d9481b728eeae5f3b19aa3b25daaf04801574a2e3b",
+      "bytes": 2329
+    },
+    {
+      "path": "vendor/Gaussian/A9/code/a9_engine.py",
+      "sha256": "e4e28318e54598af66b29a407c0ab7ae8f9c10f56614f228687f896ef78c45e3",
+      "bytes": 43596
+    },
+    {
+      "path": "vendor/Gaussian/A9/code/experiment_support.py",
+      "sha256": "a14f1a9ee4c6f1b6af4e0be1e5b36cb38c16582d1296a3644759b5f3e0445346",
+      "bytes": 7014
+    }
+  ],
+  "includes_frozen_G0_inputs": false,
+  "scope": "Numerical dependency for anchor/dictionary and new pilot only. Reproducing the original two-state G0 also requires the separately archived original A17 inputs. Existing project rights retained; no new license."
+}

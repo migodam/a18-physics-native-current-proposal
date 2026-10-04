@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "tests_run": 85,
+  "elapsed_seconds": 1.101,
+  "command": "python -m unittest discover -s tests -q",
+  "scope": "Implementation unit checks; not scientific gates",
+  "new_regression": "Protected masked logits must preserve legal proposals; no-op highest yields empty"
+}

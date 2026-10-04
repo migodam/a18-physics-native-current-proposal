@@ -1,3 +1,6 @@
+<!-- current-result -->
+> 本文件保留实验前规格与预算；当前实测状态见 [GATE_DECISION.json](GATE_DECISION.json) 和 [中文报告](RESEARCH_REPORT_ZH.md)。
+
 # GO / NO-GO：预注册裁决表
 
 **以下数值是本轮设计阈值，不是既有 A17/A18 实证推导出的普适常数。**所有 gate 在看 locked test 前冻结；`HOLD` 表示证据不足，不自动授权加大网络/数据。

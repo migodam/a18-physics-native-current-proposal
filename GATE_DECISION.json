@@ -1,0 +1,204 @@
+{
+  "schema": "a18.integrated_gate_decision.v1",
+  "scientific_conclusion": "NO_GO_BOTH",
+  "publication_status": "LOCAL_EVIDENCE_COMPLETE_REMOTE_VERIFICATION_PENDING",
+  "scope": "Tested registered A bank and B deterministic learning pilot only, not global impossibility",
+  "gates": {
+    "G0": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "results/shared/G0.json",
+          "sha256": "7629b6be1d1238b7d83416f99d410d2d620489e7c388de34289f1f79259d6c54"
+        },
+        {
+          "path": "results/shared/G0_FFT.json",
+          "sha256": "23dd43040d50e68003043a32727baecc5ce3b8c7592d4ce4c9d82ccbd0606256"
+        },
+        {
+          "path": "results/shared/G0_DICTIONARY_BATCH.json",
+          "sha256": "147d70b555d0d11379072576f9cbe65382134d7ee52723105d143de12220996c"
+        }
+      ]
+    },
+    "G1A": {
+      "status": "FAIL",
+      "checks": {
+        "macro_coverage": false,
+        "near_coverage": false,
+        "acq_median_ratio": true,
+        "acq_P95_ratio": true
+      },
+      "coverage_macro_union": 0.618244528605787,
+      "coverage_near_union": 0.5187316376545126
+    },
+    "G1B": {
+      "status": "PASS",
+      "checks": {
+        "macro_coverage": true,
+        "near_coverage": true,
+        "shared_root_loss": true,
+        "acq_median_ratio": true,
+        "acq_P95_ratio": true
+      },
+      "coverage_macro_union": 0.9933720261969906,
+      "coverage_near_union": 0.9912626530537965,
+      "shared_root_loss_union": -0.004333516390381709
+    },
+    "G2": {
+      "status": "PASS",
+      "meaning": "positive learning headroom",
+      "strongest_same_space_nonNN_coverage": 0.38647505629734785
+    },
+    "G3": {
+      "status": "FAIL",
+      "reason": "MANDATORY_EPOCH20_LEARNING_STOP",
+      "main_macro": 0.36301511885906484,
+      "main_near": 0.5377637954177806,
+      "order0_macro": 0.34304607932764586,
+      "order0_near": 0.3669497857252024,
+      "baseline_macro": 0.40863481259721557,
+      "baseline_near": 0.6640831220698281,
+      "coverage_branch": "FAIL",
+      "K2_cost_branch": "NOT_RUN_AFTER_MANDATORY_STOP",
+      "matched_validation_physical_Tinc": "NOT_RUN_AFTER_COVERAGE_STOP",
+      "epochs_each": 20,
+      "same_registered_epoch_cap": 35
+    },
+    "G4": {
+      "status": "FAIL",
+      "reason": "Prerequisite G3 fails; B-main also below strongest validation non-NN by more than0.02",
+      "B_minus_nonNN": -0.045619693738150724
+    },
+    "G5": {
+      "status": "NOT_RUN",
+      "reason": "No G3-passing MLP, no architecture extension"
+    },
+    "G6": {
+      "status": "HOLD",
+      "primary_pair": {
+        "candidate": "B-main",
+        "baseline": "B-poly",
+        "object_count": 8,
+        "replicates": 2000,
+        "point_difference": 0.0345129143247111,
+        "CI95": [
+          -0.028798903968696825,
+          0.09690334796610288
+        ],
+        "status": "HOLD",
+        "scope": "Paired parent objects; two states aggregated before resampling. Eight parents are tiny feasibility only."
+      },
+      "frozen_primary_physical_rows": 1280,
+      "cached_transfer_ranks": [
+        4,
+        16
+      ],
+      "full_transfer_deployment_timing": "NOT_RUN_AFTER_STOP"
+    },
+    "G7": {
+      "status": "HOLD",
+      "interpretation": {
+        "formal_status": "HOLD_MECHANISM_COVERAGE_CLAIM",
+        "raw_joint_gain_over_singleton_reference_macro": 0.9252462517571586,
+        "positive_extra_gain_macro": 0.0,
+        "optimized_joint_only_state_rate": 0.0,
+        "projected_frame_joint_only_pairs": 16,
+        "reason": "Registered G7 says pair opportunity contributes >=10% of reference without defining overlap allocation. Absolute joint/reference triggers the literal branch; nonoverlapping extra gain does not. Preserve both rather than silently choosing the favorable interpretation. Arbitrary QR-column singleton projection is gauge dependent.",
+        "practical_route_effect": "No broad singleton mechanism completeness claim. A/B deployment already stopped by independent G1A/epoch20 gates. No generative/block neural extension authorized by this result.",
+        "physical_search_repeated": false,
+        "prior_review_status_scope": "NO_BLOCK_TRIGGER_FOUND used the extra-gain interpretation only; superseded for formal mechanism verdict by this qualified HOLD."
+      }
+    },
+    "G8": {
+      "status": "NOT_RUN",
+      "reason": "No deployment winner; no nonlinear transfer or final material quality claim"
+    },
+    "G9": {
+      "status": "PASS",
+      "budgets": {
+        "physics": {
+          "charged_wall_minutes": 14.138564918331879,
+          "limit_minutes": 60.0,
+          "status": "PASS"
+        },
+        "teacher": {
+          "charged_wall_minutes": 112.55089923500199,
+          "limit_minutes": 120.0,
+          "status": "PASS"
+        },
+        "nn": {
+          "charged_wall_minutes": 54.199137336667626,
+          "limit_minutes": 240.0,
+          "status": "PASS"
+        },
+        "nonlinear": {
+          "charged_wall_minutes": 0.0,
+          "limit_minutes": 60.0,
+          "status": "PASS"
+        }
+      },
+      "J6": "TIME_CAP_ENFORCED",
+      "J7": "ONE_UNCHANGED_CONTINUATION_COMPLETED",
+      "all_failures_charged": true
+    }
+  },
+  "evidence": [
+    {
+      "path": "results/preflight_review/FINAL_INTEGRATED_PREFLIGHT.json",
+      "sha256": "3ae6809bc763edc1c2efde0d4f39de602a1309a283bca04e4db75321e5e55bc3"
+    },
+    {
+      "path": "results/route_b/J0/G2_PILOT.json",
+      "sha256": "6b84d7b36e1961f634002ecec373b985216dc08edcbd154a6c8852972b4284ec"
+    },
+    {
+      "path": "results/route_b/J0/J2_SCHEDULE.json",
+      "sha256": "8d966433cc4fadc9e8b4202db47575fecc685d41161c1517a5042ab782102464"
+    },
+    {
+      "path": "results/route_b/FREEZE_RECEIPT.json",
+      "sha256": "c1e4712a878ba4eb55734b496b49a9bb5aa3f3f686af7338c4c8d371b3ba88c8"
+    },
+    {
+      "path": "results/route_b/training/main/training_summary.json",
+      "sha256": "03e751cf4f22b794995d263832bccbd882e3c2dcb59dc1fb9d1181c02cae2bde"
+    },
+    {
+      "path": "results/route_b/training/order0/training_summary.json",
+      "sha256": "a6e06b4f90aab5582094f17ccbf6898cf9b7146770264dc579afbc88dbe390d2"
+    },
+    {
+      "path": "results/frozen_evaluation/SUMMARY.json",
+      "sha256": "f2e1fd3a71d4d8e359bc96c79b11f4c18cf32a1626b1d26088942125423e674a"
+    },
+    {
+      "path": "results/route_b/FROZEN_CACHED_QUALITY_NATIVE.json",
+      "sha256": "27e3d46b676ed3de7fb7ff9efcff738e7b8cef57b743d3599c7d29ed799ee72a"
+    },
+    {
+      "path": "results/shared/CAP3_TRAIN_IMPLEMENTATION_AUDIT.json",
+      "sha256": "fb1d7fc80d433a0b1d9c8142a6e22657d80406233952bb74cfcc05b4d4d99650"
+    },
+    {
+      "path": "results/preflight_review/G7_INTERPRETATION.json",
+      "sha256": "d734db489a9e1f10fe583be7b2b12dacacbd2392038c7d4b4c83607f0c2fe5fb"
+    },
+    {
+      "path": "results/gpu_jobs/jobs.jsonl",
+      "sha256": "d6920fcd53545bfeda18bf5a22b64fe7bd796926d2ba12ed692364ffe8332dc8"
+    }
+  ],
+  "not_measured": [
+    "A0 historical ID/gain replay",
+    "successful T0/T1 per-action details",
+    "full deployment timing at k4/16",
+    "nonlinear winner transfer",
+    "extra NN seeds",
+    "J0 peak reserved VRAM and process RSS",
+    "initial shared-state operator snapshot"
+  ],
+  "retuning_after_test": false,
+  "deployment_winner": null,
+  "route_C": "THEORY_ONLY_NO_TRAINING"
+}

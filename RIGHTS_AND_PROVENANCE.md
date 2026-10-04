@@ -1,9 +1,13 @@
 # Rights and provenance
 
-本包为当前请求生成的研究分析、实施规格和独立参考代码。没有为用户的未发表研究擅自选择开源许可证；正式发布时由研究所有者决定license与公开范围。
+本次按研究所有者的明确请求公开代码、分析、合成实验数据和checkpoint，保留现有许可状态。仓库未新增MIT或其他license，公开可读不自动授予任意再许可权。
 
-SOURCES.md明确区分用户给定背景、项目公开证据、外部primary literature、当前推导/设计假设与未验证主张。没有复制第三方论文全文、付费PDF或上游vendor代码；文献记录不代表所有正文均成功获取，具体access gaps保留在审计里。
+新增分析、报告、共享适配器及实验代码由本次研究流程生成；Codex负责数学、方向和最终科学审查。A路线来自已在进行的独立Route A会话，其审核提交254a759集成到main；B在独立route-b worktree实现，审核提交逐项集成。过程记录与实际冻结source hashes见results/shared/deployment_v003至v009.json，最终数值规则见results/route_b/FREEZE_RECEIPT.json。通用Git作者标记不冒充研究者签名或同行评审。
 
-用户TXT只记录SHA-256与来源描述，不在公开准备包中重分发。上游项目只记录可访问仓库与commit，没有重新打包其数据。synthetic dense tests是本包自建的代数检查，不是实验重现、独立Maxwell证据或真实训练结果。
+vendor_physics的3个物理源码文件按原字节保留，来源、hash和项目路径逐项见vendor_physics/SOURCE_MANIFEST.json。Release的A17_CURRENT_EXCHANGE为原项目数值依赖：42个pinned source模块及4个endpoint/runtime适配模块、原manifest。runtime根路径转换为便携的相对路径；数值模块未改写。47文件完整hash见results/shared/A17_NUMERICAL_DEPENDENCY_MANIFEST.json，42-file source manifest hash与本轮G0实际加载manifest一致。上游独立项目为[原A17公开仓库](https://github.com/migodam/a17-maxwell-certified-exchange)。继承这些项目的原权属状态，不为源码重新选许可证。
 
-本地Git commit采用通用research-spec作者标记，不冒充研究者签名。没有远端写入成功记录，没有用户令牌、SSH配置或本地私密路径。运行环境测试回执只保留Python/NumPy版本与elapsed wall等必要可复核信息。
+Release数据为本项目自身合成的全矢量Maxwell对象：新48对象及历史暴露development子集，包含online public state、隔离的teacher/evaluator数组、精确小缓存、fitted control和两套B checkpoint。teacher／真值只在训练或独立评估层使用；公开归档后仍不得把已暴露locked test用于本轮调参。历史24/6/18没有重新划分。原G0的两状态输入未在本Release捆绑，重放该历史G0需要上游输入；其现有回执与hash仍保留。
+
+外部文献只保存primary链接、短评、元数据和取得证据的ledger。没有第三方论文全文、付费PDF或原用户私有TXT。ScholarQA429、author PDF timeout和全文覆盖缺口原样记录。引用核验不等于完整文献检索。
+
+发布扫描覆盖Git候选、可达历史blob及Release成员，排除私钥、实际token、私有SSH profile／argv和第三方PDF。tools/remote_transport.py只提供可选transport实现，仓库不含实际profile、凭据或密钥路径；原日志只保存数值命令与成本。扫描回执见results/PUBLICATION_AUDIT.json，文件SHA清单见PUBLIC_MANIFEST.json。模式扫描是本次发布检查，不是一般安全证明。

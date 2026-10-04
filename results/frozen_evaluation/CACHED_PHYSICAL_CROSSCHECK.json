@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "max_gain_difference_normalized_by_reference": 6.278331836114315e-10,
+  "matched_state_method_count": 80,
+  "scope": "Saved native2.6 FP64 exact small endpoint vs actual physical verifier; no new Maxwell calls"
+}

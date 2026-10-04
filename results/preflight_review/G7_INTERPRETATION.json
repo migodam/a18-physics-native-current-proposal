@@ -1,0 +1,11 @@
+{
+  "formal_status": "HOLD_MECHANISM_COVERAGE_CLAIM",
+  "raw_joint_gain_over_singleton_reference_macro": 0.9252462517571586,
+  "positive_extra_gain_macro": 0.0,
+  "optimized_joint_only_state_rate": 0.0,
+  "projected_frame_joint_only_pairs": 16,
+  "reason": "Registered G7 says pair opportunity contributes >=10% of reference without defining overlap allocation. Absolute joint/reference triggers the literal branch; nonoverlapping extra gain does not. Preserve both rather than silently choosing the favorable interpretation. Arbitrary QR-column singleton projection is gauge dependent.",
+  "practical_route_effect": "No broad singleton mechanism completeness claim. A/B deployment already stopped by independent G1A/epoch20 gates. No generative/block neural extension authorized by this result.",
+  "physical_search_repeated": false,
+  "prior_review_status_scope": "NO_BLOCK_TRIGGER_FOUND used the extra-gain interpretation only; superseded for formal mechanism verdict by this qualified HOLD."
+}

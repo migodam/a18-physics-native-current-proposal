@@ -1,0 +1,3533 @@
+{
+  "status": "FROZEN_TRANSFER_QUALITY_COMPLETE",
+  "ranks": {
+    "8": {
+      "status": "COMPLETE_CACHED_FP64_QUALITY_ONLY",
+      "metrics": {
+        "B-main": {
+          "macro_union": 0.41075816316553754,
+          "macro_original": 0.5034869298970761,
+          "near_union": 0.45171172286326583
+        },
+        "B-order0": {
+          "macro_union": 0.3924158213741198,
+          "macro_original": 0.4795795535445352,
+          "near_union": 0.4610936413037914
+        },
+        "B-poly": {
+          "macro_union": 0.37624524878612686,
+          "macro_original": 0.4526404059215031,
+          "near_union": 0.40433142796970795
+        },
+        "control:ridge_0.01_m1": {
+          "macro_union": 0.4128111240235568,
+          "macro_original": 0.5058595466624551,
+          "near_union": 0.2992314136626903
+        },
+        "control:KNN3_objects_m1": {
+          "macro_union": 0.4388957409439164,
+          "macro_original": 0.5365429008870642,
+          "near_union": 0.446983844505947
+        }
+      },
+      "rows": [
+        {
+          "object_id": "pilot_locked_test_00",
+          "state_id": "state0",
+          "family": "separated",
+          "near": false,
+          "union_reference": 20.96237083503992,
+          "original_reference": 15.430027764412225,
+          "B-poly": 8.258881267900382,
+          "B-main": 8.488514938503586,
+          "B-main_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 4.706231479400675,
+              "tau": 3.5238581490801674e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 8.488514938503586,
+              "tau": 3.503400980385351e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 6.494312070724306,
+              "tau": 3.486642304429115e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 7.923515940550308,
+              "tau": 3.4934485261540383e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 2.4922855552211276,
+          "B-order0_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": -4.091118644278503,
+              "tau": 3.4703789830585104e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 0.15036987794379808,
+              "tau": 3.4715571751871383e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 1.4501509456591826,
+              "tau": 3.46073865135808e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 2.4922855552211276,
+              "tau": 3.460492313490743e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 4.484604490065559,
+          "control:KNN3_objects_m1": 9.025998749500843
+        },
+        {
+          "object_id": "pilot_locked_test_00",
+          "state_id": "state1",
+          "family": "separated",
+          "near": false,
+          "union_reference": 21.299918334665247,
+          "original_reference": 15.55804485389502,
+          "B-poly": 8.867905634553308,
+          "B-main": 4.107032367631853,
+          "B-main_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 3.674023514630864,
+              "tau": 3.3889258259123013e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 4.107032367631853,
+              "tau": 3.3812676528709002e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 3.1235480744118416,
+              "tau": 3.352120088841989e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 2.282212795095484,
+              "tau": 3.348998995014697e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 5.241283534176098,
+          "B-order0_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 0.7696132924345552,
+              "tau": 3.3494151569153163e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 4.247622929411477,
+              "tau": 3.35077881135326e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 5.241283534176098,
+              "tau": 3.3397188075567992e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 3.2637723790090125,
+              "tau": 3.337661719497635e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 11.228496466127716
+        },
+        {
+          "object_id": "pilot_locked_test_01",
+          "state_id": "state0",
+          "family": "separated",
+          "near": false,
+          "union_reference": 11.19463058608051,
+          "original_reference": 9.9794551958579,
+          "B-poly": 0.0,
+          "B-main": 1.527207054238941,
+          "B-main_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": -3.432442496171256,
+              "tau": 1.671875021732449e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": -7.373199231641128,
+              "tau": 1.695720205790656e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 1.527207054238941,
+              "tau": 1.6722488963560646e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": -1.357257591805919,
+              "tau": 1.6697966893670851e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 1.5790141411191634,
+          "B-order0_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": -1.2081179449006876,
+              "tau": 1.6574766736351252e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": -2.379903589089621,
+              "tau": 1.6720553220100478e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 1.5790141411191634,
+              "tau": 1.6615205943320843e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": -4.3933317108730225,
+              "tau": 1.657145430289809e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_01",
+          "state_id": "state1",
+          "family": "separated",
+          "near": false,
+          "union_reference": 11.236475082465285,
+          "original_reference": 10.034304561965781,
+          "B-poly": 0.0,
+          "B-main": 1.9534323095775687,
+          "B-main_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": -2.5300737548505023,
+              "tau": 1.6035774188167327e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": -14.094706426531529,
+              "tau": 1.6326751038340984e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 0.694007351603342,
+              "tau": 1.6120960213271225e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 1.9534323095775687,
+              "tau": 1.6133510376340687e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": -3.302642311353926,
+              "tau": 1.5909944589019239e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": -5.708995410119611,
+              "tau": 1.6124041366457849e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": -2.986526112194484,
+              "tau": 1.5964586828367905e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": -8.425347212773753,
+              "tau": 1.5979588874503152e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 6.458665831240213,
+          "control:KNN3_objects_m1": 2.4146933128459875
+        },
+        {
+          "object_id": "pilot_locked_test_02",
+          "state_id": "state0",
+          "family": "near",
+          "near": true,
+          "union_reference": 24.61147965204712,
+          "original_reference": 21.49614100233619,
+          "B-poly": 11.956260011743087,
+          "B-main": 8.191335143935389,
+          "B-main_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": -3.7266025880562275,
+              "tau": 2.809751010898355e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": -2.6780194654841583,
+              "tau": 2.8271214910858667e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": -4.138936577112672,
+              "tau": 2.8311677724301463e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 8.191335143935389,
+              "tau": 2.7661488740975642e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 7.673637758490982,
+          "B-order0_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": -8.909393389680181,
+              "tau": 2.8071442048806175e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": -0.9502113827166243,
+              "tau": 2.791220452989813e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 7.673637758490982,
+              "tau": 2.755151498787821e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 0.5117581845142465,
+              "tau": 2.8059536870527583e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 8.602336569781915,
+          "control:KNN3_objects_m1": 14.546095493989556
+        },
+        {
+          "object_id": "pilot_locked_test_02",
+          "state_id": "state1",
+          "family": "near",
+          "near": true,
+          "union_reference": 24.604072413972506,
+          "original_reference": 21.21293165484358,
+          "B-poly": 11.783690800405134,
+          "B-main": 16.44084747145751,
+          "B-main_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 16.369919167241186,
+              "tau": 2.035376125222476e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 14.793762649071194,
+              "tau": 2.0514065325777083e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 16.44084747145751,
+              "tau": 2.040586669575982e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 14.260489275530437,
+              "tau": 2.0453000263219963e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 16.547199054319986,
+          "B-order0_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 12.747973944042219,
+              "tau": 2.0765825999279396e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 15.758446079533647,
+              "tau": 2.0633071429651435e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 16.547199054319986,
+              "tau": 2.0620626837565623e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 15.397747419728523,
+              "tau": 2.084650876174065e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 11.090567396905815,
+          "control:KNN3_objects_m1": 17.18413486024378
+        },
+        {
+          "object_id": "pilot_locked_test_03",
+          "state_id": "state0",
+          "family": "near",
+          "near": true,
+          "union_reference": 9.149794946924489,
+          "original_reference": 4.895040882925117,
+          "B-poly": 0.0,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": -5.836316961575109,
+              "tau": 2.159041848204435e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": -5.581419020822484,
+              "tau": 2.1441837329294835e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": -14.652245412054326,
+              "tau": 2.1733227246129805e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": -4.713740306907855,
+              "tau": 2.135382015800922e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": -7.466350841592924,
+              "tau": 2.1837128044964204e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": -10.803599510276543,
+              "tau": 2.1761873695854185e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": -4.1000217317385985,
+              "tau": 2.157203468242492e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": -12.285757464386084,
+              "tau": 2.176906500490229e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 1.5309895746168243,
+          "control:KNN3_objects_m1": 2.1088113626844533
+        },
+        {
+          "object_id": "pilot_locked_test_03",
+          "state_id": "state1",
+          "family": "near",
+          "near": true,
+          "union_reference": 9.031686795857334,
+          "original_reference": 4.786505264121841,
+          "B-poly": 0.0,
+          "B-main": 2.9261534979247052,
+          "B-main_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 2.9261534979247052,
+              "tau": 1.984782813656893e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": -11.335466723905778,
+              "tau": 2.000951665184133e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": -1.9733868026448205,
+              "tau": 1.9765169604042666e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": -9.295744266338076,
+              "tau": 1.9903436499788754e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 2.769918217321767,
+          "B-order0_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 0.398192841912879,
+              "tau": 1.9931787623329403e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": -0.7455381543785331,
+              "tau": 1.9720418915361493e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 2.769918217321767,
+              "tau": 1.964018176494101e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": -8.60113399576004,
+              "tau": 1.993141550381376e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 1.0537506650274293,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_04",
+          "state_id": "state0",
+          "family": "geometry",
+          "near": false,
+          "union_reference": 25.591131134286112,
+          "original_reference": 19.013497341783857,
+          "B-poly": 6.843299946033259,
+          "B-main": 3.129871849353497,
+          "B-main_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 3.129871849353497,
+              "tau": 1.872707625657586e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": -6.449423590385033,
+              "tau": 1.9005479682991267e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": -8.605773118809646,
+              "tau": 1.892338188253085e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": -1.5001049579451193,
+              "tau": 1.8812040320133217e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 2.3013119133849536,
+          "B-order0_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 1.7658378745062362,
+              "tau": 1.8914790876399293e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 2.227741249208807,
+              "tau": 1.894088568285628e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 2.3013119133849536,
+              "tau": 1.890957227225737e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 1.0925753905623412,
+              "tau": 1.887080449644969e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 12.82340878510962,
+          "control:KNN3_objects_m1": 3.081817612409221
+        },
+        {
+          "object_id": "pilot_locked_test_04",
+          "state_id": "state1",
+          "family": "geometry",
+          "near": false,
+          "union_reference": 18.57439721882002,
+          "original_reference": 14.478661481054143,
+          "B-poly": 3.4774742404728944,
+          "B-main": 6.531288408285733,
+          "B-main_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 4.624736593921325,
+              "tau": 1.0656345757551156e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 2.473098284619316,
+              "tau": 1.0779094515285968e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 6.531288408285733,
+              "tau": 1.064245958119611e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 3.4895001004500994,
+              "tau": 1.0644263050740157e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 8.803163559231042,
+          "B-order0_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 6.218022076001535,
+              "tau": 1.0764178434983954e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 7.502164738666791,
+              "tau": 1.0802015135688194e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 8.803163559231042,
+              "tau": 1.078631054142022e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 4.613979900689668,
+              "tau": 1.0742914653618723e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 10.962579167024932,
+          "control:KNN3_objects_m1": 5.215279351079474
+        },
+        {
+          "object_id": "pilot_locked_test_05",
+          "state_id": "state0",
+          "family": "geometry",
+          "near": false,
+          "union_reference": 33.24954057937565,
+          "original_reference": 28.179919873994535,
+          "B-poly": 22.13019742491407,
+          "B-main": 21.792392379642074,
+          "B-main_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 19.13598364262392,
+              "tau": 1.7468734258451944e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 5.804318006971323,
+              "tau": 1.7961155250963076e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 21.792392379642074,
+              "tau": 1.7533608815913243e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 20.54236900036049,
+              "tau": 1.7517050604026263e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 23.1440759436093,
+          "B-order0_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 20.81046855800995,
+              "tau": 1.76822142664295e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 7.985442624011949,
+              "tau": 1.818723779516431e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 23.1440759436093,
+              "tau": 1.7760654919215743e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 20.28144505433786,
+              "tau": 1.7694789249762407e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 21.88549678356701,
+          "control:KNN3_objects_m1": 22.07372213119574
+        },
+        {
+          "object_id": "pilot_locked_test_05",
+          "state_id": "state1",
+          "family": "geometry",
+          "near": false,
+          "union_reference": 30.010051028801655,
+          "original_reference": 25.303351851972156,
+          "B-poly": 19.520251622218005,
+          "B-main": 19.195262482128683,
+          "B-main_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 16.59379126430586,
+              "tau": 1.5485418712773711e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 3.3850694068741802,
+              "tau": 1.5951840153340563e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 19.195262482128683,
+              "tau": 1.55447228882853e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 18.016416191690716,
+              "tau": 1.5524706007807101e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 20.78435946767113,
+          "B-order0_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 18.611254651651006,
+              "tau": 1.5696929096341212e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 6.126085989449508,
+              "tau": 1.6162073774169201e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 20.78435946767113,
+              "tau": 1.5767471446933581e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 17.97824868689939,
+              "tau": 1.5699512526359822e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 21.818872738632123,
+          "control:KNN3_objects_m1": 19.737018549940593
+        },
+        {
+          "object_id": "pilot_locked_test_06",
+          "state_id": "state0",
+          "family": "test_high",
+          "near": false,
+          "union_reference": 74.20046606757512,
+          "original_reference": 62.00212393288293,
+          "B-poly": 37.75786440347523,
+          "B-main": 45.42461419755809,
+          "B-main_actions": [
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 42.208408440924835,
+              "tau": 1.2577376474049317e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 40.53295545075853,
+              "tau": 1.2900944862215564e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 45.42461419755809,
+              "tau": 1.2242463887517762e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 44.93896251056187,
+              "tau": 1.2449357527493001e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 41.83048123112507,
+          "B-order0_actions": [
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 38.1513438795479,
+              "tau": 1.2226176326417515e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 36.61890196225469,
+              "tau": 1.2491777850011361e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 41.83048123112507,
+              "tau": 1.1991689812142853e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 40.424274757985735,
+              "tau": 1.2304828413944248e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 57.0981319096118,
+          "control:KNN3_objects_m1": 48.53442352402524
+        },
+        {
+          "object_id": "pilot_locked_test_06",
+          "state_id": "state1",
+          "family": "test_high",
+          "near": false,
+          "union_reference": 71.13876513158594,
+          "original_reference": 62.07102840958339,
+          "B-poly": 34.85777737827297,
+          "B-main": 43.384974696590845,
+          "B-main_actions": [
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 40.32205344306204,
+              "tau": 1.2090861090922595e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 38.79545829414411,
+              "tau": 1.242526318836857e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 43.25701605475214,
+              "tau": 1.177927715791426e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 43.384974696590845,
+              "tau": 1.1993695976679705e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 39.09700255648336,
+          "B-order0_actions": [
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 35.46547085449814,
+              "tau": 1.1753286430936407e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 33.616483350651464,
+              "tau": 1.2023563979474579e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 39.09700255648336,
+              "tau": 1.1534025129716627e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 37.702134531374895,
+              "tau": 1.183390341071062e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 56.456821492575024,
+          "control:KNN3_objects_m1": 58.21801871975086
+        },
+        {
+          "object_id": "pilot_locked_test_07",
+          "state_id": "state0",
+          "family": "test_high",
+          "near": true,
+          "union_reference": 66.72269121663973,
+          "original_reference": 57.608121513008605,
+          "B-poly": 48.624045596886624,
+          "B-main": 41.02908596336065,
+          "B-main_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 33.53385735189039,
+              "tau": 9.236807688182021e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 41.02908596336065,
+              "tau": 8.802030086875325e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 36.987012218050474,
+              "tau": 9.210498723685164e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 21.15343117341898,
+              "tau": 8.903813211158307e-10,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 46.46179627658509,
+          "B-order0_actions": [
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 45.94266071675247,
+              "tau": 9.529389761796852e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 46.46179627658509,
+              "tau": 8.852011093528188e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 40.77110318806922,
+              "tau": 9.050202841182069e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 31.806572877418187,
+              "tau": 8.98257286517898e-10,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 47.74317584205107,
+          "control:KNN3_objects_m1": 57.42206323366245
+        },
+        {
+          "object_id": "pilot_locked_test_07",
+          "state_id": "state1",
+          "family": "test_high",
+          "near": true,
+          "union_reference": 67.61561371025888,
+          "original_reference": 59.182336568370296,
+          "B-poly": 49.5272054319809,
+          "B-main": 52.16110547378065,
+          "B-main_actions": [
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 42.65969151371881,
+              "tau": 9.569304694740409e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 29.276168684159174,
+              "tau": 9.416582869755742e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 52.16110547378065,
+              "tau": 8.866690428689269e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 46.97949490114406,
+              "tau": 9.223329361386803e-10,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 52.786636242275904,
+          "B-order0_actions": [
+            {
+              "drop": 4,
+              "mode": 0,
+              "gain": 52.786636242275904,
+              "tau": 9.525172449355576e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 5,
+              "mode": 0,
+              "gain": 47.257209842015314,
+              "tau": 9.253226207323155e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 7,
+              "mode": 0,
+              "gain": 50.30584008300864,
+              "tau": 9.297379846754259e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 6,
+              "mode": 0,
+              "gain": 34.740707486827446,
+              "tau": 9.326577307940783e-10,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 20.527090193041104
+        }
+      ],
+      "object_count": 8,
+      "paired_bootstrap_main_minus_poly_CI95": [
+        -0.028798904029781143,
+        0.09690334802622341
+      ],
+      "replicates": 2000,
+      "deployment_Tinc": "NOT_RUN_AFTER_LEARNING_STOP_GATE",
+      "nonlinear_quality": "NOT_RUN_NO_WINNER",
+      "Maxwell_calls_during_replay": 0,
+      "paid_physics_source": "Earlier gated shared rank-specific cache preparation; features formed before full matrices/labels."
+    },
+    "4": {
+      "status": "COMPLETE_CACHED_FP64_QUALITY_ONLY",
+      "metrics": {
+        "B-main": {
+          "macro_union": 0.2512750391025126,
+          "macro_original": 0.3888416643301069,
+          "near_union": 0.15110065033298803
+        },
+        "B-order0": {
+          "macro_union": 0.0,
+          "macro_original": 0.0,
+          "near_union": 0.0
+        },
+        "B-poly": {
+          "macro_union": 0.17374761352897233,
+          "macro_original": 0.2425204907471817,
+          "near_union": 0.32007241744581955
+        },
+        "control:ridge_0.01_m1": {
+          "macro_union": 0.0,
+          "macro_original": 0.0,
+          "near_union": 0.0
+        },
+        "control:KNN3_objects_m1": {
+          "macro_union": 0.3018819013599728,
+          "macro_original": 0.45348895858843563,
+          "near_union": 0.3133623174203248
+        }
+      },
+      "rows": [
+        {
+          "object_id": "pilot_locked_test_00",
+          "state_id": "state0",
+          "family": "separated",
+          "near": false,
+          "union_reference": 30.777170082035266,
+          "original_reference": 15.15380822677171,
+          "B-poly": 0.0,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": -82.95415811821324,
+              "tau": 3.949663690797559e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": -332.42548084449845,
+              "tau": 4.598955524842753e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": -114.07911981564118,
+              "tau": 3.905852174808319e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": -80.10048896900004,
+              "tau": 4.0441343811280426e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_00",
+          "state_id": "state1",
+          "family": "separated",
+          "near": false,
+          "union_reference": 31.277761043052447,
+          "original_reference": 15.948762145754303,
+          "B-poly": 0.0,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": -80.01085887452925,
+              "tau": 3.816259608890098e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": -315.989734860336,
+              "tau": 4.442013876591262e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": -116.4480898563994,
+              "tau": 3.798423431029789e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": -72.22848177579996,
+              "tau": 3.898106719530009e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_01",
+          "state_id": "state0",
+          "family": "separated",
+          "near": false,
+          "union_reference": 38.94115195268339,
+          "original_reference": 26.00975467360685,
+          "B-poly": 0.0,
+          "B-main": 5.098987280726299,
+          "B-main_actions": [
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": 2.2648074294732914,
+              "tau": 2.044828461653899e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": -12.043156325466374,
+              "tau": 1.8994457629690434e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": -51.816151391452166,
+              "tau": 1.9396103044460385e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": 5.098987280726299,
+              "tau": 1.9672287042606213e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 8.109645937705913
+        },
+        {
+          "object_id": "pilot_locked_test_01",
+          "state_id": "state1",
+          "family": "separated",
+          "near": false,
+          "union_reference": 40.722082155850664,
+          "original_reference": 24.522173668871396,
+          "B-poly": 0.0,
+          "B-main": 10.948616838071677,
+          "B-main_actions": [
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": 2.4948920532222445,
+              "tau": 1.994258080363918e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": -11.200934716052705,
+              "tau": 1.8478746068413428e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": -45.26502680848032,
+              "tau": 1.884215606019836e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": 10.948616838071677,
+              "tau": 1.8990219633864575e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 11.213626420608291
+        },
+        {
+          "object_id": "pilot_locked_test_02",
+          "state_id": "state0",
+          "family": "near",
+          "near": true,
+          "union_reference": 61.00120927068561,
+          "original_reference": 38.88852980535566,
+          "B-poly": 21.53565231900187,
+          "B-main": 0.0,
+          "B-main_actions": [],
+          "B-order0": 0.0,
+          "B-order0_actions": [],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 14.490717805648135
+        },
+        {
+          "object_id": "pilot_locked_test_02",
+          "state_id": "state1",
+          "family": "near",
+          "near": true,
+          "union_reference": 61.461125848922705,
+          "original_reference": 41.84859186187943,
+          "B-poly": 16.482452379265908,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": -3.531502501163606,
+              "tau": 2.567299571491912e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": -99.84242538793154,
+              "tau": 2.5231818137919113e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": -3.0102364182811745,
+              "tau": 2.5217218970847442e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": -65.9256159672251,
+              "tau": 2.7607296269769618e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 24.515544687902203
+        },
+        {
+          "object_id": "pilot_locked_test_03",
+          "state_id": "state0",
+          "family": "near",
+          "near": true,
+          "union_reference": 17.16319879927931,
+          "original_reference": 2.9652214750444155,
+          "B-poly": 0.0,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": -72.37593506947515,
+              "tau": 2.427601489428388e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": -109.33699533622078,
+              "tau": 2.45310236534352e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": -67.88326800926329,
+              "tau": 2.403479041672656e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": -101.9658088924182,
+              "tau": 2.530030389688674e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_03",
+          "state_id": "state1",
+          "family": "near",
+          "near": true,
+          "union_reference": 16.107272509154875,
+          "original_reference": 1.8658641563016403,
+          "B-poly": 0.0,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": -68.51116533915253,
+              "tau": 2.244320330165364e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": -120.49160185042227,
+              "tau": 2.2968574969862736e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": -55.3451674266957,
+              "tau": 2.193068300813224e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": -84.24302710436244,
+              "tau": 2.325572594374517e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_04",
+          "state_id": "state0",
+          "family": "geometry",
+          "near": false,
+          "union_reference": 67.46586848582231,
+          "original_reference": 22.294406986733645,
+          "B-poly": 0.0,
+          "B-main": 12.528895850029226,
+          "B-main_actions": [
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": 12.528895850029226,
+              "tau": 2.2890737537110426e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": -90.99064730822026,
+              "tau": 2.4984902925298955e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": -20.451269855413766,
+              "tau": 2.4399107081804357e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": -97.77175346062403,
+              "tau": 2.6229454821578624e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_04",
+          "state_id": "state1",
+          "family": "geometry",
+          "near": false,
+          "union_reference": 61.28116916990966,
+          "original_reference": 36.75183587439864,
+          "B-poly": 0.0,
+          "B-main": 24.190795055575478,
+          "B-main_actions": [
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": 24.190795055575478,
+              "tau": 1.4518844128768493e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": -115.29058475296213,
+              "tau": 1.7350806334814984e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": 12.361527096242142,
+              "tau": 1.5106851052521105e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": -41.98932465448191,
+              "tau": 1.6745241690126397e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 22.845714264302305
+        },
+        {
+          "object_id": "pilot_locked_test_05",
+          "state_id": "state0",
+          "family": "geometry",
+          "near": false,
+          "union_reference": 76.50013265487756,
+          "original_reference": 52.04954722406334,
+          "B-poly": 18.101027265460168,
+          "B-main": 28.311186144692808,
+          "B-main_actions": [
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": -6.716203244441062,
+              "tau": 2.2442512190033305e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": -38.60129259107951,
+              "tau": 2.3154527562635013e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": 28.311186144692808,
+              "tau": 2.2439215439035113e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": -7.9993087800703435,
+              "tau": 2.0060215816476115e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 26.415688688416918
+        },
+        {
+          "object_id": "pilot_locked_test_05",
+          "state_id": "state1",
+          "family": "geometry",
+          "near": false,
+          "union_reference": 75.43679541566466,
+          "original_reference": 54.37122083721522,
+          "B-poly": 19.219304181796414,
+          "B-main": 52.33948192088281,
+          "B-main_actions": [
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": -40.92103048070704,
+              "tau": 2.1082633891598963e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": -142.87955390987653,
+              "tau": 2.3464245407219676e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": 52.33948192088281,
+              "tau": 2.0288023944726503e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": -102.9649474050028,
+              "tau": 2.0537467095968982e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 38.703978849803896
+        },
+        {
+          "object_id": "pilot_locked_test_06",
+          "state_id": "state0",
+          "family": "test_high",
+          "near": false,
+          "union_reference": 96.17988037600912,
+          "original_reference": 62.8628059601534,
+          "B-poly": 16.98362479437541,
+          "B-main": 49.478126820972065,
+          "B-main_actions": [
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": 40.55704346084808,
+              "tau": 1.4870115945088603e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": 49.478126820972065,
+              "tau": 1.5634980198818357e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": 20.296274394956008,
+              "tau": 1.3623639636276052e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": 39.73082646133652,
+              "tau": 1.4426159417877146e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": -32.252152766531,
+              "tau": 1.272204534662546e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": -13.682478599891104,
+              "tau": 1.3594493021627742e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": -26.326688510624916,
+              "tau": 1.4151321361272223e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": -118.78678214102318,
+              "tau": 1.3645179580484036e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 57.08724230571801
+        },
+        {
+          "object_id": "pilot_locked_test_06",
+          "state_id": "state1",
+          "family": "test_high",
+          "near": false,
+          "union_reference": 94.2445168006553,
+          "original_reference": 60.756701153972,
+          "B-poly": 18.079835661291877,
+          "B-main": 53.24260378740652,
+          "B-main_actions": [
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": 41.4954425729905,
+              "tau": 1.4341553788545673e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": 53.24260378740652,
+              "tau": 1.4852351174663844e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": 20.438326956093206,
+              "tau": 1.3028916247366316e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": 43.87976656683722,
+              "tau": 1.3767266714789312e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": -32.05147586969002,
+              "tau": 1.2264296201107506e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": -12.63903357468168,
+              "tau": 1.309956219883753e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": -22.309016570870995,
+              "tau": 1.3534429998974196e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": -109.79078843365882,
+              "tau": 1.2872193811968627e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 62.1875615554383
+        },
+        {
+          "object_id": "pilot_locked_test_07",
+          "state_id": "state0",
+          "family": "test_high",
+          "near": true,
+          "union_reference": 146.12798498942016,
+          "original_reference": 113.80451143515316,
+          "B-poly": 95.16531895714337,
+          "B-main": 66.13270726069445,
+          "B-main_actions": [
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": 66.13270726069445,
+              "tau": 1.6617381893598907e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": 11.862811014761233,
+              "tau": 1.8024511159734845e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": 64.52090953697027,
+              "tau": 1.376427039619308e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": 52.39638782631193,
+              "tau": 1.7876606323614815e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 90.06310917731219
+        },
+        {
+          "object_id": "pilot_locked_test_07",
+          "state_id": "state1",
+          "family": "test_high",
+          "near": true,
+          "union_reference": 151.2939628599368,
+          "original_reference": 117.65356095299585,
+          "B-poly": 98.0905176424262,
+          "B-main": 68.68924196933122,
+          "B-main_actions": [
+            {
+              "drop": 2,
+              "mode": 0,
+              "gain": 65.23910856036889,
+              "tau": 1.6992083073260703e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 3,
+              "mode": 0,
+              "gain": 8.94437106467841,
+              "tau": 1.858130474755796e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 1,
+              "mode": 0,
+              "gain": 68.68924196933122,
+              "tau": 1.4134359328036996e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 0,
+              "mode": 0,
+              "gain": 33.021668404663124,
+              "tau": 1.8848185274364903e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 94.8056142895911
+        }
+      ],
+      "object_count": 8,
+      "paired_bootstrap_main_minus_poly_CI95": [
+        -0.08547164365439038,
+        0.22693242382859516
+      ],
+      "replicates": 2000,
+      "deployment_Tinc": "NOT_RUN_AFTER_LEARNING_STOP_GATE",
+      "nonlinear_quality": "NOT_RUN_NO_WINNER",
+      "Maxwell_calls_during_replay": 0,
+      "paid_physics_source": "Earlier gated shared rank-specific cache preparation; features formed before full matrices/labels."
+    },
+    "16": {
+      "status": "COMPLETE_CACHED_FP64_QUALITY_ONLY",
+      "metrics": {
+        "B-main": {
+          "macro_union": 0.27600203446552996,
+          "macro_original": 0.36535342198473625,
+          "near_union": 0.12742951388529294
+        },
+        "B-order0": {
+          "macro_union": 0.2910000201263693,
+          "macro_original": 0.3883841718964965,
+          "near_union": 0.14052202364512478
+        },
+        "B-poly": {
+          "macro_union": 0.329128897086281,
+          "macro_original": 0.8283924945432464,
+          "near_union": 0.3960805483921752
+        },
+        "control:ridge_0.01_m1": {
+          "macro_union": 0.27947239420664155,
+          "macro_original": 0.377567987940335,
+          "near_union": 0.19522528615715926
+        },
+        "control:KNN3_objects_m1": {
+          "macro_union": 0.16287870850158698,
+          "macro_original": 0.1983261221697537,
+          "near_union": 0.0
+        }
+      },
+      "rows": [
+        {
+          "object_id": "pilot_locked_test_00",
+          "state_id": "state0",
+          "family": "separated",
+          "near": false,
+          "union_reference": 1.518867772796888,
+          "original_reference": 0.6493228032694482,
+          "B-poly": 0.0,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -1.415917178134591,
+              "tau": 3.3781170379466283e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -0.5790594911310709,
+              "tau": 3.3779175009557115e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -2.1662725518264954,
+              "tau": 3.379725636925848e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -0.9052932734935379,
+              "tau": 3.3806585483006196e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -1.4909873192691743,
+              "tau": 3.377455616992022e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -1.587937776479645,
+              "tau": 3.378830557917602e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -1.8262850927132623,
+              "tau": 3.379179518666491e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -1.2491261830737905,
+              "tau": 3.3797633427315927e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 0.16763722890683067,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_00",
+          "state_id": "state1",
+          "family": "separated",
+          "near": false,
+          "union_reference": 1.2909907620084722,
+          "original_reference": 0.46758743764456245,
+          "B-poly": 0.0,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -1.4714721251025644,
+              "tau": 3.2422835155826914e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -0.6515901757964424,
+              "tau": 3.2417240712635866e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -2.1864950637256024,
+              "tau": 3.2438682987791908e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -0.9457480511754921,
+              "tau": 3.2441973306306817e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -1.5227453360503922,
+              "tau": 3.2415875583828955e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -1.5521823330313802,
+              "tau": 3.243111765753466e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -1.857455256012248,
+              "tau": 3.2432461813809465e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -1.2857680541723375,
+              "tau": 3.2439807449803087e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 0.07179984760959257,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_01",
+          "state_id": "state0",
+          "family": "separated",
+          "near": false,
+          "union_reference": 0.5665547527944959,
+          "original_reference": 0.0,
+          "B-poly": 0.0,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -1.9983790177767724,
+              "tau": 1.584853182467186e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -2.0690386862329095,
+              "tau": 1.5859595876769642e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -1.121666148151579,
+              "tau": 1.5808316274779119e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -2.124715493314443,
+              "tau": 1.5840905534734348e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -1.3213323522569858,
+              "tau": 1.5817513296815106e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -2.028089806191924,
+              "tau": 1.5856641938555806e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -1.2260102916923863,
+              "tau": 1.5813645646030395e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -2.0185905336491565,
+              "tau": 1.5804746579754083e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_01",
+          "state_id": "state1",
+          "family": "separated",
+          "near": false,
+          "union_reference": 0.4873386390257279,
+          "original_reference": 0.0,
+          "B-poly": 0.0,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -2.208772547000758,
+              "tau": 1.5255057393320416e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -1.8356963912636066,
+              "tau": 1.5244190294990698e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -1.2188165897162277,
+              "tau": 1.520998789150987e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -2.2003214073419666,
+              "tau": 1.5238497786551252e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -1.9456373576970365,
+              "tau": 1.5248758420685304e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -1.9672653763277532,
+              "tau": 1.5252011357675788e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -1.44975764943474,
+              "tau": 1.5220736408146943e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -2.2571476671157953,
+              "tau": 1.5222379625352922e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_02",
+          "state_id": "state0",
+          "family": "near",
+          "near": true,
+          "union_reference": 1.144770966700717,
+          "original_reference": 0.41048679957567713,
+          "B-poly": 0.2088699017279578,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -0.7560575922212577,
+              "tau": 2.534987508210981e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -0.7278969294375429,
+              "tau": 2.5295734337016094e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -1.0841375944136817,
+              "tau": 2.5375467137458318e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -1.7731029570481542,
+              "tau": 2.5361905940094342e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -1.6781656784140815,
+              "tau": 2.537162399621591e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -0.6991580440656202,
+              "tau": 2.5289397132205048e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -1.8783297797802594,
+              "tau": 2.5387742856293056e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -3.352959791416802,
+              "tau": 2.5405709758885813e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_02",
+          "state_id": "state1",
+          "family": "near",
+          "near": true,
+          "union_reference": 0.8895977172284988,
+          "original_reference": 0.31299013577064944,
+          "B-poly": 0.04377902942341794,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -0.3966347384221172,
+              "tau": 1.8703504134386682e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -0.5194724289422937,
+              "tau": 1.8668937181359e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -1.0544969691442978,
+              "tau": 1.874478873927025e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -1.6462668238522202,
+              "tau": 1.874059521865869e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -0.8220833613075961,
+              "tau": 1.871651132108129e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -0.3991446645374854,
+              "tau": 1.866422899908614e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -1.1914744773097503,
+              "tau": 1.8749100964634854e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -1.4905728938543759,
+              "tau": 1.871942183707067e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_03",
+          "state_id": "state0",
+          "family": "near",
+          "near": true,
+          "union_reference": 0.5564374008520225,
+          "original_reference": 0.12611884873949686,
+          "B-poly": 0.38406878791129867,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -4.0874302345478855,
+              "tau": 2.070017585851658e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -2.075213660763422,
+              "tau": 2.0626062401460193e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -1.6242954742104034,
+              "tau": 2.0627028146747168e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -2.756788295715922,
+              "tau": 2.0681064790280734e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -4.288748655554379,
+              "tau": 2.0705683781609852e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -1.919177492925968,
+              "tau": 2.062141921096256e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -2.041461545291885,
+              "tau": 2.065284274612088e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -2.3677953939293124,
+              "tau": 2.0664860374027096e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_03",
+          "state_id": "state1",
+          "family": "near",
+          "near": true,
+          "union_reference": 0.551584878832462,
+          "original_reference": 0.09767108900703987,
+          "B-poly": 0.33604190169817477,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -3.0800716771255408,
+              "tau": 1.9022912094029583e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -1.8787519165183335,
+              "tau": 1.896609183341135e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -1.4576841545108674,
+              "tau": 1.8969306717661107e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -2.2718746083022388,
+              "tau": 1.90123774676925e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.0,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -3.2286363512388543,
+              "tau": 1.9028640104604005e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -1.8881149884020365,
+              "tau": 1.897249786997565e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -2.008322082653521,
+              "tau": 1.90033647973489e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -1.9243224958772236,
+              "tau": 1.8996448938686236e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_04",
+          "state_id": "state0",
+          "family": "geometry",
+          "near": false,
+          "union_reference": 3.866994017242947,
+          "original_reference": 2.9943238718080676,
+          "B-poly": 1.8604891507378611,
+          "B-main": 1.486747018562555,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -0.3577877448243454,
+              "tau": 1.6741350704104517e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -1.040386825972156,
+              "tau": 1.684336189691697e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 1.486747018562555,
+              "tau": 1.666306121804093e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -1.034338942693678,
+              "tau": 1.6806075136528886e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 1.939627101187743,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -2.172230753634245,
+              "tau": 1.6894517924724653e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -0.5065095177097024,
+              "tau": 1.6827625362097338e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 1.939627101187743,
+              "tau": 1.667744909715801e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -2.710077940631374,
+              "tau": 1.6937560466583338e-09,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_04",
+          "state_id": "state1",
+          "family": "geometry",
+          "near": false,
+          "union_reference": 1.2965008366186022,
+          "original_reference": 0.6560794647250815,
+          "B-poly": 0.2480818332625589,
+          "B-main": 0.0,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -0.5344632964022314,
+              "tau": 9.186851775160806e-10,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -2.3773644374324605,
+              "tau": 9.338424541018024e-10,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": -0.2729705828302829,
+              "tau": 9.227831105402597e-10,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -1.2219456547877408,
+              "tau": 9.270462261557948e-10,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 0.05536699173550166,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -1.0974582164335793,
+              "tau": 9.261031820837271e-10,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -1.2317619390661596,
+              "tau": 9.268991591909392e-10,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 0.05536699173550166,
+              "tau": 9.209840091166959e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -1.7676741285233566,
+              "tau": 9.321295644750046e-10,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "control:ridge_0.01_m1": 0.0,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_05",
+          "state_id": "state0",
+          "family": "geometry",
+          "near": false,
+          "union_reference": 5.330314810862674,
+          "original_reference": 4.561224439821071,
+          "B-poly": 2.9240864185450337,
+          "B-main": 3.590758483182582,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": 0.12871302778655302,
+              "tau": 1.5407169833159518e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": 3.114267637347952,
+              "tau": 1.5255718652790356e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 2.6332218955325617,
+              "tau": 1.5397960966976967e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": 3.590758483182582,
+              "tau": 1.5376724915083693e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 3.320063859857716,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -0.3930023507259522,
+              "tau": 1.5413692918953795e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": 3.242372930246669,
+              "tau": 1.5250558633490091e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 3.0283060818481817,
+              "tau": 1.5392705053541103e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": 3.320063859857716,
+              "tau": 1.542164525199319e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 3.563914011511286,
+          "control:KNN3_objects_m1": 2.6136795399039534
+        },
+        {
+          "object_id": "pilot_locked_test_05",
+          "state_id": "state1",
+          "family": "geometry",
+          "near": false,
+          "union_reference": 4.342669708020744,
+          "original_reference": 3.585147845138627,
+          "B-poly": 1.9459211907863039,
+          "B-main": 2.7487548704202878,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -0.7221914698018768,
+              "tau": 1.36275211848254e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": 2.379996734958003,
+              "tau": 1.3476439278752653e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 1.9516842374851247,
+              "tau": 1.360913613407763e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": 2.7487548704202878,
+              "tau": 1.3591840988623782e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 2.5216796417329315,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": -1.127912223537389,
+              "tau": 1.36286784071022e-09,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": 2.421790652952789,
+              "tau": 1.3474345299584862e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 2.2718679103079595,
+              "tau": 1.3600937983231064e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": 2.5216796417329315,
+              "tau": 1.3631204518650111e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 2.6743672112756776,
+          "control:KNN3_objects_m1": 0.9865455014592978
+        },
+        {
+          "object_id": "pilot_locked_test_06",
+          "state_id": "state0",
+          "family": "test_high",
+          "near": false,
+          "union_reference": 88.45365201772097,
+          "original_reference": 86.98532014992992,
+          "B-poly": 47.11240720234318,
+          "B-main": 78.22930869173423,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": 74.44258000421257,
+              "tau": 1.3777776420475837e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": 46.776086007391534,
+              "tau": 1.2275728792968393e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 63.234660620282085,
+              "tau": 1.2589307760091719e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": 78.22930869173423,
+              "tau": 1.4086748578565207e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 80.83636845282992,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": 80.75117139922595,
+              "tau": 1.309553276269998e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": 14.3459436420448,
+              "tau": 1.227887601178191e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 67.02759737492569,
+              "tau": 1.2211471780846434e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 9,
+              "mode": 0,
+              "gain": 80.83636845282992,
+              "tau": 1.282068225586529e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 81.43468282600458,
+          "control:KNN3_objects_m1": 84.43413705154013
+        },
+        {
+          "object_id": "pilot_locked_test_06",
+          "state_id": "state1",
+          "family": "test_high",
+          "near": false,
+          "union_reference": 87.32052254292033,
+          "original_reference": 85.90896321271394,
+          "B-poly": 46.568809479740004,
+          "B-main": 76.87559778009826,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": 73.74568925977205,
+              "tau": 1.3507548672064488e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": 47.39921159271063,
+              "tau": 1.2016726862885345e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 63.820518539263766,
+              "tau": 1.2227854548254258e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": 76.87559778009826,
+              "tau": 1.3824837369338674e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 80.19833749462993,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": 79.82804620582107,
+              "tau": 1.2936026225766706e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": 13.155686088048165,
+              "tau": 1.2060525438195153e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 65.3016021171752,
+              "tau": 1.186111337773139e-09,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 9,
+              "mode": 0,
+              "gain": 80.19833749462993,
+              "tau": 1.2531409232803781e-09,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 80.27266140316834,
+          "control:KNN3_objects_m1": 79.1827661027286
+        },
+        {
+          "object_id": "pilot_locked_test_07",
+          "state_id": "state0",
+          "family": "test_high",
+          "near": true,
+          "union_reference": 8.936757942671143,
+          "original_reference": 7.3989817307569306,
+          "B-poly": 4.246317831280998,
+          "B-main": 4.901734502691701,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": 4.901734502691701,
+              "tau": 5.769610810560798e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -4.109277331946774,
+              "tau": 5.482947258698712e-10,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 1.1578573315941478,
+              "tau": 5.446257642713888e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": 2.3002075651423923,
+              "tau": 5.551987985136819e-10,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "B-order0": 3.829345862418196,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": 3.829345862418196,
+              "tau": 5.80331694810315e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": 0.051924051778779956,
+              "tau": 5.360898799412735e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 1.852011945591928,
+              "tau": 5.612311757103415e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 9,
+              "mode": 0,
+              "gain": 2.934302987391641,
+              "tau": 5.830034665963436e-10,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 5.564762866827358,
+          "control:KNN3_objects_m1": 0.0
+        },
+        {
+          "object_id": "pilot_locked_test_07",
+          "state_id": "state1",
+          "family": "test_high",
+          "near": true,
+          "union_reference": 6.6974063220824975,
+          "original_reference": 5.186805040724195,
+          "B-poly": 2.228492849602412,
+          "B-main": 1.075027354089423,
+          "B-main_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": 1.075027354089423,
+              "tau": 5.391100871749693e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -7.947477578634956,
+              "tau": 5.196741428951934e-10,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 0.5480286706506268,
+              "tau": 5.191513623197006e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 12,
+              "mode": 0,
+              "gain": -3.146257013805343,
+              "tau": 5.455811205886932e-10,
+              "valid": true,
+              "positive": false
+            }
+          ],
+          "B-order0": 2.7614873390322314,
+          "B-order0_actions": [
+            {
+              "drop": 15,
+              "mode": 0,
+              "gain": 1.324824851943116,
+              "tau": 5.30611912954148e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 14,
+              "mode": 0,
+              "gain": -7.351360948624134,
+              "tau": 5.171288391701301e-10,
+              "valid": true,
+              "positive": false
+            },
+            {
+              "drop": 13,
+              "mode": 0,
+              "gain": 2.7614873390322314,
+              "tau": 5.238772667287224e-10,
+              "valid": true,
+              "positive": true
+            },
+            {
+              "drop": 9,
+              "mode": 0,
+              "gain": 1.3897100130907418,
+              "tau": 5.515385322181082e-10,
+              "valid": true,
+              "positive": true
+            }
+          ],
+          "control:ridge_0.01_m1": 3.5917897104163288,
+          "control:KNN3_objects_m1": 0.0
+        }
+      ],
+      "object_count": 8,
+      "paired_bootstrap_main_minus_poly_CI95": [
+        -0.25171489060980407,
+        0.11547308122518321
+      ],
+      "replicates": 2000,
+      "deployment_Tinc": "NOT_RUN_AFTER_LEARNING_STOP_GATE",
+      "nonlinear_quality": "NOT_RUN_NO_WINNER",
+      "Maxwell_calls_during_replay": 0,
+      "paid_physics_source": "Earlier gated shared rank-specific cache preparation; features formed before full matrices/labels."
+    }
+  },
+  "elapsed_seconds": 8.613071200088598,
+  "freeze_sha256": "c1e4712a878ba4eb55734b496b49a9bb5aa3f3f686af7338c4c8d371b3ba88c8",
+  "model_or_rule_selection_after_test": false,
+  "runtime": {
+    "platform": "Windows",
+    "python": "3.10.9",
+    "torch": "2.6.0+cu124",
+    "numpy": "2.2.6"
+  }
+}

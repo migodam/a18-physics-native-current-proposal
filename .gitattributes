@@ -1,0 +1,2 @@
+# Preserve source and receipt byte identity for SHA256 manifests.
+* -text

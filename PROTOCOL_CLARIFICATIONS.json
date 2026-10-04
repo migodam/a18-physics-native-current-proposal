@@ -1,0 +1,54 @@
+{
+  "schema": "a18.protocol_clarifications.v1",
+  "registered_config_unchanged": true,
+  "items": [
+    {
+      "topic": "current metric",
+      "registered_word": "whitened",
+      "actual": "Original Euclidean dipole-current gauge with constant cell-volume convention. Data residual is whitened; no new current whitening was inserted. G0 reproduces the original gauge.",
+      "effect": "Terminology clarification; config fingerprint unchanged"
+    },
+    {
+      "topic": "G7 overlap allocation",
+      "registered": "pair opportunity contributes >=10% of reference gain",
+      "actual": "Absolute joint/reference .925246; positive extra/reference0. The original wording leaves overlap allocation undefined.",
+      "effect": "HOLD mechanism claim; no silent choice of favorable metric"
+    },
+    {
+      "topic": "J2 epochs",
+      "registered_upper_bound": 80,
+      "actual": 35,
+      "effect": "Equal ceiling selected from J0 before training, both stopped at20; equal1350s caps"
+    },
+    {
+      "topic": "G3 K2 branch",
+      "actual": "NOT_RUN_AFTER_MANDATORY_EPOCH20_STOP",
+      "effect": "Coverage branch fails; no complete falsification of the alternative cost branch"
+    },
+    {
+      "topic": "transfer timing",
+      "actual": "k4/k16 frozen FP64 cached quality only; full timing NOT_RUN_AFTER_STOP",
+      "effect": "No deployment transfer or nonlinear quality claim"
+    },
+    {
+      "topic": "cost counters",
+      "actual": "All saved incremental operator/RHS counters; initial shared-state operator snapshot not persisted. Initial wall included separately in Ttotal.",
+      "effect": "No fully decomposed end-to-end operator claim"
+    },
+    {
+      "topic": "A historical evidence",
+      "actual": "Route A preflight cards are immutable historical records before unified frozen test. Integrated A-analytic test has five actual cold/warm timings and selected traces.",
+      "effect": "No retroactive fill of earlier A0 ID/gain or T0/T1 action-trace gaps"
+    },
+    {
+      "topic": "teacher and physical scope",
+      "actual": "Bounded BEST_FOUND and truth-seeded local state initialization",
+      "effect": "Not global oracle or unknown-initialization reconstruction evidence"
+    },
+    {
+      "topic": "J6 contingency",
+      "actual": "TIME_CAP124, one unchanged J7 continuation, atomic cases reused, no model/rule change",
+      "effect": "Failures and repeated partial work charged; no test selection"
+    }
+  ]
+}

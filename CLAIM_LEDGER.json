@@ -1,0 +1,64 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "status": "PASS_WITH_SCOPE",
+      "claim": "Schur forward/adjoint and original discrete endpoint/finite gain agree in the tested audits",
+      "evidence": "MATHEMATICAL_REVIEW.md; results/shared/G0*.json"
+    },
+    {
+      "id": "C2",
+      "status": "PASS_DEVELOPMENT_ONLY",
+      "claim": "B shared degree2 representation covers best-found development opportunities at0.993 macro",
+      "evidence": "results/preflight_review/FINAL_INTEGRATED_PREFLIGHT.json"
+    },
+    {
+      "id": "C3",
+      "status": "FAIL",
+      "claim": "The registered A bank passes the common-reference representation threshold",
+      "evidence": "results/route_a/GATE_DECISION.json"
+    },
+    {
+      "id": "C4",
+      "status": "FAIL",
+      "claim": "The registered B neural proposal passes epoch20 validation learning gate",
+      "evidence": "results/route_b/training/"
+    },
+    {
+      "id": "C5",
+      "status": "HOLD",
+      "claim": "B has a reliable positive held-out gain advantage over its frozen B-poly comparator",
+      "evidence": "results/frozen_evaluation/SUMMARY.json"
+    },
+    {
+      "id": "C6",
+      "status": "HOLD",
+      "claim": "Singleton proposals cover the important block mechanism",
+      "evidence": "results/preflight_review/G7_INTERPRETATION.json"
+    },
+    {
+      "id": "C7",
+      "status": "NOT_RUN",
+      "claim": "The proposal improves final nonlinear material recovery or end-to-end deployment",
+      "evidence": "GATE_DECISION.json G8"
+    },
+    {
+      "id": "C8",
+      "status": "NOT_CLAIMED",
+      "claim": "This is the first learned Krylov space, projective loss, or learned current proposal",
+      "evidence": "research/literature/CODEX_NOVELTY_REVIEW.md"
+    },
+    {
+      "id": "C9",
+      "status": "NOT_CLAIMED",
+      "claim": "Finite discrete gain/tau is a continuum or complete safety certificate",
+      "evidence": "MATHEMATICAL_REVIEW.md"
+    }
+  ],
+  "novelty_scope": "Limited retrieved primary literature only, no exhaustive priority conclusion",
+  "scholarqa_status": "429_NO_USABLE_RETRIEVAL",
+  "full_text_gaps": [
+    "Wei Chen2019 author PDF timeout"
+  ],
+  "literature_ledger": "research/literature/CODEX_NOVELTY_REVIEW.md"
+}

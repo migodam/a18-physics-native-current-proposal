@@ -1,0 +1,34 @@
+{
+  "archives": [
+    {
+      "name": "a17-numerical-dependency.zip",
+      "bytes": 199552,
+      "sha256": "825cae361196604a39acf8417880bd1736661e411ac072bd1bccaf8f353ed1d2",
+      "url": "https://github.com/migodam/a18-physics-native-current-proposal/releases/download/pilot-2026-10-04/a17-numerical-dependency.zip"
+    },
+    {
+      "name": "frozen-caches-checkpoints.zip",
+      "bytes": 26107022,
+      "sha256": "41aaa7bc2994a54fceed229a56a0e22359659bb48d733cc3a7128ac507442959",
+      "url": "https://github.com/migodam/a18-physics-native-current-proposal/releases/download/pilot-2026-10-04/frozen-caches-checkpoints.zip"
+    },
+    {
+      "name": "historical-development-states.zip",
+      "bytes": 17056155,
+      "sha256": "7bd1276379cd660528f99580cb2752d6148df1fc5865b547abd1e191492c082f",
+      "url": "https://github.com/migodam/a18-physics-native-current-proposal/releases/download/pilot-2026-10-04/historical-development-states.zip"
+    },
+    {
+      "name": "pilot-data.zip",
+      "bytes": 137710575,
+      "sha256": "0c2e13578f6cb32211b08e5b2f0ddbc5bba2f0ab9915db1316bdf3d75a7b9ef5",
+      "url": "https://github.com/migodam/a18-physics-native-current-proposal/releases/download/pilot-2026-10-04/pilot-data.zip"
+    },
+    {
+      "name": "raw-execution-logs.zip",
+      "bytes": 394515,
+      "sha256": "b9ca176a96a37d033be78d7d3b98b283da579030ccbda6dc8c85b277c438e494",
+      "url": "https://github.com/migodam/a18-physics-native-current-proposal/releases/download/pilot-2026-10-04/raw-execution-logs.zip"
+    }
+  ]
+}

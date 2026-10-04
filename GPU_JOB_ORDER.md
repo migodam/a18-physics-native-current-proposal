@@ -1,3 +1,6 @@
+<!-- current-result -->
+> 本文件保留实验前规格与预算；当前实测状态见 [GATE_DECISION.json](GATE_DECISION.json) 和 [中文报告](RESEARCH_REPORT_ZH.md)。
+
 # GPU_JOB_ORDER：单台 RTX 4060 Laptop
 
 **唯一 CUDA worker；所有 GPU 工作严格串行。以下是资源预算/估计，不是本轮实测，也不是执行完成承诺。**

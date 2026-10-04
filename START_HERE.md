@@ -1,33 +1,15 @@
-# START HERE — A18 Physics-Native Current Proposal
+# A18_C: physics-native current proposal — public research archive
 
-**裁决：B 是有条件主线，A 是必须并行的实用对照，C 只保留理论。** 本包完成理论、文献审计、实施规格和 CPU 代数测试；真实 Maxwell/NN pilot 尚未运行。A17 主稿保持独立。
+**科学裁决：NO_GO_BOTH。** 共享真实物理后端及B发展集表示门通过，A表示门失败，B两个模型均在epoch20未超过validation无NN控制，停止扩展。冻结test的正差值区间跨越明显劣化区域，G6 HOLD；pair口径未消除，G7 HOLD。没有最终nonlinear成像质量claim。
 
-|路线|检验的核心假设|现在做什么|
-|---|---|---|
-|B / Primary|廉价 Schur-feedback current 空间足以覆盖好动作，任务先验能找到它们|CPU oracle/cost gate；通过后约0.3M MLP|
-|A / Secondary|不生成全 bank，仅凭 recipe descriptors 能提出有用的 atom/drop 动作|lazy recipe audit；先MLP，GNN有条件|
-|C / High-risk|同一物理空间存在 deterministic 多head仍漏掉的多region机会|不训练，不上Flow；保留projective分布规格|
+网页GPT／研究者阅读顺序：
 
-## 最核心数学结构
+1. [中文研究报告](RESEARCH_REPORT_ZH.md)
+2. [简明机器结果](RESULTS_SUMMARY.json) 与 [逐项gate裁决](GATE_DECISION.json)
+3. [覆盖／成本表](tables/locked_k8_coverage_cost.csv)、[真实五次计时与counters](tables/locked_k8_raw_costs.csv)
+4. [数学核验](MATHEMATICAL_REVIEW.md)、[claim ledger](CLAIM_LEDGER.json)、[文献审查](research/literature/CODEX_NOVELTY_REVIEW.md)
+5. [复核与重现](REPRODUCE.md)、[权属与来源](RIGHTS_AND_PROVENANCE.md)、[发布说明](PUBLISH.md)
 
-$$P=I-UU^*,\qquad F_U^{eff}=PFP+PFU(I-U^*FU)^{-1}U^*FP.$$
+原研究规格与预定门槛继续保留；其中旧的SPEC_READY/NOT_RUN描述是制定时历史状态，当前实测以根目录报告和GATE_DECISION.json为准。old A18-B24/6/18为历史暴露，新48对象32/8/8独立split。数据初始化为真值附近局部扰动，teacher为BEST_FOUND，没有全局最优／全局反演能力保证。
 
-O 用 dressed observation seed 与 adjoint chain；P/M 用 current-residual/material-injection seeds 与 forward chain。默认6 seeds、degree0/1/2，联合正交 rank≤18，hard cap24。
-
-删去 u_i 后，网络给单位系数 t，提出 **c=[u_i,Q_U]t**，保留 partial rotation 与 no-op。由原 A17 endpoint solve 和同一 full frozen finite gain决定接受；不是以 NN 分数接受。degree惩罚对应嵌套层，而不是任意QR列号。
-
-## Codex 应该先跑什么
-
-Integrator 先运行 `python tools/run_algebra_tests.py`，再把真实A17 backend接到共享接口，在2个真实states验证原endpoint/gain一致。接着只做12-state无NN representation/cost preflight。给两个agent分别发送 [CODEX_ROUTE_A.md](CODEX_ROUTE_A.md) 和 [CODEX_ROUTE_B.md](CODEX_ROUTE_B.md)；两者共享数据、teacher、verifier和cost ledger，不共享有额外训练优势的checkpoint。
-
-## 唯一4060怎么排队
-
-CPU开发并行；GPU严格 **共享physics准备 → A-MLP → B-MLP → 条件性A-GNN/B-Set → 仅赢家追加seeds**。所有NN job合计最多240 GPU分钟，含失败；单job与显存预算见 [GPU_JOB_ORDER.md](GPU_JOB_ORDER.md)。这些是预算/估计，不是已测性能。所有训练epochs只读cache，不重跑Maxwell。
-
-## 出现这些结果立即停止
-
-A/B manifold或recipe oracle coverage不足，或者acquisition未明显省：不训练。最强同空间无NN已达.95 reference：停止NN。B不在coverage/acquisition上优于A：A升主线。GNN/Set不优于MLP：保留MLP，不claim physics决定网络架构。deterministic已充分覆盖：C继续关闭。frozen gain不代替最终成像验证。
-
-完整理论与依据：[THEORY_OVERVIEW.md](THEORY_OVERVIEW.md)；执行配置：[config/pilot.json](config/pilot.json)；最终判据：[GO_NO_GO_GATES.md](GO_NO_GO_GATES.md)。
-
-**交付状态：本地Git仓库已整理；远端尚未创建/推送，因为本会话GitHub连接仅提供读取操作。发布步骤见 [PUBLISH.md](PUBLISH.md)，不把准备完成称为已经上线。**
+Git提供代码、报告、表图和manifests；较大合成数据、checkpoint、缓存及数值依赖在[Release](https://github.com/migodam/a18-physics-native-current-proposal/releases/tag/pilot-2026-10-04)。先核对[公开manifest](PUBLIC_MANIFEST.json)中的SHA256，再解压。科学判定与远端发布核验分别记录，公开归档不等于peer-reviewed acceptance。
