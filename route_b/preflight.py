@@ -85,8 +85,8 @@ def cov(rows,key,denom="union_reference"):
     objects={}
     for r in rows:
         ref=r[denom]
-        if ref>0:objects.setdefault(r["object_id"],[]).append(r[key]/ref)
-    return float(np.mean([np.mean(v) for v in objects.values()])) if objects else None
+        if ref>0:objects.setdefault(r["object_id"],[]).append((r[key],ref))
+    return float(np.mean([sum(g for g,ref in v)/sum(ref for g,ref in v) for v in objects.values()])) if objects else None
 
 def run(args):
     torch.set_num_threads(4);root=Path(args.output);root.mkdir(parents=True,exist_ok=True);start=time.monotonic();deadline=start+60*args.teacher_budget_minutes
