@@ -62,6 +62,16 @@ def backend_from_arrays(a,*,source_sha256="generated",rtol=1e-10,device="cpu",lo
         if "all" not in basis_cache:basis_cache["all"]=la.svd(S,full_matrices=False)[2].conj().T
         return basis_cache["all"][:,:count].copy()
     holder={};solve_records=[]
+    def solve_current(rhs):
+        one=rhs.ndim==1;rhs=rhs[:,None] if one else rhs;out=np.empty_like(rhs,dtype=complex)
+        for j in range(rhs.shape[1]):
+            v=rhs[:,j];op=LinearOperator((n,n),matvec=lambda c:holder["b"].apply_L(c),dtype=complex)
+            c,info=gmres(op,v,rtol=rtol,atol=0,restart=160,maxiter=150)
+            rr=la.norm(holder["b"].apply_L(c)-v)/max(la.norm(v),1e-300)
+            if info or rr>max(5*rtol,1e-12):raise RuntimeError("PRIMAL_SOLVE_FAILED")
+            out[:,j]=c
+        holder["b"].receipt.add("full_primal_illumination_rhs",rhs.shape[1])
+        return out[:,0] if one else out
     def jaction(z):
         rhs=inj(z);one=z.ndim==1;rhs=rhs[:,:,None] if one else rhs;out=np.empty((P,m,rhs.shape[2]),complex)
         for i in range(P):
@@ -73,8 +83,13 @@ def backend_from_arrays(a,*,source_sha256="generated",rtol=1e-10,device="cpu",lo
                 if info or rr>max(5*rtol,1e-12):raise RuntimeError("FULL_J_SOLVE_FAILED")
                 out[i,:,j]=S@c
         out=pack(out);return out[:,0] if one else out
-    geom={"receivers":7*fibonacci(8),"historical_anchor_loaded":False,"current_dof":n}
-    meta={"chi":a["chi"],"a":a["a"],"points":a["xyz"],"grid_shape":shape,"cell_volume":float(a["h"])**3,"wavenumber":float(a["k"]),"r":a["r"].reshape(P,m),"ell":a["ell"],"Lambda":a["Lambda"],"forcing":forcing,"source_phase":np.ones(P,complex),"geometry":geom,"state_hash":array_hash(a["chi"]),"material_gauge_sha256":array_hash(a["scale"]),"receiver_geometry_sha256":array_hash(S),"public_source_sha256":source_sha256,"historical_anchor_loaded":False,"device":device}
+    geom={"receivers":7*fibonacci(8),"channel_ids":tuple(range(m)),"historical_anchor_loaded":False,"current_dof":n}
+    state_hash=hashlib.sha256("".join(array_hash(v) for k,v in sorted(a.items())).encode()).hexdigest()
+    meta={"chi":a["chi"],"a":a["a"],"points":a["xyz"],"grid_shape":shape,"cell_volume":float(a["h"])**3,"wavenumber":float(a["k"]),"r":a["r"].reshape(P,m),"ell":a["ell"],"Lambda":a["Lambda"],"forcing":forcing,"source_phase":np.ones(P,complex),"geometry":geom,"state_hash":state_hash,"material_gauge_sha256":array_hash(a["scale"]),"receiver_geometry_sha256":array_hash(geom["receivers"]),"public_source_sha256":source_sha256,"historical_anchor_loaded":False,"device":device}
     backend=OperatorBackend(lambda C:L(C),lambda C:L(C,True),lambda C:S@C,lambda W:S.conj().T@W,inj,dual,proj,jaction,receiver,meta);holder["b"]=backend
-    backend.solve_records=solve_records;backend.receipt.add("whitelisted_state_load",1,load_wall);backend.receipt.add("forcing_construction",4)
+    backend.solve_records=solve_records;backend.solve_current=solve_current
+    def gd(C,adj=False):
+        t=time.perf_counter();out=conv(C,adj)*float(a["h"])**3;backend.receipt.add("GD_adjoint_rhs" if adj else "GD_rhs",1 if C.ndim==1 else C.shape[1],time.perf_counter()-t);return out
+    backend.apply_GD=gd
+    backend.receipt.add("whitelisted_state_load",1,load_wall);backend.receipt.add("forcing_construction",4)
     return backend
