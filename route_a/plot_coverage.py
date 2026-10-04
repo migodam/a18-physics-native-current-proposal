@@ -25,7 +25,7 @@ def main():
     a, d, original = [np.array([float(r[key]) for r in rows]) for key in
                        ("A_coverage_union", "D_coverage_union", "A_coverage_original")]
     fig, ax = plt.subplots(1, 2, figsize=(11, 5.2), sharey=True, layout="constrained")
-    ax[0].barh(y-.18, d, .34, label="Original dictionary", color="#b0b6bf")
+    ax[0].barh(y-.18, d, .34, label="Original dictionary oracle", color="#b0b6bf")
     ax[0].barh(y+.18, a, .34, label="A1 bank oracle", color="#2a678d")
     ax[1].barh(y, original, .52, color="#378074")
     ax[0].set_yticks(y, [r["object_id"]+" ("+r["family"]+")" for r in rows])
@@ -51,6 +51,8 @@ def main():
     outputs = {}
     for ext in ("png", "svg"):
         target = prefix.with_suffix("."+ext); fig.savefig(target, dpi=160)
+        if ext == "svg":
+            target.write_text("\n".join(line.rstrip() for line in target.read_text().splitlines())+"\n")
         outputs[target.name] = hashlib.sha256(target.read_bytes()).hexdigest()
     plt.close(fig)
     metadata = dict(scope="exposed development representation only; not NN or locked-test",

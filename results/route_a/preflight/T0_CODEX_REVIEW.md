@@ -11,3 +11,5 @@ T0's original summary averaged state ratios inside each object. That sensitivity
 Cost remeasurement, the strongest legal analytic prior after commit712995e, full warm incremental timing and A0 historical ID/gain replay remain separately pending. Old unfiltered A policies are weak controls. A fails the representation gate regardless of whether those later costs pass. J1, GNN, new-object A training, locked-test evaluation and nonlinear A transfer are not authorized by this result.
 
 Inputs and hashes are in T0_CODEX_REVIEW.json; state/object CSVs carry the raw gains, both references and policy scope. Later Integrator results determine the complete publication status. No physics or neural job was started to produce this statistical review.
+
+The final cold control/cost review is recorded in [FINAL_A_REVIEW.json](FINAL_A_REVIEW.json). The figure's original-dictionary bars are enumerated bank oracles, not the deployed topK policy. Re-render it with `python -m route_a.plot_coverage` (Matplotlib required). T0 pending statements preserve that earlier snapshot; consult the root Route A gate/model card for the final stopped-route status.

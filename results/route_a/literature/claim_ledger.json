@@ -48,11 +48,12 @@
     ],
     "confidence": "high for the measured registered-bank opportunity ceiling; no universal impossibility claim",
     "empirical_evidence": {
-      "path": "results/route_a/preflight/T0_CODEX_REVIEW.json",
+      "path": "results/route_a/preflight/FINAL_A_REVIEW.json",
       "macro_common": 0.6182445286057869,
       "near_common": 0.5187316376545128,
       "macro_original": 0.9544209053846279,
-      "cost_status": "PENDING_FAIR_RECHECK"
+      "cost_status": "PASS_COLD_ACQUISITION; full warm Tinc NOT_MEASURED",
+      "strongest_legal_control_macro": 0.3745985431188596
     }
   },
   {

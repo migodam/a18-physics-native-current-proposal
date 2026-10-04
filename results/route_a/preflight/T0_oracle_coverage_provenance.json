@@ -8,7 +8,7 @@
   "n_objects": 6,
   "n_states": 12,
   "outputs": {
-    "T0_oracle_coverage.png": "e9c9619fc91eda645e9fbcea3e701886af2cc8a7d510b2212c47ba40da6a66ae",
-    "T0_oracle_coverage.svg": "57c48992cdfe644948c5f610102320ead2727b653afe965dad7ab662b2ef043e"
+    "T0_oracle_coverage.png": "a477b59f4280d4ab84a66daad7e197a1604b6c4d820a62a6937c5614098c0fe1",
+    "T0_oracle_coverage.svg": "6f4def9cdf801bf5978246c41f861ba20249ff3ce0a703378953541e56c6b4b9"
   }
 }
