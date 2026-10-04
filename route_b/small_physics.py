@@ -2,7 +2,7 @@
 import time
 import numpy as np
 import torch
-from shared_backend.core import pack,endpoint_from_maps
+from shared_backend.core import pack,endpoint_from_maps,directional_check
 
 class SmallPhysics:
     def __init__(self,backend,state,Q,Jfull,device="cpu"):
@@ -43,6 +43,11 @@ class SmallPhysics:
         z=torch.as_tensor(np.asarray(t)[None],dtype=torch.complex128,device=self.device)
         with torch.no_grad():g,valid,_,_=self.evaluate(z,(drop,))
         return float(g[0]),bool(valid[0])
+    def numpy_metrics(self,t,drops):
+        z=torch.as_tensor(np.asarray(t)[None],dtype=torch.complex128,device=self.device)
+        with torch.no_grad():g,valid,step,nr=self.evaluate(z,tuple(drops))
+        a=self.numpy;d=step[0].cpu().numpy()-a['old_step'];check=directional_check(a['r'],a['r']+a['Jfull']@a['old_step'],a['Jfull']@d,a['old_step'],d,a['ell'],a['Lambda'])
+        return {**check,'valid':bool(valid[0]),'normal_relative_residual':float(nr[0]),'step':step[0].cpu().numpy()}
 
 def teacher_best(cache,drops,*,starts=8,steps=40,seed=1801,deadline=None):
     """Bounded Adam + sphere/Stiefel retraction; every result is best-found."""
@@ -68,8 +73,9 @@ def teacher_best(cache,drops,*,starts=8,steps=40,seed=1801,deadline=None):
     order=np.argsort(-best,kind="stable");modes=[]
     for j in order:
         t=bestT[j].detach().cpu().numpy();g=float(best[j])
-        if g<=0:continue
+        check=cache.numpy_metrics(t,drops)
+        if not check['valid'] or check['gain']<=check['tau']:continue
         if rank==1 and any(abs(np.vdot(np.asarray(m["coefficients"]),t))>=.9 for m in modes):continue
-        modes.append({"gain":g,"coefficients":t,"start_index":int(j)})
+        modes.append({"gain":check['gain'],"tau":check['tau'],"coefficients":t,"start_index":int(j)})
         if len(modes)==(2 if rank==1 else 1):break
-    return {"best_gain":float(best.max(initial=0)),"modes":modes,"starts":starts,"steps":steps,"wall_seconds":time.perf_counter()-start,"invalid_backtracks":failures,"status":"BEST_FOUND","global_optimality":False,"drops":list(drops)}
+    return {"best_gain":max([m['gain'] for m in modes],default=0.),"raw_best_gain":float(best.max(initial=0)),"modes":modes,"starts":starts,"steps":steps,"wall_seconds":time.perf_counter()-start,"invalid_backtracks":failures,"status":"BEST_FOUND","global_optimality":False,"drops":list(drops),"positive_rule":"valid and finite gain > original A17 tau"}
