@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "candidate_count": 259,
-  "reachable_history_blob_count": 226,
+  "candidate_count": 264,
+  "reachable_history_blob_count": 332,
   "release_archives": 5,
   "release_members_scanned": 647,
   "issues": [],

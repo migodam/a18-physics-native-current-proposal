@@ -69,13 +69,13 @@
     },
     {
       "path": "COST_SUMMARY.json",
-      "bytes": 20788,
-      "sha256": "7d8db32013985dcc70071609b8878588e97f300b17443615cec6cb940abb64ac"
+      "bytes": 20840,
+      "sha256": "d071870e4ba09123c7f7f393d2b1e6c04bb657fb7f6df4318525bed68e3f61a3"
     },
     {
       "path": "DELIVERY_MANIFEST.json",
-      "bytes": 767,
-      "sha256": "f6aaaf9beb9be3e4de6f8724555dcded6f086ffcbd9b68fd5f1124c5134fb38b"
+      "bytes": 816,
+      "sha256": "12f335c0423a2760371da80a9bacf1cb6cde1a2cf40d9035e4202a993c76ef95"
     },
     {
       "path": "FEATURE_CONTRACT.md",
@@ -84,8 +84,8 @@
     },
     {
       "path": "GATE_DECISION.json",
-      "bytes": 7361,
-      "sha256": "c75a28cb2f09adb17a19782841aca2f4db1efcc52d0ae0ee8b9feed1eb3cba98"
+      "bytes": 7386,
+      "sha256": "a4c101d6eb89238a8bca42e1f67aa1dca69a5f1f230db71006a944439cf45387"
     },
     {
       "path": "GO_NO_GO_GATES.md",
@@ -134,13 +134,18 @@
     },
     {
       "path": "PUBLISH.md",
-      "bytes": 1709,
-      "sha256": "e708af6149dea63b90ac5513756b4b1f3d70d0cc00db1ab34cae08dffa64db2f"
+      "bytes": 1904,
+      "sha256": "8104955fd954534000d987043ca4f0caef4d9487ea49bfc63d063bdb32457815"
     },
     {
       "path": "README.md",
       "bytes": 1217,
       "sha256": "857b3fbe57455e01adb2953c8b963d098117261db96a924b37a47d47644b7eab"
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "bytes": 1713,
+      "sha256": "7f39201f2edcbddf9aa34ba270231262db3ef44598bc4ddb0fd37e46876f033f"
     },
     {
       "path": "REPRODUCE.md",
@@ -149,13 +154,13 @@
     },
     {
       "path": "RESEARCH_REPORT_ZH.md",
-      "bytes": 11017,
-      "sha256": "2d80c09007d7394f7eac793a038c45603b540990457294e62d9960b0c1330101"
+      "bytes": 11213,
+      "sha256": "14c54b5c0dd88adbb3eb65226f6bdbf75f8bf100b29a9fc33d408cd728200c0d"
     },
     {
       "path": "RESULTS_SUMMARY.json",
-      "bytes": 9014,
-      "sha256": "4e94e90df2bc8c094d7cfc52308059700904b7aa2dfa593f16c9182c90329b60"
+      "bytes": 9039,
+      "sha256": "21d5e15373e7085a7550cd480e86d1e026b1354c4b7022c2307dbe7481e79029"
     },
     {
       "path": "RIGHTS_AND_PROVENANCE.md",
@@ -290,12 +295,17 @@
     {
       "path": "results/DELIVERY_QA.json",
       "bytes": 255,
-      "sha256": "15f7a2a5aeb18d4aecb81de948f63a47b7faa98f973983241c7b5de859a0dd03"
+      "sha256": "f775b747dd5a54d38d4fd97490d1825024fc98509820a85138a8b6044b028332"
     },
     {
       "path": "results/EXPERIMENT_STATUS.json",
-      "bytes": 348,
-      "sha256": "dd9e447cdffeee40f53519ebb8b8615ad8638212d09b16b3b053046f05f4f5a3"
+      "bytes": 373,
+      "sha256": "9759ab23adc9f70b3a249b5c3a6d18b08894c3f072a6247daca38aea163808cc"
+    },
+    {
+      "path": "results/FROZEN_SOURCE_CROSSCHECK.json",
+      "bytes": 290,
+      "sha256": "ac9ba48e42787e9866394fd74234403f73d4fced04c9ac9f18ddce50a753416c"
     },
     {
       "path": "results/UNIT_TEST_OUTPUT.txt",
@@ -421,6 +431,11 @@
       "path": "results/frozen_evaluation/progress.json",
       "bytes": 185,
       "sha256": "6be3075e6f32d8d29f9690378b5a08820c4bcbe693f7f1cc52d4709a5bd940e9"
+    },
+    {
+      "path": "results/gpu_jobs/PLANNED_JOB_STATUS.json",
+      "bytes": 1761,
+      "sha256": "60cc28af7daaae08f548ccd24c6afc913701c1e87d3ce801a8d1fa3632ef8c86"
     },
     {
       "path": "results/gpu_jobs/jobs.jsonl",
@@ -1259,8 +1274,8 @@
     },
     {
       "path": "tools/build_final_report.py",
-      "bytes": 30165,
-      "sha256": "1b7b0a4929d5fb0ac9c62dd1592bda046c210631ccd8665ed0fa4a6d68ad17c3"
+      "bytes": 30293,
+      "sha256": "d1d37ffded90b28cfed8eb21c28a72b852f8c4cce7547f3c6512cae730083618"
     },
     {
       "path": "tools/frozen_cached_transfer.py",
@@ -1301,6 +1316,11 @@
       "path": "tools/validate_delivery.py",
       "bytes": 3175,
       "sha256": "3c7e25f5a5219f7ac2282a9f17501f26fe15d5ca6ec688219393e887e6fe6bbf"
+    },
+    {
+      "path": "tools/verify_publication.py",
+      "bytes": 4009,
+      "sha256": "f15f5fc4321060033c66896f84fd8828831017ecb25348817c71f9a056275524"
     },
     {
       "path": "vendor_physics/SOURCE_MANIFEST.json",

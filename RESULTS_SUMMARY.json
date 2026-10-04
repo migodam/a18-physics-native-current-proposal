@@ -1,6 +1,6 @@
 {
   "scientific_conclusion": "NO_GO_BOTH",
-  "publication_status": "LOCAL_EVIDENCE_COMPLETE_REMOTE_VERIFICATION_PENDING",
+  "publication_status": "PUBLIC_VERIFIED",
   "implementation": {
     "real_G0": "PASS",
     "new_two_state_physics": "PASS",
@@ -304,5 +304,6 @@
     "G7 overlap interpretation unresolved",
     "No nonlinear material quality claim",
     "Literature429 and incomplete full-text coverage"
-  ]
+  ],
+  "publication_receipt": "results/publication_receipt.json"
 }

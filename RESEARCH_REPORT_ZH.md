@@ -84,3 +84,5 @@ J6在15min硬限被终止，J7用同freeze唯一续跑完成剩余病例，合�
 最终 **NO_GO_BOTH**；G6统计与G7机制claim各自HOLD。保留便宜解析控制作为比较结果，但不将其重新命名为通过部署门槛的赢家。后续若研究其他feature、初始化、预算或block proposal，应新建独立预注册和未暴露test；本轮无权用locked test继续调参。
 
 代码、报告、表图和manifests在Git；合成物理数据、checkpoint、拟合权重、缓存、依赖及原日志放Release，并核对SHA256。原许可状态保留，不擅自添加许可证或重分发论文全文。入口：[START_HERE](START_HERE.md)，重现：[REPRODUCE](REPRODUCE.md)，机器裁决：[GATE_DECISION](GATE_DECISION.json)，来源：[RIGHTS_AND_PROVENANCE](RIGHTS_AND_PROVENANCE.md)。公开归档不等于期刊录用或同行评审。
+
+公开发布已完成。初次固定commit及五个资产的匿名HTTP／SHA256回执见 [publication receipt](results/publication_receipt.json)；最终main完整核验文件随Release提供。

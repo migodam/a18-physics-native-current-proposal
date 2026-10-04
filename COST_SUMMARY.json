@@ -27,7 +27,6 @@
   "cpu_teacher_overlap_seconds": 751.1982287999708,
   "local_aux_seconds": 120.0,
   "local_aux_scope": "Conservative charged upper bound, not measured wall",
-  "cuda_occupied_seconds_measured_or_reserved": 138.18433950003237,
   "legacy_gpu_labels": "Early P0 generator was native CPU but old wrapper conservatively labeled 751.198s GPU occupied; immutable raw row retained. First P0 omitted compute classification. No GPU kernel-utilization claim.",
   "memory_gaps": {
     "J0_peak_allocated_cuda_bytes": 82355712,
@@ -549,5 +548,7 @@
         }
       }
     }
-  }
+  },
+  "cuda_occupied_seconds_in_explicitly_classified_jobs": 138.18433950003237,
+  "total_GPU_kernel_time": "NOT_MEASURED"
 }

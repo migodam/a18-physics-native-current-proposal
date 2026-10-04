@@ -1,0 +1,151 @@
+{
+  "status": "PASS",
+  "repository": "https://github.com/migodam/a18-physics-native-current-proposal",
+  "visibility": "PUBLIC_ANONYMOUS_READ_VERIFIED",
+  "commit": "c8386612208cf1857cb4f7cdaedb3f702627afd6",
+  "remote_main": "c8386612208cf1857cb4f7cdaedb3f702627afd6",
+  "release": "https://github.com/migodam/a18-physics-native-current-proposal/releases/tag/pilot-2026-10-04",
+  "verified_utc": "2026-10-04T16:16:14.073094+00:00",
+  "files": [
+    {
+      "artifact": "git:GATE_DECISION.json",
+      "url": "https://raw.githubusercontent.com/migodam/a18-physics-native-current-proposal/c8386612208cf1857cb4f7cdaedb3f702627afd6/GATE_DECISION.json",
+      "HTTP_status": 200,
+      "bytes": 7361,
+      "sha256": "c75a28cb2f09adb17a19782841aca2f4db1efcc52d0ae0ee8b9feed1eb3cba98",
+      "expected_sha256": "c75a28cb2f09adb17a19782841aca2f4db1efcc52d0ae0ee8b9feed1eb3cba98",
+      "status": "PASS",
+      "authentication": "NONE; environment proxies disabled; no netrc/auth handler"
+    },
+    {
+      "artifact": "git:RESEARCH_REPORT_ZH.md",
+      "url": "https://raw.githubusercontent.com/migodam/a18-physics-native-current-proposal/c8386612208cf1857cb4f7cdaedb3f702627afd6/RESEARCH_REPORT_ZH.md",
+      "HTTP_status": 200,
+      "bytes": 11017,
+      "sha256": "2d80c09007d7394f7eac793a038c45603b540990457294e62d9960b0c1330101",
+      "expected_sha256": "2d80c09007d7394f7eac793a038c45603b540990457294e62d9960b0c1330101",
+      "status": "PASS",
+      "authentication": "NONE; environment proxies disabled; no netrc/auth handler"
+    },
+    {
+      "artifact": "git:RESULTS_SUMMARY.json",
+      "url": "https://raw.githubusercontent.com/migodam/a18-physics-native-current-proposal/c8386612208cf1857cb4f7cdaedb3f702627afd6/RESULTS_SUMMARY.json",
+      "HTTP_status": 200,
+      "bytes": 9014,
+      "sha256": "4e94e90df2bc8c094d7cfc52308059700904b7aa2dfa593f16c9182c90329b60",
+      "expected_sha256": "4e94e90df2bc8c094d7cfc52308059700904b7aa2dfa593f16c9182c90329b60",
+      "status": "PASS",
+      "authentication": "NONE; environment proxies disabled; no netrc/auth handler"
+    },
+    {
+      "artifact": "git:START_HERE.md",
+      "url": "https://raw.githubusercontent.com/migodam/a18-physics-native-current-proposal/c8386612208cf1857cb4f7cdaedb3f702627afd6/START_HERE.md",
+      "HTTP_status": 200,
+      "bytes": 1676,
+      "sha256": "3685c95b90b124e163cc5e443368d79f63cd2524b3bdfe5d756710c3938cab8d",
+      "expected_sha256": "3685c95b90b124e163cc5e443368d79f63cd2524b3bdfe5d756710c3938cab8d",
+      "status": "PASS",
+      "authentication": "NONE; environment proxies disabled; no netrc/auth handler"
+    },
+    {
+      "artifact": "git:results/frozen_evaluation/SUMMARY.json",
+      "url": "https://raw.githubusercontent.com/migodam/a18-physics-native-current-proposal/c8386612208cf1857cb4f7cdaedb3f702627afd6/results/frozen_evaluation/SUMMARY.json",
+      "HTTP_status": 200,
+      "bytes": 71060,
+      "sha256": "f2e1fd3a71d4d8e359bc96c79b11f4c18cf32a1626b1d26088942125423e674a",
+      "expected_sha256": "f2e1fd3a71d4d8e359bc96c79b11f4c18cf32a1626b1d26088942125423e674a",
+      "status": "PASS",
+      "authentication": "NONE; environment proxies disabled; no netrc/auth handler"
+    },
+    {
+      "artifact": "git:results/frozen_evaluation/pilot_locked_test_00_state0_k8.json",
+      "url": "https://raw.githubusercontent.com/migodam/a18-physics-native-current-proposal/c8386612208cf1857cb4f7cdaedb3f702627afd6/results/frozen_evaluation/pilot_locked_test_00_state0_k8.json",
+      "HTTP_status": 200,
+      "bytes": 1340806,
+      "sha256": "5e1ac508faa9a535c380f0ca09ebc25c3725a01897661c12760c3b7996ed2508",
+      "expected_sha256": "5e1ac508faa9a535c380f0ca09ebc25c3725a01897661c12760c3b7996ed2508",
+      "status": "PASS",
+      "authentication": "NONE; environment proxies disabled; no netrc/auth handler"
+    },
+    {
+      "artifact": "release:a17-numerical-dependency.zip",
+      "url": "https://github.com/migodam/a18-physics-native-current-proposal/releases/download/pilot-2026-10-04/a17-numerical-dependency.zip",
+      "HTTP_status": 200,
+      "bytes": 199552,
+      "sha256": "825cae361196604a39acf8417880bd1736661e411ac072bd1bccaf8f353ed1d2",
+      "expected_sha256": "825cae361196604a39acf8417880bd1736661e411ac072bd1bccaf8f353ed1d2",
+      "status": "PASS",
+      "authentication": "NONE; environment proxies disabled; no netrc/auth handler"
+    },
+    {
+      "artifact": "release:frozen-caches-checkpoints.zip",
+      "url": "https://github.com/migodam/a18-physics-native-current-proposal/releases/download/pilot-2026-10-04/frozen-caches-checkpoints.zip",
+      "HTTP_status": 200,
+      "bytes": 26107022,
+      "sha256": "41aaa7bc2994a54fceed229a56a0e22359659bb48d733cc3a7128ac507442959",
+      "expected_sha256": "41aaa7bc2994a54fceed229a56a0e22359659bb48d733cc3a7128ac507442959",
+      "status": "PASS",
+      "authentication": "NONE; environment proxies disabled; no netrc/auth handler"
+    },
+    {
+      "artifact": "release:historical-development-states.zip",
+      "url": "https://github.com/migodam/a18-physics-native-current-proposal/releases/download/pilot-2026-10-04/historical-development-states.zip",
+      "HTTP_status": 200,
+      "bytes": 17056155,
+      "sha256": "7bd1276379cd660528f99580cb2752d6148df1fc5865b547abd1e191492c082f",
+      "expected_sha256": "7bd1276379cd660528f99580cb2752d6148df1fc5865b547abd1e191492c082f",
+      "status": "PASS",
+      "authentication": "NONE; environment proxies disabled; no netrc/auth handler"
+    },
+    {
+      "artifact": "release:pilot-data.zip",
+      "url": "https://github.com/migodam/a18-physics-native-current-proposal/releases/download/pilot-2026-10-04/pilot-data.zip",
+      "HTTP_status": 200,
+      "bytes": 137710575,
+      "sha256": "0c2e13578f6cb32211b08e5b2f0ddbc5bba2f0ab9915db1316bdf3d75a7b9ef5",
+      "expected_sha256": "0c2e13578f6cb32211b08e5b2f0ddbc5bba2f0ab9915db1316bdf3d75a7b9ef5",
+      "status": "PASS",
+      "authentication": "NONE; environment proxies disabled; no netrc/auth handler"
+    },
+    {
+      "artifact": "release:raw-execution-logs.zip",
+      "url": "https://github.com/migodam/a18-physics-native-current-proposal/releases/download/pilot-2026-10-04/raw-execution-logs.zip",
+      "HTTP_status": 200,
+      "bytes": 394515,
+      "sha256": "b9ca176a96a37d033be78d7d3b98b283da579030ccbda6dc8c85b277c438e494",
+      "expected_sha256": "b9ca176a96a37d033be78d7d3b98b283da579030ccbda6dc8c85b277c438e494",
+      "status": "PASS",
+      "authentication": "NONE; environment proxies disabled; no netrc/auth handler"
+    }
+  ],
+  "Release_API_assets": [
+    {
+      "name": "a17-numerical-dependency.zip",
+      "server_digest": "sha256:825cae361196604a39acf8417880bd1736661e411ac072bd1bccaf8f353ed1d2",
+      "API_size": 199552
+    },
+    {
+      "name": "frozen-caches-checkpoints.zip",
+      "server_digest": "sha256:41aaa7bc2994a54fceed229a56a0e22359659bb48d733cc3a7128ac507442959",
+      "API_size": 26107022
+    },
+    {
+      "name": "historical-development-states.zip",
+      "server_digest": "sha256:7bd1276379cd660528f99580cb2752d6148df1fc5865b547abd1e191492c082f",
+      "API_size": 17056155
+    },
+    {
+      "name": "pilot-data.zip",
+      "server_digest": "sha256:0c2e13578f6cb32211b08e5b2f0ddbc5bba2f0ab9915db1316bdf3d75a7b9ef5",
+      "API_size": 137710575
+    },
+    {
+      "name": "raw-execution-logs.zip",
+      "server_digest": "sha256:b9ca176a96a37d033be78d7d3b98b283da579030ccbda6dc8c85b277c438e494",
+      "API_size": 394515
+    }
+  ],
+  "scientific_conclusion": "NO_GO_BOTH",
+  "entry": "https://raw.githubusercontent.com/migodam/a18-physics-native-current-proposal/c8386612208cf1857cb4f7cdaedb3f702627afd6/START_HERE.md",
+  "scope": "Publication/integrity verification, not scientific gate acceptance"
+}

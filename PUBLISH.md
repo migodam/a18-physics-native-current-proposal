@@ -1,6 +1,6 @@
 # Publication
 
-本次用户明确授权创建统一公开仓库migodam/a18-physics-native-current-proposal，并发布成功、失败及预算不足结果。GitHub CLI身份和目标可用性已实测；实际创建、push和匿名读取成功以results/publication_receipt.json及Release中的FINAL_PUBLICATION_QA.json为准。该核验完成前，本地资产准备不称为已上线。
+本次用户明确授权创建统一公开仓库migodam/a18-physics-native-current-proposal，并发布成功、失败及预算不足结果。GitHub CLI身份和目标可用性已实测；实际创建、push和匿名读取成功以results/publication_receipt.json及Release中的FINAL_PUBLICATION_QA.json为准。仓库与五个Release归档现已上线；初次匿名核验固定commit为c8386612208cf1857cb4f7cdaedb3f702627afd6，6个Git文件和5个ZIP共182,908,753bytes均HTTP200且SHA256一致。最终main核验另保存于Release的FINAL_PUBLICATION_QA.json。
 
 目标入口：[仓库](https://github.com/migodam/a18-physics-native-current-proposal)、[证据包Release](https://github.com/migodam/a18-physics-native-current-proposal/releases/tag/pilot-2026-10-04)。网页版GPT从固定commit的原始START_HERE.md进入，再读取中文报告、RESULTS_SUMMARY.json、GATE_DECISION.json与代表性结果；具体固定链接由publication receipt给出。
 

@@ -15,5 +15,6 @@
   "release_scope": "Five archives listed in results/shared/RELEASE_ASSET_HASHES.json",
   "tests": "85 PASS; separate real G0 and cap3 implementation evidence",
   "historical_spec_state": "Initial SPEC_READY manifest superseded by this delivery; original retained in Git history",
-  "publication_status": "PENDING_REMOTE_VERIFICATION"
+  "publication_status": "PUBLIC_VERIFIED",
+  "publication_receipt": "results/publication_receipt.json"
 }

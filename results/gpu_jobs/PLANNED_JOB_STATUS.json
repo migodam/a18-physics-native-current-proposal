@@ -1,0 +1,66 @@
+{
+  "jobs": {
+    "P0": {
+      "status": "COMPLETED",
+      "receipt_count": 5,
+      "charged_wall_seconds": 848.3138950999128
+    },
+    "J0": {
+      "status": "COMPLETED_CPU_CHOSEN_AFTER_CUDA_COMPARISON",
+      "receipt_count": 1,
+      "charged_wall_seconds": 138.1843376000179
+    },
+    "J1": {
+      "status": "NOT_RUN_G1A_FAIL",
+      "receipt_count": 0,
+      "charged_wall_seconds": 0
+    },
+    "J2": {
+      "status": "COMPLETED_20EPOCHS_STOP_NO_VALIDATION_HEADROOM",
+      "receipt_count": 2,
+      "charged_wall_seconds": 507.60275930003263
+    },
+    "J3": {
+      "status": "NOT_RUN_G1A_FAIL",
+      "receipt_count": 0,
+      "charged_wall_seconds": 0
+    },
+    "J4": {
+      "status": "NOT_RUN_G3_FAIL",
+      "receipt_count": 0,
+      "charged_wall_seconds": 0
+    },
+    "J5": {
+      "status": "NOT_RUN_NO_WINNER",
+      "receipt_count": 0,
+      "charged_wall_seconds": 0
+    },
+    "J6": {
+      "status": "TIME_CAP_124_ATOMIC_PARTIAL",
+      "receipt_count": 1,
+      "charged_wall_seconds": 900.3943000999279
+    },
+    "J7": {
+      "status": "COMPLETED_ONE_UNCHANGED_CONTINUATION",
+      "receipt_count": 1,
+      "charged_wall_seconds": 1705.7668432000792
+    },
+    "N0": {
+      "status": "NOT_RUN_NO_WINNER",
+      "receipt_count": 0,
+      "charged_wall_seconds": 0
+    },
+    "T0": {
+      "status": "COMPLETED_WITH_CONSERVATIVE_AUX_CHARGE",
+      "receipt_count": 2,
+      "charged_wall_seconds": 2681.124839499942
+    },
+    "T1": {
+      "status": "COMPLETED_REFERENCES_WITH_RECORDED_EARLIER_STDOUT_FAILURE",
+      "receipt_count": 7,
+      "charged_wall_seconds": 4071.929114600178
+    }
+  },
+  "C": "THEORY_ONLY_NO_JOB",
+  "budget_attribution_note": "751.198s CPU preparation overlap in P0/T1 is not another execution"
+}

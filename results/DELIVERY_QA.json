@@ -2,7 +2,7 @@
   "passed": true,
   "errors": [],
   "required_documents_present": true,
-  "local_links_checked": 55,
+  "local_links_checked": 56,
   "feature_dimension_B": 1552,
   "recipe_cap": 122,
   "nn_job_cap_minutes": 240,
