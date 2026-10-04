@@ -115,6 +115,7 @@ class FrozenState:
         for key in ("chi","current_polarizability","points","r","forcing","U","LU","SU","D","step_old","ell","Lambda","source_phase"):
             object.__setattr__(self,key,readonly(getattr(self,key)))
         object.__setattr__(self,"points",readonly(self.points.reshape(-1,3)))
+        object.__setattr__(self,"grid_shape",tuple(int(v) for v in self.grid_shape))
         if self.receiver_geometry_modes is not None:object.__setattr__(self,"receiver_geometry_modes",readonly(self.receiver_geometry_modes))
         if self.r.ndim!=2 or self.r.shape[0]!=4 or self.forcing.shape!=(self.U.shape[0],4):
             raise ValueError("v1 requires four illuminations")
