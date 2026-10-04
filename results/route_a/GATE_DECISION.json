@@ -1,0 +1,71 @@
+{
+  "schema": "a18.route_a.gate_decision.v1",
+  "scientific_status": "NO_GO_A1_TESTED_BANK_REPRESENTATION",
+  "evidence_completion_status": "HOLD_PENDING_INTEGRATOR_COST_AND_CONTROL_RECHECK",
+  "publication_status": "NOT_YET_VERIFIED",
+  "scope": "Six exposed development objects, two states each; source-preserving full-vector Maxwell pilot; no locked-test generalization",
+  "aggregation": "Cov(object)=sum(state_gain)/sum(state_reference); macro=equal mean across positive complete objects",
+  "gates": {
+    "G0": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "results/shared/G0.json",
+          "sha256": "7629b6be1d1238b7d83416f99d410d2d620489e7c388de34289f1f79259d6c54"
+        },
+        {
+          "path": "results/shared/G0_FFT_cpu.json",
+          "sha256": "24837fee08cd62d908a1d54dfc3ea6a764116a15d32a4e46f19d7b8e39f0c4b7"
+        },
+        {
+          "path": "results/shared/G0_FFT.json",
+          "sha256": "23dd43040d50e68003043a32727baecc5ce3b8c7592d4ce4c9d82ccbd0606256"
+        }
+      ]
+    },
+    "G1A": {
+      "status": "FAIL",
+      "representation_status": "FAIL",
+      "macro": 0.6182445286057869,
+      "near_contact": 0.5187316376545128,
+      "macro_min": 0.85,
+      "near_contact_min": 0.7,
+      "acquisition_status": "PENDING_FAIR_RECHECK",
+      "acquisition_ratio_median": null,
+      "acquisition_ratio_p95": null
+    },
+    "G2": "NOT_RUN_G1A_FAILED",
+    "G3": "NOT_RUN_NO_A_NN",
+    "G5": "NOT_RUN_G1A_FAILED",
+    "G6": "NOT_RUN_NO_A_LOCKED_TEST",
+    "G8": "NOT_RUN_NO_A_WINNER"
+  },
+  "reference": {
+    "common": "audited singleton union; continuous BEST_FOUND is not global optimum",
+    "original_dictionary_macro": 0.9544209053846279,
+    "original_dictionary_near": 0.9299031119029997
+  },
+  "missing": {
+    "strongest_legal_analytic_prior": "T1_RECHECK_PENDING; T0 unfiltered controls are weak",
+    "full_warm_Tinc": "NOT_MEASURED_IN_T0; policy memo latency is separate",
+    "A0_historical_ID_gain_replay": "NOT_RUN",
+    "per_success_action_details": "T0 aggregate timing does not preserve all successful action details; await T1 ledger"
+  },
+  "training_authorized": false,
+  "A_NN_jobs_launched": 0,
+  "checkpoint": null,
+  "A_parameter_count": 34306,
+  "locked_test_accessed": false,
+  "new_cohort_A_training": "NOT_RUN_G1A_FAILED",
+  "review": "results/route_a/preflight/T0_CODEX_REVIEW.json",
+  "review_sha256": "cae0682f8843f6af8c61755ca7b83553f43782dc8659330ac418c748966dab3b",
+  "reason": "At each tested initial frozen state, a selector cannot exceed the enumerated best singleton opportunity in its registered bank. Cost improvements cannot recover this failed initial-state representation threshold; sequential transfer remains untested.",
+  "global_impossibility_or_novelty_claim": false,
+  "numerical_floor_statistics": {
+    "zero_reference_states": 0,
+    "missing_reference_states": 0,
+    "reference_tiny64_floor_states": 0,
+    "raw_action_floor_counts": "NOT_MEASURED_FROM_T0_AGGREGATES; full action ledger is separate",
+    "training_loss_floor_counts": "NOT_RUN_NO_TRAINING"
+  }
+}
