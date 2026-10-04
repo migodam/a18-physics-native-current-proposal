@@ -110,9 +110,12 @@ class FrozenState:
     accepted_count: int = 0
     online_provenance: dict = field(default_factory=lambda:{"origin":"FrozenState.current_estimate"})
     reduced_gradient_norm: float = 0.
+    receiver_geometry_modes: np.ndarray | None = None
     def __post_init__(self):
         for key in ("chi","current_polarizability","points","r","forcing","U","LU","SU","D","step_old","ell","Lambda","source_phase"):
             object.__setattr__(self,key,readonly(getattr(self,key)))
+        object.__setattr__(self,"points",readonly(self.points.reshape(-1,3)))
+        if self.receiver_geometry_modes is not None:object.__setattr__(self,"receiver_geometry_modes",readonly(self.receiver_geometry_modes))
         if self.r.ndim!=2 or self.r.shape[0]!=4 or self.forcing.shape!=(self.U.shape[0],4):
             raise ValueError("v1 requires four illuminations")
         if la.norm(self.U.conj().T@self.U-np.eye(self.U.shape[1]))>TOL:
@@ -202,7 +205,7 @@ class OperatorBackend:
         state_hash=sha256((m["state_hash"]+"".join(array_hash(m[k]) for k in ("chi","a","r","forcing","ell","Lambda"))+array_hash(phases)+m["material_gauge_sha256"]+m["receiver_geometry_sha256"]).encode()).hexdigest()
         config=sha256((state_hash+array_hash(U)+SEED_SCHEMA+"seed=1e-10;breakdown=1e-12;orth=1e-10;phase=maxabs;schema=192v2").encode()).hexdigest()
         if not receiver_mode_ids:receiver_mode_ids=tuple(range(U.shape[1])) if np.allclose(U,self.get_receiver_basis(U.shape[1]),rtol=0,atol=TOL) else (-1,)*U.shape[1]
-        return FrozenState(object_id,state_id,split,config,m["material_gauge_sha256"],m["receiver_geometry_sha256"],m["chi"],m["a"],m["points"],tuple(m["grid_shape"]),m["cell_volume"],m["wavenumber"],m["r"],m["forcing"],U,LU,SU,D,ep["step"],m["ell"],m["Lambda"],phases,ep["normal_relative_residual"],m.get("geometry",{}),(),tuple(receiver_mode_ids),accepted_count,{"origin":"FrozenState.current_estimate","state_sha256":state_hash},ep["reduced_gradient_norm"])
+        return FrozenState(object_id,state_id,split,config,m["material_gauge_sha256"],m["receiver_geometry_sha256"],m["chi"],m["a"],m["points"],tuple(m["grid_shape"]),m["cell_volume"],m["wavenumber"],m["r"],m["forcing"],U,LU,SU,D,ep["step"],m["ell"],m["Lambda"],phases,ep["normal_relative_residual"],m.get("geometry",{}),(),tuple(receiver_mode_ids),accepted_count,{"origin":"FrozenState.current_estimate","state_sha256":state_hash},ep["reduced_gradient_norm"],self.get_receiver_basis(16))
     def get_old_endpoint(self,state):
         return endpoint_from_maps(state.D,state.SU,self.project_B(state.U),state.r,state.ell,state.Lambda)
     def get_opm_seeds(self,state):
