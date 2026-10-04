@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "kind": "scholarqa-evidence-bundle",
+  "created_at": "2026-10-04T11:18:00+00:00",
+  "question": "Is learned Schur-feedback current proposal distinct from induced-current learning and neural Krylov subspace prediction?",
+  "search_queries": [
+    "induced current learning method electromagnetic inverse scattering Wei Chen",
+    "Neural Krylov Iteration learned subspace projector"
+  ],
+  "filters": {},
+  "query_runs": [
+    {
+      "query": "induced current learning method electromagnetic inverse scattering Wei Chen",
+      "snippet_search": {
+        "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+      },
+      "paper_search": {
+        "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+      }
+    },
+    {
+      "query": "Neural Krylov Iteration learned subspace projector",
+      "snippet_search": {
+        "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+      },
+      "paper_search": {
+        "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+      }
+    }
+  ],
+  "candidate_paper_ids": [],
+  "operation_errors": [
+    {
+      "query": "induced current learning method electromagnetic inverse scattering Wei Chen",
+      "operation": "search_semantic_scholar_snippets",
+      "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+    },
+    {
+      "query": "induced current learning method electromagnetic inverse scattering Wei Chen",
+      "operation": "search_semantic_scholar_papers",
+      "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+    },
+    {
+      "query": "Neural Krylov Iteration learned subspace projector",
+      "operation": "search_semantic_scholar_snippets",
+      "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+    },
+    {
+      "query": "Neural Krylov Iteration learned subspace projector",
+      "operation": "search_semantic_scholar_papers",
+      "error": "Semantic Scholar API error (429): Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form"
+    }
+  ],
+  "evidence_policy": {
+    "snippet_search": "Candidate passage evidence; inspect its source before assigning full-text Tier A or abstract Tier B.",
+    "paper_search": "An abstract may support Tier B; metadata alone is Tier C and does not establish a finding.",
+    "final_citations": "Select papers by relevance and evidence, then run scholarqa-cli verify before citation."
+  }
+}
