@@ -19,12 +19,13 @@ def positive_tau_bound(cache):
     """Conservative upper bound on ORIGINAL tau for any positive finite gain.
 
     Complete the square in the common prior: positive gain bounds new data and
-    prior energies by E_old, giving abs_terms <=16 E_old. This is used only to
+    prior energies by E_old, giving abs_terms <=(12+4 sqrt(kappa)) E_old. This is used only to
     reject roundoff-sized offline opportunities; deployment retains exact tau.
     """
     a=cache.numpy;x=a["old_step"];u=a["r"]+a["Jfull"]@x;ell=a["ell"];L=a["Lambda"]
     shift=la.solve(L,ell,assume_a="pos");E=.5*(u@u+(x+shift)@L@(x+shift));base=a["r"]@a["r"]+u@u+abs(ell@x)+x@L@x;n=len(a["r"])+3*len(x)+16;f=np.finfo(float);gamma=n*f.eps/(1-n*f.eps)
-    return 32*f.tiny+32*gamma*(base+16*E)
+    ev=la.eigvalsh(L);factor=12+4*np.sqrt(ev[-1]/ev[0])
+    return 32*f.tiny+32*gamma*(base+factor*E)
 
 def records(root,cache_root):
     states=[]

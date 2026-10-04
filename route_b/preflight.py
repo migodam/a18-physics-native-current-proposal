@@ -34,7 +34,8 @@ def opportunities(cache,deadline,seed):
 
 def action_cached_gain(cache,action):
     t=np.asarray(action.coefficient_real)+1j*np.asarray(action.coefficient_imag)
-    return cache.numpy_gain(t,action.drop_indices[0])[0]
+    c=cache.numpy_metrics(t,action.drop_indices)
+    return c['gain'] if c['valid'] and c['gain']>c['tau'] else 0.
 
 def a_data(b,s,Jfull):
     from route_a.features import extract
