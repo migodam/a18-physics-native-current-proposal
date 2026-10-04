@@ -1,0 +1,292 @@
+{
+  "schema": "a18.route_a.codex_review.v1",
+  "scope": "12 exposed development states; representation review only; not locked-test or deployment benefit",
+  "scientific_decision": "STOP_A_NN_TESTED_BANK_ORACLE_LIMIT",
+  "aggregation": "Cov(object)=sum(state_gain)/sum(state_reference); macro=equal mean across positive complete objects",
+  "G1A_coverage": "FAIL",
+  "required_macro": 0.85,
+  "required_near": 0.7,
+  "oracle_union": {
+    "objects": [
+      {
+        "object_id": "test_geometry_00",
+        "family": "geometry",
+        "gain": 50.56465159637739,
+        "reference": 68.70999525323745,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.7359140603927622,
+        "complete": true
+      },
+      {
+        "object_id": "train_00",
+        "family": "separated",
+        "gain": 24.25661390404359,
+        "reference": 33.523700118089714,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.7235661283986515,
+        "complete": true
+      },
+      {
+        "object_id": "train_01",
+        "family": "separated",
+        "gain": 11.943788563127566,
+        "reference": 21.420840461398885,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.5575779617354742,
+        "complete": true
+      },
+      {
+        "object_id": "train_08",
+        "family": "near",
+        "gain": 9.991879849057536,
+        "reference": 17.873268785228262,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.5590404289849619,
+        "complete": true
+      },
+      {
+        "object_id": "train_09",
+        "family": "near",
+        "gain": 15.9671735704561,
+        "reference": 33.37460510746722,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.47842284632406373,
+        "complete": true
+      },
+      {
+        "object_id": "train_16",
+        "family": "high",
+        "gain": 25.29798429198027,
+        "reference": 38.6260762120463,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.6549457457988083,
+        "complete": true
+      }
+    ],
+    "macro": 0.6182445286057869,
+    "near_contact": 0.5187316376545128,
+    "family_means": {
+      "geometry": 0.7359140603927622,
+      "separated": 0.6405720450670629,
+      "near": 0.5187316376545128,
+      "high": 0.6549457457988083
+    },
+    "missing_states": 0,
+    "zero_reference_states": 0,
+    "independent_objects": 6,
+    "positive_complete_objects": 6
+  },
+  "oracle_original_dictionary": {
+    "objects": [
+      {
+        "object_id": "test_geometry_00",
+        "family": "geometry",
+        "gain": 50.56465159637739,
+        "reference": 55.65333061640595,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.9085646992971076,
+        "complete": true
+      },
+      {
+        "object_id": "train_00",
+        "family": "separated",
+        "gain": 24.25661390404359,
+        "reference": 24.25661390404359,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 1.0,
+        "complete": true
+      },
+      {
+        "object_id": "train_01",
+        "family": "separated",
+        "gain": 11.943788563127566,
+        "reference": 11.943788563096433,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 1.0000000000026066,
+        "complete": true
+      },
+      {
+        "object_id": "train_08",
+        "family": "near",
+        "gain": 9.991879849057536,
+        "reference": 10.444612186381647,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.9566539830062419,
+        "complete": true
+      },
+      {
+        "object_id": "train_09",
+        "family": "near",
+        "gain": 15.9671735704561,
+        "reference": 17.679382112053318,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.9031522407997573,
+        "complete": true
+      },
+      {
+        "object_id": "train_16",
+        "family": "high",
+        "gain": 25.29798429198027,
+        "reference": 26.40282339541283,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.9581545092020533,
+        "complete": true
+      }
+    ],
+    "macro": 0.9544209053846279,
+    "near_contact": 0.9299031119029997,
+    "family_means": {
+      "geometry": 0.9085646992971076,
+      "separated": 1.0000000000013034,
+      "near": 0.9299031119029997,
+      "high": 0.9581545092020533
+    },
+    "missing_states": 0,
+    "zero_reference_states": 0,
+    "independent_objects": 6,
+    "positive_complete_objects": 6
+  },
+  "original_dictionary_union": {
+    "objects": [
+      {
+        "object_id": "test_geometry_00",
+        "family": "geometry",
+        "gain": 55.65333061640595,
+        "reference": 68.70999525323745,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.8099743044849607,
+        "complete": true
+      },
+      {
+        "object_id": "train_00",
+        "family": "separated",
+        "gain": 24.25661390404359,
+        "reference": 33.523700118089714,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.7235661283986515,
+        "complete": true
+      },
+      {
+        "object_id": "train_01",
+        "family": "separated",
+        "gain": 11.943788563096433,
+        "reference": 21.420840461398885,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.5575779617340209,
+        "complete": true
+      },
+      {
+        "object_id": "train_08",
+        "family": "near",
+        "gain": 10.444612186381647,
+        "reference": 17.873268785228262,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.5843705654454107,
+        "complete": true
+      },
+      {
+        "object_id": "train_09",
+        "family": "near",
+        "gain": 17.679382112053318,
+        "reference": 33.37460510746722,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.5297255819244957,
+        "complete": true
+      },
+      {
+        "object_id": "train_16",
+        "family": "high",
+        "gain": 26.40282339541283,
+        "reference": 38.6260762120463,
+        "states": 2,
+        "no_reference_states": 0,
+        "missing_states": 0,
+        "coverage": 0.6835491974506743,
+        "complete": true
+      }
+    ],
+    "macro": 0.6481272899063689,
+    "near_contact": 0.5570480736849532,
+    "family_means": {
+      "geometry": 0.8099743044849607,
+      "separated": 0.6405720450663361,
+      "near": 0.5570480736849532,
+      "high": 0.6835491974506743
+    },
+    "missing_states": 0,
+    "zero_reference_states": 0,
+    "independent_objects": 6,
+    "positive_complete_objects": 6
+  },
+  "paired_bootstrap_A_oracle_minus_Dfull_union": {
+    "status": "TINY_OBJECT_PILOT",
+    "n_objects": 6,
+    "repetitions": 2000,
+    "mean_difference": -0.029882761300581984,
+    "interval95": [
+      -0.05077659124959596,
+      -0.008988931351810244
+    ],
+    "excluded_objects": [],
+    "unit": "parent_object"
+  },
+  "source": {
+    "report": "results/route_b/preflight/G1B.json",
+    "report_sha256": "56d92eb53265f6da447f363adfdaff58b60492b2458c4fbb5a406bc419d105f3",
+    "deployment": "results/shared/deployment_v003.json",
+    "deployment_sha256": "54473f02edb6869e9cfb3671512c2845d4274c3f3210bdf47d845bbd6501def9",
+    "deployed_source_commit": "4b1d07d",
+    "snapshot": "code_v003",
+    "feature_schema_hash": "3a63f3bdd36f259b9a41cafbf4c5aa80f88691becdfa8cbe3bb149b7957f97e9"
+  },
+  "pending": {
+    "cost": "Optimized batched D controls and full warm Tinc require Integrator recheck",
+    "analytic": "T0 policies unfiltered; weak controls, not strongest legal prior; mask fix 712995e requires recheck",
+    "A0_historical_ID_gain_replay": "NOT_RUN"
+  },
+  "training_authorized": false,
+  "A_NN_jobs_launched": 0,
+  "A_GNN": "NOT_RUN_G1A_FAILED",
+  "locked_test_accessed": false,
+  "global_cheap_descriptor_impossibility_claim": false,
+  "raw_summary_aggregation": "Legacy equal state-ratio mean within object retained only as sensitivity",
+  "legacy_state_ratio_mean": {
+    "macro": 0.6184416840576269,
+    "near": 0.5191257627170273,
+    "original": 0.9551695499735618
+  }
+}

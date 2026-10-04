@@ -1,0 +1,14 @@
+{
+  "scope": "exposed development representation only; not NN or locked-test",
+  "input": "T0_object_coverage.csv",
+  "input_sha256": "324b36f01366abccd69fbc3f9b47d49eaa7da48fd0d9872d57d74991a2ce8e5b",
+  "review": "T0_CODEX_REVIEW.json",
+  "review_sha256": "cae0682f8843f6af8c61755ca7b83553f43782dc8659330ac418c748966dab3b",
+  "aggregation": "Cov(object)=sum(state_gain)/sum(state_reference); macro=equal mean across positive complete objects",
+  "n_objects": 6,
+  "n_states": 12,
+  "outputs": {
+    "T0_oracle_coverage.png": "e9c9619fc91eda645e9fbcea3e701886af2cc8a7d510b2212c47ba40da6a66ae",
+    "T0_oracle_coverage.svg": "57c48992cdfe644948c5f610102320ead2727b653afe965dad7ab662b2ef043e"
+  }
+}
