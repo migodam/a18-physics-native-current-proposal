@@ -51,11 +51,12 @@ class Proposals:
 def trace(action,result,applied=False):
     return {'action':asdict(action),'verification':{k:jsonable(result[k]) for k in ('status','reason','gain','tau','accepted','normal_relative_residual','stability','singular_core_fallback','wall_seconds','cost') if k in result},'step_sha256':array_hash(result['step']) if 'step' in result else None,'new_U_sha256':array_hash(result['new_U']) if 'new_U' in result else None,'actually_applied':applied}
 
-def benchmark_state(public,oid,sid,rank,methods,proposer,repetitions=5,sequence=True):
-    rows=[]
+def benchmark_state(public,oid,sid,rank,methods,proposer,repetitions=5,sequence=True,existing=None,sink=None):
+    rows=list(existing or []);done={(r['repetition'],r['method']) for r in rows if r['cache_mode']=='warm_same_configuration'}
     for rep in range(repetitions):
         rotated=methods[rep%len(methods):]+methods[:rep%len(methods)]
         for method in rotated:
+            if (rep,method) in done:continue
             begin=time.perf_counter();b=load_backend(public);s=b.freeze_state(b.get_receiver_basis(rank),object_id=oid,state_id=sid);state_wall=time.perf_counter()-begin;before=b.receipt.snapshot();at=time.perf_counter();actions,recipes=proposer.prepare(method,b,s);cold_acq=time.perf_counter()-at;cold_cost=b.receipt.delta(before);v=VerifiedExchange(b,s,recipes)
             vt=time.perf_counter();results=[v.evaluate(a) for a in actions];verify_wall=time.perf_counter()-vt;gain=max([r.get('gain',0.) for r in results if r.get('accepted')],default=0.)
             row={'object_id':oid,'state_id':sid,'rank':rank,'method':method,'repetition':rep,'cache_mode':'cold','Tacq':cold_acq,'Tverify':verify_wall,'Tinc':cold_acq+verify_wall,'state_seconds':state_wall,'Ttotal':state_wall+cold_acq+verify_wall,'gain':gain,'selected_count':len(actions),'acquisition_cost':cold_cost,'cost':b.receipt.delta(before),'actions':[trace(a,r) for a,r in zip(actions,results)],'scope':'initial frozen singleton top-K'};rows.append(row)
@@ -75,6 +76,7 @@ def benchmark_state(public,oid,sid,rank,methods,proposer,repetitions=5,sequence=
                     if turn==2:break
                     acq=time.perf_counter();current_actions,recipes=proposer.prepare(method,b,s);extra_acq+=time.perf_counter()-acq;v.recipes=recipes;current_results=[v.evaluate(a) for a in current_actions]
                 rows.append({'object_id':oid,'state_id':sid,'rank':rank,'method':method,'repetition':0,'cache_mode':'cap3_sequence','gain':total,'accepted_count':len(applied),'Tinc':cold_acq+verify_wall+(time.perf_counter()-st),'Tacq':cold_acq+extra_acq,'Tverify':None,'cost_initial':row['cost'],'cost_additional':b.receipt.delta(before),'rounds':rounds,'scope':'separate cap-3 sequential finite-gain domain; first round cold cost included, warm audit excluded'})
+            if sink:sink(rows)
     return rows
 
 def validate_freeze(path):
@@ -89,18 +91,29 @@ def run(args):
     torch.set_num_threads(4);torch.use_deterministic_algorithms(True);freeze=validate_freeze(args.freeze_receipt);rules=json.loads(Path(args.rules).read_text());cohort=Path(args.cohort_root);manifest=json.loads((cohort/'generation_manifest.json').read_text());out=Path(args.output);out.mkdir(parents=True,exist_ok=True)
     if args.split=='locked_test':
         marker=cohort/'locked_test_evaluation.json'
-        if marker.exists():raise RuntimeError('locked test already opened for frozen evaluation; preserve partial results, do not rerun')
+        if marker.exists():
+            prior=json.loads(marker.read_text())
+            if not args.resume or prior.get('freeze_sha256')!=sha(args.freeze_receipt) or prior.get('status')=='COMPLETE':raise RuntimeError('locked test already opened; only unchanged failed J6 may resume once under J7')
+            receipts=[json.loads(l) for l in Path(args.job_ledger).read_text().splitlines() if l.strip()];last=receipts[-1]
+            if last['job']!='J6' or last['status'] not in ('TIME_CAP','FAILED','INTERRUPTED'):raise RuntimeError('resume requires failed J6 receipt')
+        elif args.resume:raise RuntimeError('nothing to resume')
         write(marker,{'status':'STARTED','freeze_sha256':sha(args.freeze_receipt),'started_utc':__import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat()})
     proposer=Proposals(rules);methods=rules['methods'];objects=[o for o in manifest['objects'] if o['split']==args.split];count=0;begin=time.perf_counter()
     for rank in args.ranks:
         for obj in objects:
             for s in obj['states']:
-                rows=benchmark_state(cohort/s['public'],obj['object_id'],s['state_id'],rank,methods,proposer,args.repetitions,not args.no_sequence)
-                name=f"{obj['object_id']}_{s['state_id']}_k{rank}";write(out/(name+'.json'),{'rows':rows,'freeze_sha256':sha(args.freeze_receipt),'family':obj['family'],'near':obj['near']});count+=1;print(json.dumps({'event':'frozen_physical_evaluation','state':name,'completed_state_ranks':count,'seconds':time.perf_counter()-begin}),flush=True)
+                name=f"{obj['object_id']}_{s['state_id']}_k{rank}";target=out/(name+'.json');existing=[]
+                if args.resume and target.exists():
+                    prior=json.loads(target.read_text())
+                    if prior['freeze_sha256']!=sha(args.freeze_receipt):raise RuntimeError('changed partial evaluation freeze')
+                    existing=prior['rows']
+                def sink(rows):write(target,{'rows':rows,'freeze_sha256':sha(args.freeze_receipt),'family':obj['family'],'near':obj['near']})
+                rows=benchmark_state(cohort/s['public'],obj['object_id'],s['state_id'],rank,methods,proposer,args.repetitions,not args.no_sequence,existing,sink)
+                sink(rows);count+=1;print(json.dumps({'event':'frozen_physical_evaluation','state':name,'completed_state_ranks':count,'seconds':time.perf_counter()-begin}),flush=True)
                 write(out/'progress.json',{'status':'BUILDING','state_rank_count':count,'elapsed_seconds':time.perf_counter()-begin,'freeze_sha256':sha(args.freeze_receipt)})
     result={'status':'PASS','split':args.split,'state_rank_count':count,'ranks':args.ranks,'repetitions':args.repetitions,'methods':methods,'freeze_sha256':sha(args.freeze_receipt),'elapsed_seconds':time.perf_counter()-begin,'scope':'Raw physical timing/evidence completion; scientific gates are judged separately.'};write(out/'index.json',result)
     if args.split=='locked_test':write(marker,{**result,'status':'COMPLETE'})
     return result
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--cohort-root',required=True);p.add_argument('--rules',required=True);p.add_argument('--freeze-receipt',required=True);p.add_argument('--split',choices=['validation','locked_test'],required=True);p.add_argument('--output',required=True);p.add_argument('--ranks',type=int,nargs='+',default=[8]);p.add_argument('--repetitions',type=int,default=5);p.add_argument('--no-sequence',action='store_true');a=p.parse_args();print(json.dumps(run(a)))
+    p=argparse.ArgumentParser();p.add_argument('--cohort-root',required=True);p.add_argument('--rules',required=True);p.add_argument('--freeze-receipt',required=True);p.add_argument('--split',choices=['validation','locked_test'],required=True);p.add_argument('--output',required=True);p.add_argument('--ranks',type=int,nargs='+',default=[8]);p.add_argument('--repetitions',type=int,default=5);p.add_argument('--no-sequence',action='store_true');p.add_argument('--resume',action='store_true');p.add_argument('--job-ledger');a=p.parse_args();print(json.dumps(run(a)))
