@@ -53,6 +53,7 @@ def main():
     bucket = job["bucket"]
     caps = {"nn": config["training"]["total_nn_gpu_minutes_cap"],
             "physics": config["data"]["teacher_gpu_minutes_cap"],
+            "teacher": config["data"]["teacher_cpu_minutes_cap"],
             "nonlinear": config["evaluation"]["nonlinear_gpu_minutes_cap"]}
     lock = Path(args.lock_dir).resolve()
     lock.parent.mkdir(parents=True, exist_ok=True)
@@ -101,6 +102,7 @@ def main():
         if start is not None:
             row = {"job": args.job, "bucket": bucket, "status": status,
                    "returncode": returncode, "occupied_seconds": time.perf_counter() - start,
+                   "gpu_occupied_seconds": 0. if bucket == "teacher" else time.perf_counter() - start,
                    "utc": datetime.now(timezone.utc).isoformat(), "command": cmd,
                    "note": "Occupied wall, not measured GPU kernel utilization; physics gates authorized by integrator"}
             with ledger.open("a", encoding="utf-8") as f:

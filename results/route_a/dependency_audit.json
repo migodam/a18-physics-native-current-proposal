@@ -1,0 +1,30 @@
+{
+  "scope": "static_dependency_contract_only",
+  "status": "IMPLEMENTED_NOT_PHYSICS_TESTED",
+  "G0": "NOT_RUN",
+  "G1A": "NOT_RUN",
+  "family_caps": {
+    "receiver": 16,
+    "fourier": 32,
+    "haar": 32,
+    "random": 24,
+    "feedback": 18
+  },
+  "max_recipes": 122,
+  "atom_seed_projections": false,
+  "forbidden_online": [
+    "teacher_only",
+    "/teacher/",
+    "teacher_labels",
+    "full_j",
+    "full_h",
+    "full_optimal_step",
+    "ground_truth",
+    "anchor64",
+    "workspace128",
+    "exact_future_gain"
+  ],
+  "backend_required": "shared_backend",
+  "dynamic_machinery_counters": "NOT_MEASURED",
+  "split": "development"
+}

@@ -1,0 +1,636 @@
+{
+  "master_seed": 2026100418,
+  "counts": {
+    "train": 32,
+    "validation": 8,
+    "locked_test": 8
+  },
+  "objects": [
+    {
+      "object_id": "pilot_train_00",
+      "split": "train",
+      "family": "separated",
+      "seed": 2026100418,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_01",
+      "split": "train",
+      "family": "separated",
+      "seed": 2026101427,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_02",
+      "split": "train",
+      "family": "separated",
+      "seed": 2026102436,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_03",
+      "split": "train",
+      "family": "separated",
+      "seed": 2026103445,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_04",
+      "split": "train",
+      "family": "separated",
+      "seed": 2026104454,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_05",
+      "split": "train",
+      "family": "separated",
+      "seed": 2026105463,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_06",
+      "split": "train",
+      "family": "separated",
+      "seed": 2026106472,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_07",
+      "split": "train",
+      "family": "separated",
+      "seed": 2026107481,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_08",
+      "split": "train",
+      "family": "separated",
+      "seed": 2026108490,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_09",
+      "split": "train",
+      "family": "separated",
+      "seed": 2026109499,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_10",
+      "split": "train",
+      "family": "separated",
+      "seed": 2026110508,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_11",
+      "split": "train",
+      "family": "near",
+      "seed": 2026111517,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_12",
+      "split": "train",
+      "family": "near",
+      "seed": 2026112526,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_13",
+      "split": "train",
+      "family": "near",
+      "seed": 2026113535,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_14",
+      "split": "train",
+      "family": "near",
+      "seed": 2026114544,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_15",
+      "split": "train",
+      "family": "near",
+      "seed": 2026115553,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_16",
+      "split": "train",
+      "family": "near",
+      "seed": 2026116562,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_17",
+      "split": "train",
+      "family": "near",
+      "seed": 2026117571,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_18",
+      "split": "train",
+      "family": "near",
+      "seed": 2026118580,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_19",
+      "split": "train",
+      "family": "near",
+      "seed": 2026119589,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_20",
+      "split": "train",
+      "family": "near",
+      "seed": 2026120598,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_21",
+      "split": "train",
+      "family": "near",
+      "seed": 2026121607,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_22",
+      "split": "train",
+      "family": "high",
+      "seed": 2026122616,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_23",
+      "split": "train",
+      "family": "high",
+      "seed": 2026123625,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_24",
+      "split": "train",
+      "family": "high",
+      "seed": 2026124634,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_25",
+      "split": "train",
+      "family": "high",
+      "seed": 2026125643,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_26",
+      "split": "train",
+      "family": "high",
+      "seed": 2026126652,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_27",
+      "split": "train",
+      "family": "high",
+      "seed": 2026127661,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_28",
+      "split": "train",
+      "family": "high",
+      "seed": 2026128670,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_29",
+      "split": "train",
+      "family": "high",
+      "seed": 2026129679,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_30",
+      "split": "train",
+      "family": "high",
+      "seed": 2026130688,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_train_31",
+      "split": "train",
+      "family": "high",
+      "seed": 2026131697,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_validation_00",
+      "split": "validation",
+      "family": "separated",
+      "seed": 2026132706,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_validation_01",
+      "split": "validation",
+      "family": "separated",
+      "seed": 2026133715,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_validation_02",
+      "split": "validation",
+      "family": "separated",
+      "seed": 2026134724,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_validation_03",
+      "split": "validation",
+      "family": "near",
+      "seed": 2026135733,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_validation_04",
+      "split": "validation",
+      "family": "near",
+      "seed": 2026136742,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_validation_05",
+      "split": "validation",
+      "family": "near",
+      "seed": 2026137751,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_validation_06",
+      "split": "validation",
+      "family": "high",
+      "seed": 2026138760,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_validation_07",
+      "split": "validation",
+      "family": "high",
+      "seed": 2026139769,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": false
+    },
+    {
+      "object_id": "pilot_locked_test_00",
+      "split": "locked_test",
+      "family": "separated",
+      "seed": 2026140778,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": true
+    },
+    {
+      "object_id": "pilot_locked_test_01",
+      "split": "locked_test",
+      "family": "separated",
+      "seed": 2026141787,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": true
+    },
+    {
+      "object_id": "pilot_locked_test_02",
+      "split": "locked_test",
+      "family": "near",
+      "seed": 2026142796,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": true
+    },
+    {
+      "object_id": "pilot_locked_test_03",
+      "split": "locked_test",
+      "family": "near",
+      "seed": 2026143805,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": true
+    },
+    {
+      "object_id": "pilot_locked_test_04",
+      "split": "locked_test",
+      "family": "geometry",
+      "seed": 2026144814,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": true
+    },
+    {
+      "object_id": "pilot_locked_test_05",
+      "split": "locked_test",
+      "family": "geometry",
+      "seed": 2026145823,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": true
+    },
+    {
+      "object_id": "pilot_locked_test_06",
+      "split": "locked_test",
+      "family": "test_high",
+      "seed": 2026146832,
+      "near": false,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": true
+    },
+    {
+      "object_id": "pilot_locked_test_07",
+      "split": "locked_test",
+      "family": "test_high",
+      "seed": 2026147841,
+      "near": true,
+      "states": [
+        0,
+        1
+      ],
+      "generation_status": "NOT_GENERATED",
+      "locked": true
+    }
+  ],
+  "locked_test_opened": false,
+  "generation_gate": "G0 and at least one proposal route clears representation/cost preflight"
+}

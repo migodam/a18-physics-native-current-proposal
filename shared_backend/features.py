@@ -39,7 +39,7 @@ def shared_features(backend,s):
 def outgoing_features(backend,s):
     t=time.perf_counter();k=s.U.shape[1]
     if k>16:raise ValueError("outgoing k cap")
-    x=np.zeros((k,32));corr=s.SU.conj().T@s.r.sum(axis=0)
+    x=np.zeros((k,32));corr=s.SU.conj().T@(s.r/s.source_phase[:,None]).sum(axis=0)
     for i in range(k):
         x[i,i]=1;x[i,16:]=[la.norm(s.LU[:,i]),la.norm(s.SU[:,i]),s.D[i,i].real,s.D[i,i].imag,float(abs(s.D[i]).mean()),float(abs(s.D[i]).max()),float(abs(s.D[:,i]).mean()),float(abs(s.D[:,i]).max()),corr[i].real,corr[i].imag,0.,0.,s.receiver_mode_ids[i] if s.receiver_mode_ids else -1.,float(i in s.protected_slots),0.,1.]
     return x,({"origin":"shared_backend.outgoing32","dependencies":["current_U","current_LU","current_SU","current_D","residual"],"exclusive_seconds":time.perf_counter()-t,"injection_row_present":False},)

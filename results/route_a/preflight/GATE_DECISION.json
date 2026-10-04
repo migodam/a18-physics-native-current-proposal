@@ -1,0 +1,17 @@
+{
+  "status": "HOLD_SHARED_INPUTS_UNAVAILABLE",
+  "gates": {
+    "G0": "NOT_RUN",
+    "G1A": "NOT_RUN",
+    "G2": "NOT_RUN"
+  },
+  "missing": [
+    "results/backend/G0.json",
+    "data/manifest.jsonl",
+    "cache/online_features",
+    "labels/action_A1.jsonl",
+    "results/route_a/preflight_online_timings.jsonl"
+  ],
+  "training_authorized": false,
+  "maxwell_evidence": false
+}

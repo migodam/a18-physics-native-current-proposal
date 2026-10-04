@@ -70,5 +70,12 @@ class SharedTests(unittest.TestCase):
         b,_,_,_=dense_backend();s=b.freeze_state(b.get_receiver_basis(4),object_id="x",state_id="0");x=b.shared_state_features(s)[0];order=[2,0,1]
         s2=replace(s,r=s.r[:,order],SU=s.SU[order],geometry={"channel_ids":tuple(order)})
         x2=b.shared_state_features(s2)[0];np.testing.assert_allclose(x[64:128],x2[64:128],atol=1e-12)
+    def test_accept_reuses_paid_maps_and_preserves_protection(self):
+        from dataclasses import replace
+        b,_,_,_=dense_backend();s=b.freeze_state(b.get_receiver_basis(4),object_id="x",state_id="0",protected_slots=(0,2));v=VerifiedExchange(b,s,{"new":lambda:np.eye(12,dtype=complex)[:,5]})
+        a=ActionSpec("A","new",s.configuration_id,(1,),0.,"new");r=v.evaluate(a);r["accepted"]=True # Contract plumbing, not scientific acceptance.
+        before=b.receipt.snapshot();new=v.accept(r);delta=b.receipt.delta(before)["counters"]
+        self.assertEqual(delta.get("L_rhs",0),0);self.assertEqual(new.protected_slots,(0,1));self.assertEqual(new.receiver_mode_ids,(0,2,3,-1));self.assertNotEqual(s.configuration_id,new.configuration_id)
+        np.testing.assert_allclose(v._u,pack(new.r)+b.full_J_action(new.step_old),atol=1e-12)
 
 if __name__=="__main__":unittest.main()
